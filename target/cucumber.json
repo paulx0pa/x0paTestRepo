@@ -3,414 +3,19 @@
     "line": 2,
     "elements": [
       {
-        "line": 20,
-        "name": "Verify Candidate registration",
+        "line": 6,
+        "name": "verify login and logout functionality",
         "description": "",
-        "id": "candidate-choose-sign-in-and-apply;verify-candidate-registration;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 4969054700,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Candidate clicks on job link",
-            "match": {
-              "location": "Stepdef.candidate_clicks_on_job_link()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 137633700,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50935}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: f12607134e27236ba5d8a3145096e70c\n*** Element info: {Using\u003dxpath, value\u003d//a[@id\u003d\u0027hs-eu-confirmation-button\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.candidate_clicks_on_apply_button_of_Job(Stepdef.java:549)\r\n\tat ✽.When Candidate clicks on apply button of Job(candidatereg.feature:7)\r\n",
-              "status": "failed"
-            },
-            "line": 7,
-            "name": "Candidate clicks on apply button of Job",
-            "match": {
-              "location": "Stepdef.candidate_clicks_on_apply_button_of_Job()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 8,
-            "name": "candidate choose sign in option to apply",
-            "match": {
-              "location": "Stepdef.candidate_choose_sign_in_option_to_apply()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 9,
-            "name": "candidate click on register Link",
-            "match": {
-              "location": "Stepdef.candidate_click_on_register_Link()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 10,
-            "name": "candidate enter first name \"karun\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "karun",
-                  "offset": 28
-                }
-              ],
-              "location": "Stepdef.candidate_enter_first_name(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 11,
-            "name": "candidate enter last name \"kumar\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "kumar",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.candidate_enter_last_name(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 12,
-            "name": "candidate enters email \"karun11@0001.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "karun11@0001.com",
-                  "offset": 24
-                }
-              ],
-              "location": "Stepdef.candidate_enters_email(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 13,
-            "name": "candidate enters password \"akshay@0001\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "akshay@0001",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.candidate_enters_password(String)"
-            },
-            "matchedColumns": [
-              3
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 14,
-            "name": "candidate enters conformpassword \"akshay@0001\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "akshay@0001",
-                  "offset": 34
-                }
-              ],
-              "location": "Stepdef.candidate_enters_conformpassword(String)"
-            },
-            "matchedColumns": [
-              4
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 15,
-            "name": "candidate accepts terms and conditions",
-            "match": {
-              "location": "Stepdef.candidate_accepts_terms_and_conditions()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 16,
-            "name": "candidate enters submit button of registration",
-            "match": {
-              "location": "Stepdef.candidate_enters_submit_button_of_registration()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@tag"
-          },
-          {
-            "line": 4,
-            "name": "@Registration"
-          }
-        ]
-      },
-      {
-        "line": 21,
-        "name": "Verify Candidate registration",
-        "description": "",
-        "id": "candidate-choose-sign-in-and-apply;verify-candidate-registration;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 2653534000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Candidate clicks on job link",
-            "match": {
-              "location": "Stepdef.candidate_clicks_on_job_link()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 18452400,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50961}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 6fa93e9b2ba6896073039bbf07a963ef\n*** Element info: {Using\u003dxpath, value\u003d//a[@id\u003d\u0027hs-eu-confirmation-button\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.candidate_clicks_on_apply_button_of_Job(Stepdef.java:549)\r\n\tat ✽.When Candidate clicks on apply button of Job(candidatereg.feature:7)\r\n",
-              "status": "failed"
-            },
-            "line": 7,
-            "name": "Candidate clicks on apply button of Job",
-            "match": {
-              "location": "Stepdef.candidate_clicks_on_apply_button_of_Job()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 8,
-            "name": "candidate choose sign in option to apply",
-            "match": {
-              "location": "Stepdef.candidate_choose_sign_in_option_to_apply()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 9,
-            "name": "candidate click on register Link",
-            "match": {
-              "location": "Stepdef.candidate_click_on_register_Link()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 10,
-            "name": "candidate enter first name \"Suresh\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Suresh",
-                  "offset": 28
-                }
-              ],
-              "location": "Stepdef.candidate_enter_first_name(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 11,
-            "name": "candidate enter last name \"kumar\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "kumar",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.candidate_enter_last_name(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 12,
-            "name": "candidate enters email \"suresh11@0001.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "suresh11@0001.com",
-                  "offset": 24
-                }
-              ],
-              "location": "Stepdef.candidate_enters_email(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 13,
-            "name": "candidate enters password \"suresh@0001\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "suresh@0001",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.candidate_enters_password(String)"
-            },
-            "matchedColumns": [
-              3
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 14,
-            "name": "candidate enters conformpassword \"suresh@0001\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "suresh@0001",
-                  "offset": 34
-                }
-              ],
-              "location": "Stepdef.candidate_enters_conformpassword(String)"
-            },
-            "matchedColumns": [
-              4
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 15,
-            "name": "candidate accepts terms and conditions",
-            "match": {
-              "location": "Stepdef.candidate_accepts_terms_and_conditions()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 16,
-            "name": "candidate enters submit button of registration",
-            "match": {
-              "location": "Stepdef.candidate_enters_submit_button_of_registration()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@tag"
-          },
-          {
-            "line": 4,
-            "name": "@Registration"
-          }
-        ]
-      }
-    ],
-    "name": "Candidate choose Sign in and Apply",
-    "description": "",
-    "id": "candidate-choose-sign-in-and-apply",
-    "keyword": "Feature",
-    "uri": "candidatereg.feature",
-    "tags": [
-      {
-        "line": 1,
-        "name": "@tag"
-      }
-    ]
-  },
-  {
-    "line": 2,
-    "elements": [
-      {
-        "line": 5,
-        "name": "Verify Recruiter Ai Login Functionality",
-        "description": "",
-        "id": "create-new-job-with-basic-information;verify-recruiter-ai-login-functionality",
+        "id": "application-info-page;verify-login-and-logout-functionality",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 2929560900,
-              "error_message": "org.openqa.selenium.WebDriverException: disconnected: received Inspector.detached event\n  (failed to check if window was closed: disconnected: Unable to receive message from renderer)\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50987}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 1b709870c31e6e05433eeedecad181d0\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat stepdef.Stepdef.launch_Application_using_valid_URL(Stepdef.java:32)\r\n\tat ✽.Given Launch Application using valid URL(createbasicjob.feature:6)\r\n",
-              "status": "failed"
+              "duration": 8373105500,
+              "status": "passed"
             },
-            "line": 6,
+            "line": 7,
             "name": "Launch Application using valid URL",
             "match": {
               "location": "Stepdef.launch_Application_using_valid_URL()"
@@ -419,9 +24,10 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 3533115500,
+              "status": "passed"
             },
-            "line": 7,
+            "line": 8,
             "name": "accept cookies and choose login type",
             "match": {
               "location": "Stepdef.accept_cookies_and_choose_login_type()"
@@ -430,9 +36,10 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 547524200,
+              "status": "passed"
             },
-            "line": 8,
+            "line": 9,
             "name": "enters valid credentials \"paul@trainingqa.com\" and \"XPAStag0\"",
             "match": {
               "arguments": [
@@ -451,587 +58,266 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 78381600,
+              "status": "passed"
             },
-            "line": 9,
+            "line": 10,
             "name": "verify captcha and click on Login button",
             "match": {
               "location": "Stepdef.verify_captcha_and_click_on_Login_button()"
             },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 4,
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 40,
-        "name": "Verify create new job functionality with basic information",
-        "description": "",
-        "id": "create-new-job-with-basic-information;verify-create-new-job-functionality-with-basic-information;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 5029550800,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50987}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 1b709870c31e6e05433eeedecad181d0\n*** Element info: {Using\u003dxpath, value\u003d(//a[@class\u003d\u0027bx--header__menu-item\u0027])[2]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.recruiter_clicks_on_Jobs_Menu(Stepdef.java:65)\r\n\tat ✽.Given Recruiter clicks on Jobs Menu(createbasicjob.feature:13)\r\n",
-              "status": "failed"
-            },
-            "line": 13,
-            "name": "Recruiter clicks on Jobs Menu",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_Jobs_Menu()"
-            },
-            "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 10153147500,
+              "status": "passed"
             },
-            "line": 14,
-            "name": "select create new job section",
+            "line": 11,
+            "name": "Recruiter clicks on source menu",
             "match": {
-              "location": "Stepdef.select_create_new_job_section()"
+              "location": "Stepdef.recruiter_clicks_on_source_menu()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 3345803700,
+              "status": "passed"
             },
-            "line": 15,
-            "name": "click on Start button of form",
+            "line": 12,
+            "name": "Recruiter clicks on all applicants section",
             "match": {
-              "location": "Stepdef.click_on_Start_button_of_form()"
+              "location": "Stepdef.recruiter_clicks_on_all_applicants_section()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17651786100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Recruiter clicks on any Application",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_any_Application()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11212819700,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 14,
+                "value": "#Then Recruiter downloads cv of applicant"
+              },
+              {
+                "line": 15,
+                "value": "#Then Recruiter downloads report of candidate"
+              }
+            ],
+            "line": 16,
+            "name": "Recruiter clicks on candidates Resume",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_candidates_Resume()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
-            },
-            "line": 16,
-            "name": "choose office address \"Hyderabad\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Hyderabad",
-                  "offset": 23
-                }
-              ],
-              "location": "Stepdef.choose_office_address(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
+              "duration": 232017200,
+              "status": "passed"
             },
             "line": 17,
-            "name": "add Job Title as \"software engineer\"",
+            "name": "Recruiter clicks on candidates Interview Status",
             "match": {
-              "arguments": [
-                {
-                  "val": "software engineer",
-                  "offset": 18
-                }
-              ],
-              "location": "Stepdef.add_Job_Title_as(String)"
+              "location": "Stepdef.recruiter_clicks_on_candidates_Interview_Status()"
             },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 4511620400,
+              "status": "passed"
             },
             "line": 18,
-            "name": "add internal code for job \"Job0001\"",
+            "name": "Recruiter enables autosend pre screening Questions",
             "match": {
-              "arguments": [
-                {
-                  "val": "Job0001",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.add_internal_code_for_job(String)"
+              "location": "Stepdef.recruiter_enables_autosend_pre_screening_Questions()"
             },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 4152168400,
+              "status": "passed"
             },
             "line": 19,
-            "name": "select Job Status as \"internal\u0026external\"",
+            "name": "Recruiter shortlists the candidate",
             "match": {
-              "arguments": [
-                {
-                  "val": "internal\u0026external",
-                  "offset": 22
-                }
-              ],
-              "location": "Stepdef.select_Job_Status_as(String)"
+              "location": "Stepdef.recruiter_shortlists_the_candidate()"
             },
-            "matchedColumns": [
-              3
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 10338550900,
+              "status": "passed"
             },
             "line": 20,
-            "name": "choose candidates from other countries",
+            "name": "Recruiter sends shortlist Mail",
             "match": {
-              "location": "Stepdef.choose_candidates_from_other_countries()"
+              "location": "Stepdef.recruiter_sends_shortlist_Mail()"
             },
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 10304122900,
+              "error_message": "org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element \u003cbutton id\u003d\"have-consent-btn\" tabindex\u003d\"0\" class\u003d\"ml-md-2 xpa-min-width-100 justify-content-center mb-2 mb-md-0 bx--btn bx--btn--sm bx--btn--secondary\" type\u003d\"button\"\u003e...\u003c/button\u003e is not clickable at point (717, 563). Other element would receive the click: \u003cdiv class\u003d\"bx--loading-overlay\"\u003e...\u003c/div\u003e\n  (Session info: chrome\u003d107.0.5304.107)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.3\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: d1b157515355d1a5472d66b151d078ac\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat stepdef.Stepdef.recruiter_choose_already_have_concent_option(Stepdef.java:1364)\r\n\tat ✽.Then Recruiter choose already have concent option(Featurefiles/04_application.feature:21)\r\n",
+              "status": "failed"
             },
             "line": 21,
-            "name": "enable rank and file job",
+            "name": "Recruiter choose already have concent option",
             "match": {
-              "location": "Stepdef.enable_rank_and_file_job()"
+              "location": "Stepdef.recruiter_choose_already_have_concent_option()"
             },
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 22,
-            "name": "Select Country Location \"India\"",
+            "name": "Recruiter clicks on add pre interview stage button",
             "match": {
-              "arguments": [
-                {
-                  "val": "India",
-                  "offset": 25
-                }
-              ],
-              "location": "Stepdef.select_Country_Location(String)"
+              "location": "Stepdef.recruiter_clicks_on_add_pre_interview_stage_button()"
             },
-            "matchedColumns": [
-              4
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 23,
-            "name": "Select City location \"Hyderabad\"",
+            "name": "Recruiter clicks on add interview stage button",
             "match": {
-              "arguments": [
-                {
-                  "val": "Hyderabad",
-                  "offset": 22
-                }
-              ],
-              "location": "Stepdef.select_City_location(String)"
+              "location": "Stepdef.recruiter_clicks_on_add_interview_stage_button()"
             },
-            "matchedColumns": [
-              5
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 24,
-            "name": "add skills \"java\" and \"sql\"",
+            "name": "Recruiter chooses Interview type phone round",
             "match": {
-              "arguments": [
-                {
-                  "val": "java",
-                  "offset": 12
-                },
-                {
-                  "val": "sql",
-                  "offset": 23
-                }
-              ],
-              "location": "Stepdef.add_skills_and(String,String)"
+              "location": "Stepdef.recruiter_chooses_Interview_type()"
             },
-            "matchedColumns": [
-              6,
-              7
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 25,
-            "name": "add Qualification \"Bachelor\u0027s degree\"",
+            "name": "Recruiter schedules interview by clicking on blue arrow",
             "match": {
-              "arguments": [
-                {
-                  "val": "Bachelor\u0027s degree",
-                  "offset": 19
-                }
-              ],
-              "location": "Stepdef.add_Qualification(String)"
+              "location": "Stepdef.recruiter_schedules_interview_by_clicking_on_blue_arrow()"
             },
-            "matchedColumns": [
-              8
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 26,
-            "name": "add job type in emp details as \"Permanent\"",
+            "name": "Recruiter clicks on checkbox to directly send invite",
             "match": {
-              "arguments": [
-                {
-                  "val": "Permanent",
-                  "offset": 32
-                }
-              ],
-              "location": "Stepdef.add_job_type_in_emp_details_as(String)"
+              "location": "Stepdef.recruiter_clicks_on_checkbox_to_directly_send_invite()"
             },
-            "matchedColumns": [
-              9
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 27,
-            "name": "select minimum experience as \"2\"",
+            "name": "Recruiter chooses Interview date and time",
             "match": {
-              "arguments": [
-                {
-                  "val": "2",
-                  "offset": 30
-                }
-              ],
-              "location": "Stepdef.select_minimum_experience_as(String)"
+              "location": "Stepdef.recruiter_chooses_Interview_date_and_time()"
             },
-            "matchedColumns": [
-              10
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 28,
-            "name": "select maximum experience as \"10\"",
+            "name": "Recruiter clicks on schedule an interview button",
             "match": {
-              "arguments": [
-                {
-                  "val": "10",
-                  "offset": 30
-                }
-              ],
-              "location": "Stepdef.select_maximum_experience_as(String)"
+              "location": "Stepdef.recruiter_clicks_on_schedule_an_interview_button()"
             },
-            "matchedColumns": [
-              11
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 29,
-            "name": "choose Employment type as \"full-time\"",
+            "name": "Recruiter clicks on yes if candidate attended interview",
             "match": {
-              "arguments": [
-                {
-                  "val": "full-time",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.choose_Employment_type_as(String)"
+              "location": "Stepdef.recruiter_clicks_on_yes_if_candidate_attended_interview()"
             },
-            "matchedColumns": [
-              12
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 30,
-            "name": "choose no of vacancies \"15\"",
+            "name": "Recruiter clicks on mark this stage as complete",
             "match": {
-              "arguments": [
-                {
-                  "val": "15",
-                  "offset": 24
-                }
-              ],
-              "location": "Stepdef.choose_no_of_vacancies(String)"
+              "location": "Stepdef.recruiter_clicks_on_mark_this_stage_as_complete()"
             },
-            "matchedColumns": [
-              13
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 31,
-            "name": "choose close date of job \"12/02/2022\"",
+            "name": "recruiter gives feedback on interview",
             "match": {
-              "arguments": [
-                {
-                  "val": "12/02/2022",
-                  "offset": 26
-                }
-              ],
-              "location": "Stepdef.choose_close_date_of_job(String)"
+              "location": "Stepdef.recruiter_gives_feedback_on_interview()"
             },
-            "matchedColumns": [
-              14
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 32,
-            "name": "add Job Description \"candidate should be expert in java\"",
+            "name": "recruiter rates candidate",
             "match": {
-              "arguments": [
-                {
-                  "val": "candidate should be expert in java",
-                  "offset": 21
-                }
-              ],
-              "location": "Stepdef.add_Job_Description(String)"
+              "location": "Stepdef.recruiter_rates_candidate()"
             },
-            "matchedColumns": [
-              15
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 33,
-            "name": "add Job Requirements \"3 years experience\"",
+            "name": "recruiter accepts candidate",
             "match": {
-              "arguments": [
-                {
-                  "val": "3 years experience",
-                  "offset": 22
-                }
-              ],
-              "location": "Stepdef.add_Job_Requirements(String)"
-            },
-            "matchedColumns": [
-              16
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 34,
-            "name": "choose primary recruiter \"anand paul\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "anand paul",
-                  "offset": 26
-                }
-              ],
-              "location": "Stepdef.choose_primary_recruiter(String)"
-            },
-            "matchedColumns": [
-              17
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 35,
-            "name": "click on submit button of job",
-            "match": {
-              "location": "Stepdef.click_on_submit_button_of_job()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@tag"
-          },
-          {
-            "line": 11,
-            "name": "@CreateNewJob"
-          }
-        ]
-      }
-    ],
-    "name": "Create new Job with Basic Information",
-    "description": "",
-    "id": "create-new-job-with-basic-information",
-    "keyword": "Feature",
-    "uri": "createbasicjob.feature",
-    "tags": [
-      {
-        "line": 1,
-        "name": "@tag"
-      }
-    ]
-  },
-  {
-    "line": 2,
-    "elements": [
-      {
-        "line": 4,
-        "name": "Verify Recruiter Ai Login Functionality",
-        "description": "",
-        "id": "create-new-job-with-all-details;verify-recruiter-ai-login-functionality",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 2732309800,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "Launch Application using valid URL",
-            "match": {
-              "location": "Stepdef.launch_Application_using_valid_URL()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 32290000,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0501d1a3942824562905e04f7ddb1dbb\n*** Element info: {Using\u003did, value\u003dhs-eu-confirmation-button}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.accept_cookies_and_choose_login_type(Stepdef.java:41)\r\n\tat ✽.Then accept cookies and choose login type(createnewjob.feature:6)\r\n",
-              "status": "failed"
-            },
-            "line": 6,
-            "name": "accept cookies and choose login type",
-            "match": {
-              "location": "Stepdef.accept_cookies_and_choose_login_type()"
+              "location": "Stepdef.recruiter_accepts_candidate()"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 7,
-            "name": "enters valid credentials \"paul@trainingqa.com\" and \"XPAStag0\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "paul@trainingqa.com",
-                  "offset": 26
-                },
-                {
-                  "val": "XPAStag0",
-                  "offset": 52
-                }
-              ],
-              "location": "Stepdef.enters_valid_credentials_and(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 8,
-            "name": "verify captcha and click on Login button",
-            "match": {
-              "location": "Stepdef.verify_captcha_and_click_on_Login_button()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 48,
-        "name": "Verify create new job functionality",
-        "description": "",
-        "id": "create-new-job-with-all-details;verify-create-new-job-functionality;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 5028740700,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0501d1a3942824562905e04f7ddb1dbb\n*** Element info: {Using\u003dxpath, value\u003d(//a[@class\u003d\u0027bx--header__menu-item\u0027])[2]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.recruiter_clicks_on_Jobs_Menu(Stepdef.java:65)\r\n\tat ✽.Given Recruiter clicks on Jobs Menu(createnewjob.feature:12)\r\n",
-              "status": "failed"
-            },
-            "line": 12,
-            "name": "Recruiter clicks on Jobs Menu",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_Jobs_Menu()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 13,
-            "name": "select create new job section",
-            "match": {
-              "location": "Stepdef.select_create_new_job_section()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 14,
-            "name": "click on Start button of form",
-            "match": {
-              "location": "Stepdef.click_on_Start_button_of_form()"
-            },
-            "keyword": "When "
           },
           {
             "result": {
@@ -1039,627 +325,349 @@
             },
             "comments": [
               {
-                "line": 15,
-                "value": "#And click on Add New Office button to add new office Address"
+                "line": 34,
+                "value": "#       SECOND INTERVIEW ROUND"
               }
             ],
-            "line": 16,
-            "name": "choose office address \"Hyderabad\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Hyderabad",
-                  "offset": 23
-                }
-              ],
-              "location": "Stepdef.choose_office_address(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 17,
-            "name": "add Job Title as \"software engineer\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "software engineer",
-                  "offset": 18
-                }
-              ],
-              "location": "Stepdef.add_Job_Title_as(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 18,
-            "name": "add internal code for job \"Job0001\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Job0001",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.add_internal_code_for_job(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 19,
-            "name": "select Job Status as \"internal\u0026external\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "internal\u0026external",
-                  "offset": 22
-                }
-              ],
-              "location": "Stepdef.select_Job_Status_as(String)"
-            },
-            "matchedColumns": [
-              3
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 20,
-            "name": "choose candidates from other countries",
-            "match": {
-              "location": "Stepdef.choose_candidates_from_other_countries()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 21,
-            "name": "enable rank and file job",
-            "match": {
-              "location": "Stepdef.enable_rank_and_file_job()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 22,
-            "name": "Select Country Location \"India\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "India",
-                  "offset": 25
-                }
-              ],
-              "location": "Stepdef.select_Country_Location(String)"
-            },
-            "matchedColumns": [
-              4
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 23,
-            "name": "Select City location \"Hyderabad\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Hyderabad",
-                  "offset": 22
-                }
-              ],
-              "location": "Stepdef.select_City_location(String)"
-            },
-            "matchedColumns": [
-              5
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 24,
-            "name": "add skills \"java\" and \"sql\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "java",
-                  "offset": 12
-                },
-                {
-                  "val": "sql",
-                  "offset": 23
-                }
-              ],
-              "location": "Stepdef.add_skills_and(String,String)"
-            },
-            "matchedColumns": [
-              6,
-              7
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 25,
-            "name": "add Qualification \"Bachelor\u0027s degree\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Bachelor\u0027s degree",
-                  "offset": 19
-                }
-              ],
-              "location": "Stepdef.add_Qualification(String)"
-            },
-            "matchedColumns": [
-              8
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 26,
-            "name": "add job type in emp details as \"Permanent\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Permanent",
-                  "offset": 32
-                }
-              ],
-              "location": "Stepdef.add_job_type_in_emp_details_as(String)"
-            },
-            "matchedColumns": [
-              9
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 27,
-            "name": "select minimum experience as \"2\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "2",
-                  "offset": 30
-                }
-              ],
-              "location": "Stepdef.select_minimum_experience_as(String)"
-            },
-            "matchedColumns": [
-              10
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 28,
-            "name": "select maximum experience as \"10\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "10",
-                  "offset": 30
-                }
-              ],
-              "location": "Stepdef.select_maximum_experience_as(String)"
-            },
-            "matchedColumns": [
-              11
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 29,
-            "name": "choose Employment type as \"full-time\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "full-time",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.choose_Employment_type_as(String)"
-            },
-            "matchedColumns": [
-              12
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 30,
-            "name": "choose no of vacancies \"15\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "15",
-                  "offset": 24
-                }
-              ],
-              "location": "Stepdef.choose_no_of_vacancies(String)"
-            },
-            "matchedColumns": [
-              13
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 31,
-            "name": "choose close date of job \"12/02/2022\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "12/02/2022",
-                  "offset": 26
-                }
-              ],
-              "location": "Stepdef.choose_close_date_of_job(String)"
-            },
-            "matchedColumns": [
-              14
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 32,
-            "name": "add Job Description \"candidate should be expert in java\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "candidate should be expert in java",
-                  "offset": 21
-                }
-              ],
-              "location": "Stepdef.add_Job_Description(String)"
-            },
-            "matchedColumns": [
-              15
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 33,
-            "name": "add Job Requirements \"3 years experience\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "3 years experience",
-                  "offset": 22
-                }
-              ],
-              "location": "Stepdef.add_Job_Requirements(String)"
-            },
-            "matchedColumns": [
-              16
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 34,
-            "name": "choose primary recruiter \"anand paul\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "anand paul",
-                  "offset": 26
-                }
-              ],
-              "location": "Stepdef.choose_primary_recruiter(String)"
-            },
-            "matchedColumns": [
-              17
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
             "line": 35,
-            "name": "clicks on skills and education section",
+            "name": "Recruiter again clicks on add interview stage button",
             "match": {
-              "location": "Stepdef.clicks_on_skills_and_education_section()"
+              "location": "Stepdef.recruiter_again_clicks_on_add_interview_stage_button()"
             },
-            "keyword": "When "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 36,
-            "name": "recruiter add industry field \"computer software\"",
+            "name": "Recruiter chooses Interview type Onsite",
             "match": {
-              "arguments": [
-                {
-                  "val": "computer software",
-                  "offset": 30
-                }
-              ],
-              "location": "Stepdef.recruiter_add_industry_field(String)"
+              "location": "Stepdef.recruiter_chooses_Interview_type_Onsite()"
             },
-            "matchedColumns": [
-              18
-            ],
-            "keyword": "When "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 37,
-            "name": "add keywords for AI to vote CV \"java\"",
+            "name": "recruiter chooses onsite round",
             "match": {
-              "arguments": [
-                {
-                  "val": "java",
-                  "offset": 32
-                }
-              ],
-              "location": "Stepdef.add_keywords_for_AI_to_vote_CV(String)"
+              "location": "Stepdef.recruiter_chooses_onsite_round()"
             },
-            "matchedColumns": [
-              19
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 38,
-            "name": "recruiter add Education \"BSc Computers\"",
+            "name": "Recruiter clicks on checkbox to directly send invite",
             "match": {
-              "arguments": [
-                {
-                  "val": "BSc Computers",
-                  "offset": 25
-                }
-              ],
-              "location": "Stepdef.recruiter_add_Education(String)"
+              "location": "Stepdef.recruiter_clicks_on_checkbox_to_directly_send_invite()"
             },
-            "matchedColumns": [
-              20
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 39,
-            "name": "recruiter clicks on Additional Information",
+            "name": "Recruiter chooses Interview date and time",
             "match": {
-              "location": "Stepdef.recruiter_clicks_on_Additional_Information()"
+              "location": "Stepdef.recruiter_chooses_Interview_date_and_time()"
             },
-            "keyword": "When "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 40,
-            "name": "recruiter add Work Location \"Hyderabad\"",
+            "name": "Recruiter clicks on schedule an interview button",
             "match": {
-              "arguments": [
-                {
-                  "val": "Hyderabad",
-                  "offset": 29
-                }
-              ],
-              "location": "Stepdef.recruiter_add_Work_Location(String)"
+              "location": "Stepdef.recruiter_clicks_on_schedule_an_interview_button()"
             },
-            "matchedColumns": [
-              21
-            ],
-            "keyword": "When "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 41,
-            "name": "recruiter add working Hours \"8 hrs\"",
+            "name": "Recruiter clicks on yes if candidate attended interview",
             "match": {
-              "arguments": [
-                {
-                  "val": "8 hrs",
-                  "offset": 29
-                }
-              ],
-              "location": "Stepdef.recruiter_add_working_Hours(String)"
+              "location": "Stepdef.recruiter_clicks_on_yes_if_candidate_attended_interview()"
             },
-            "matchedColumns": [
-              22
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 42,
-            "name": "enter minimal Annual Salary \"400000\"",
+            "name": "Recruiter clicks on mark this stage as complete",
             "match": {
-              "arguments": [
-                {
-                  "val": "400000",
-                  "offset": 29
-                }
-              ],
-              "location": "Stepdef.enter_minimal_Annual_Salary(String)"
+              "location": "Stepdef.recruiter_clicks_on_mark_this_stage_as_complete()"
             },
-            "matchedColumns": [
-              23
-            ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 43,
-            "name": "enter maximum Annual Salary \"1000000\"",
+            "name": "recruiter gives feedback on interview",
             "match": {
-              "arguments": [
-                {
-                  "val": "1000000",
-                  "offset": 29
-                }
-              ],
-              "location": "Stepdef.enter_maximum_Annual_Salary(String)"
+              "location": "Stepdef.recruiter_gives_feedback_on_interview()"
             },
-            "matchedColumns": [
-              24
-            ],
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@tag"
+            "keyword": "Then "
           },
-          {
-            "line": 10,
-            "name": "@CreateNewJob"
-          }
-        ]
-      },
-      {
-        "comments": [
-          {
-            "line": 51,
-            "value": "#@Skills\u0026Education"
-          },
-          {
-            "line": 52,
-            "value": "#Scenario Outline:verify recruiter able to add Skills and Education"
-          },
-          {
-            "line": 57,
-            "value": "#@AdditionalInformation"
-          },
-          {
-            "line": 58,
-            "value": "#Scenario:verify recruiter able to add AdditionalInformation"
-          }
-        ],
-        "line": 62,
-        "name": "verify recruiter able to choose pre screening questions",
-        "description": "",
-        "id": "create-new-job-with-all-details;verify-recruiter-able-to-choose-pre-screening-questions",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
           {
             "result": {
-              "duration": 2031954800,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0501d1a3942824562905e04f7ddb1dbb\n*** Element info: {Using\u003dxpath, value\u003d(//li[@class\u003d\u0027sui-single-option-facet__item inactive\u0027])[3]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.recruiter_clicks_on_pre_screening_questionaire(Stepdef.java:319)\r\n\tat ✽.Given recruiter clicks on pre screening questionaire(createnewjob.feature:63)\r\n",
-              "status": "failed"
+              "status": "skipped"
+            },
+            "line": 44,
+            "name": "recruiter rates candidate",
+            "match": {
+              "location": "Stepdef.recruiter_rates_candidate()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 45,
+            "name": "recruiter accepts candidate",
+            "match": {
+              "location": "Stepdef.recruiter_accepts_candidate()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "comments": [
+              {
+                "line": 46,
+                "value": "#     ONLINE INTERVIEW ROUND"
+              }
+            ],
+            "line": 47,
+            "name": "again recruiter clicks on add interview stage button",
+            "match": {
+              "location": "Stepdef.again_recruiter_clicks_on_add_interview_stage_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 48,
+            "name": "Recruiter chooses Interview type Online",
+            "match": {
+              "location": "Stepdef.recruiter_chooses_Interview_type_Online()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 49,
+            "name": "Recruiter clicks on checkbox to directly send invite",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_checkbox_to_directly_send_invite()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 50,
+            "name": "Recruiter chooses Interview date and time",
+            "match": {
+              "location": "Stepdef.recruiter_chooses_Interview_date_and_time()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 51,
+            "name": "recruiter choose meeting type",
+            "match": {
+              "location": "Stepdef.recruiter_choose_meeting_type()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 52,
+            "name": "Recruiter clicks on schedule an interview button",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_schedule_an_interview_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 53,
+            "name": "recruiter clicks on start meeting button",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_start_meeting_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 54,
+            "name": "Recruiter clicks on yes if candidate attended interview",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_yes_if_candidate_attended_interview()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 55,
+            "name": "Recruiter clicks on mark this stage as complete",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_mark_this_stage_as_complete()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 56,
+            "name": "recruiter gives feedback on interview",
+            "match": {
+              "location": "Stepdef.recruiter_gives_feedback_on_interview()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 57,
+            "name": "recruiter rates candidate",
+            "match": {
+              "location": "Stepdef.recruiter_rates_candidate()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 58,
+            "name": "recruiter accepts candidate",
+            "match": {
+              "location": "Stepdef.recruiter_accepts_candidate()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "comments": [
+              {
+                "line": 59,
+                "value": "#     Coding/Whiteboard Assessment"
+              },
+              {
+                "line": 60,
+                "value": "#Then recruiter chooses Coding or Whiteboard Assessment"
+              }
+            ],
+            "line": 61,
+            "name": "recruiter takes final decision on interview",
+            "match": {
+              "location": "Stepdef.recruiter_takes_final_decision_on_interview()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 62,
+            "name": "recruiter sends offer concent",
+            "match": {
+              "location": "Stepdef.recruiter_sends_offer_concent()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
             },
             "line": 63,
-            "name": "recruiter clicks on pre screening questionaire",
+            "name": "recruiter resends offer concent",
             "match": {
-              "location": "Stepdef.recruiter_clicks_on_pre_screening_questionaire()"
+              "location": "Stepdef.recruiter_resends_offer_concent()"
             },
-            "keyword": "Given "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 64,
-            "name": "recruiter clicks on select questions button",
+            "name": "recruiter skips offer concent",
             "match": {
-              "location": "Stepdef.recruiter_clicks_on_select_questions_button()"
+              "location": "Stepdef.recruiter_skips_offer_concent()"
             },
-            "keyword": "When "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 65,
-            "name": "recruiter clicks on Add Question button",
+            "name": "recruiter clicks on add offer to add offer details",
             "match": {
-              "location": "Stepdef.recruiter_clicks_on_Add_Question_button()"
+              "location": "Stepdef.recruiter_clicks_on_add_offer_to_add_offer_details()"
             },
-            "keyword": "When "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 66,
-            "name": "recruiter adds essay text type question",
+            "name": "recruiter clicks on send offer added",
             "match": {
-              "location": "Stepdef.recruiter_adds_essay_text_type_question()"
+              "location": "Stepdef.recruiter_clicks_on_send_offer_added()"
             },
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 67,
-            "name": "recruiter adds numeric type question",
+            "name": "Recruiter clicks on candidates Approvals Table",
             "match": {
-              "location": "Stepdef.recruiter_adds_numeric_type_question()"
+              "location": "Stepdef.recruiter_clicks_on_candidates_Approvals_Table()"
             },
             "keyword": "And "
           },
@@ -1668,9 +676,9 @@
               "status": "skipped"
             },
             "line": 68,
-            "name": "recruiter adds yes or no question",
+            "name": "Recruiter clicks on candidates Collaborators",
             "match": {
-              "location": "Stepdef.recruiter_adds_yes_or_no_question()"
+              "location": "Stepdef.recruiter_clicks_on_candidates_Collaborators()"
             },
             "keyword": "And "
           },
@@ -1678,24 +686,43 @@
             "result": {
               "status": "skipped"
             },
-            "comments": [
-              {
-                "line": 69,
-                "value": "#And recruiter adds multiple choice question"
-              },
-              {
-                "line": 70,
-                "value": "#And recruiter adds weighted choice question"
-              },
-              {
-                "line": 71,
-                "value": "#And recruiter adds file type question"
-              }
-            ],
-            "line": 72,
-            "name": "Select questions from displayed List",
+            "line": 69,
+            "name": "Recruiter clicks on candidates Applicant Notes",
             "match": {
-              "location": "Stepdef.select_questions_from_displayed_List()"
+              "location": "Stepdef.recruiter_clicks_on_candidates_Applicant_Notes()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 70,
+            "name": "Recruiter clicks on candidates References",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_candidates_References()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 71,
+            "name": "Recruiter clicks on candidates Offer Information",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_candidates_Offer_Information()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 72,
+            "name": "Recruiter clicks on candidates Other Jobs Applied",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_candidates_Other_Jobs_Applied()"
             },
             "keyword": "And "
           },
@@ -1704,660 +731,9 @@
               "status": "skipped"
             },
             "line": 73,
-            "name": "click on Add Selected option",
+            "name": "Recruiter clicks on candidates Suitable Jobs",
             "match": {
-              "location": "Stepdef.click_on_Add_Selected_option()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 61,
-            "name": "@PrescreeningQuestions"
-          }
-        ]
-      },
-      {
-        "line": 77,
-        "name": "Verify Attachments functionality",
-        "description": "",
-        "id": "create-new-job-with-all-details;verify-attachments-functionality",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 2029105700,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51017}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0501d1a3942824562905e04f7ddb1dbb\n*** Element info: {Using\u003dxpath, value\u003d(//button[@type\u003d\u0027button\u0027])[73]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.recruiter_Clicks_on_Attachments_section(Stepdef.java:505)\r\n\tat ✽.Given recruiter Clicks on Attachments section(createnewjob.feature:78)\r\n",
-              "status": "failed"
-            },
-            "line": 78,
-            "name": "recruiter Clicks on Attachments section",
-            "match": {
-              "location": "Stepdef.recruiter_Clicks_on_Attachments_section()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 79,
-            "name": "recruiter uploads Attachment file",
-            "match": {
-              "location": "Stepdef.recruiter_uploads_Attachment_file()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 80,
-            "name": "click on submit after uploading file",
-            "match": {
-              "location": "Stepdef.click_on_submit_after_uploading_file()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 76,
-            "name": "@Attachments"
-          }
-        ]
-      }
-    ],
-    "name": "Create New Job with all details",
-    "description": "",
-    "id": "create-new-job-with-all-details",
-    "keyword": "Feature",
-    "uri": "createnewjob.feature",
-    "tags": [
-      {
-        "line": 1,
-        "name": "@tag"
-      }
-    ]
-  },
-  {
-    "line": 2,
-    "elements": [
-      {
-        "line": 5,
-        "name": "Verify Candidate apply for job as a guest",
-        "description": "",
-        "id": "candidate-job-application-form;verify-candidate-apply-for-job-as-a-guest",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 2918851900,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Candidate clicks on job link",
-            "match": {
-              "location": "Stepdef.candidate_clicks_on_job_link()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 49207800,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51049}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 7cded4565323ae21503b506cd22442f9\n*** Element info: {Using\u003dxpath, value\u003d//a[@id\u003d\u0027hs-eu-confirmation-button\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.candidate_clicks_on_apply_button_of_Job(Stepdef.java:549)\r\n\tat ✽.When Candidate clicks on apply button of Job(guestapply.feature:7)\r\n",
-              "status": "failed"
-            },
-            "line": 7,
-            "name": "Candidate clicks on apply button of Job",
-            "match": {
-              "location": "Stepdef.candidate_clicks_on_apply_button_of_Job()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 8,
-            "name": "candidate choose to apply as guest",
-            "match": {
-              "location": "Stepdef.candidate_choose_to_apply_as_guest()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "line": 4,
-            "name": "@Guestapplyjob"
-          }
-        ]
-      },
-      {
-        "line": 21,
-        "name": "Verify guest candidate able to fill job Application",
-        "description": "",
-        "id": "candidate-job-application-form;verify-guest-candidate-able-to-fill-job-application;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 37746400,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51049}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 7cded4565323ae21503b506cd22442f9\n*** Element info: {Using\u003dxpath, value\u003d//input[@id\u003d\u0027candidateFirstName\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.candidate_enters_first_name(Stepdef.java:629)\r\n\tat ✽.And Candidate enters first name \"first001\"(guestapply.feature:12)\r\n",
-              "status": "failed"
-            },
-            "line": 12,
-            "name": "Candidate enters first name \"first001\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "first001",
-                  "offset": 29
-                }
-              ],
-              "location": "Stepdef.candidate_enters_first_name(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 13,
-            "name": "Candidate enters last name \"last001\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "last001",
-                  "offset": 28
-                }
-              ],
-              "location": "Stepdef.candidate_enters_last_name(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 14,
-            "name": "Candidate  chooses Country \"india\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "india",
-                  "offset": 28
-                }
-              ],
-              "location": "Stepdef.candidate_chooses_Country(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 15,
-            "name": "Candidate enters phone no \"9100100100\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "9100100100",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.candidate_enters_phone_no(String)"
-            },
-            "matchedColumns": [
-              3
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 16,
-            "name": "Candidate enters Email Address \"first001@in.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "first001@in.com",
-                  "offset": 32
-                }
-              ],
-              "location": "Stepdef.candidate_enters_Email_Address(String)"
-            },
-            "matchedColumns": [
-              4
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 17,
-            "name": "Candidate uploads his resume",
-            "match": {
-              "location": "Stepdef.candidate_uploads_his_resume()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@tag"
-          },
-          {
-            "line": 10,
-            "name": "@Application"
-          }
-        ]
-      }
-    ],
-    "name": "Candidate Job Application form",
-    "description": "",
-    "id": "candidate-job-application-form",
-    "keyword": "Feature",
-    "uri": "guestapply.feature",
-    "tags": [
-      {
-        "line": 1,
-        "name": "@tag"
-      }
-    ]
-  },
-  {
-    "line": 2,
-    "elements": [
-      {
-        "line": 6,
-        "name": "verify login and logout functionality",
-        "description": "",
-        "id": "login-and-logout-feature;verify-login-and-logout-functionality",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 3091624600,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "Launch Application using valid URL",
-            "match": {
-              "location": "Stepdef.launch_Application_using_valid_URL()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 62313300,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51072}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 1b8ff08ffc45ce78b99351464fb27b4a\n*** Element info: {Using\u003did, value\u003dhs-eu-confirmation-button}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.accept_cookies_and_choose_login_type(Stepdef.java:41)\r\n\tat ✽.Then accept cookies and choose login type(loginlogout.feature:8)\r\n",
-              "status": "failed"
-            },
-            "line": 8,
-            "name": "accept cookies and choose login type",
-            "match": {
-              "location": "Stepdef.accept_cookies_and_choose_login_type()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 9,
-            "name": "enters valid credentials \"paul@trainingqa.com\" and \"XPAStag0\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "paul@trainingqa.com",
-                  "offset": 26
-                },
-                {
-                  "val": "XPAStag0",
-                  "offset": 52
-                }
-              ],
-              "location": "Stepdef.enters_valid_credentials_and(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 10,
-            "name": "verify captcha and click on Login button",
-            "match": {
-              "location": "Stepdef.verify_captcha_and_click_on_Login_button()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 5,
-            "name": "@tag1"
-          }
-        ]
-      },
-      {
-        "line": 13,
-        "name": "Verify Recruiter Ai Logout Functionality",
-        "description": "",
-        "id": "login-and-logout-feature;verify-recruiter-ai-logout-functionality",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 4031384600,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51072}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 1b8ff08ffc45ce78b99351464fb27b4a\n*** Element info: {Using\u003dxpath, value\u003d//button[@aria-label\u003d\u0027Logout\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.click_on_Logout_Button(Stepdef.java:60)\r\n\tat ✽.Given Click on Logout Button(loginlogout.feature:14)\r\n",
-              "status": "failed"
-            },
-            "line": 14,
-            "name": "Click on Logout Button",
-            "match": {
-              "location": "Stepdef.click_on_Logout_Button()"
-            },
-            "keyword": "Given "
-          }
-        ],
-        "tags": [
-          {
-            "line": 12,
-            "name": "@Logout"
-          }
-        ]
-      }
-    ],
-    "name": "Login and Logout feature",
-    "description": "I want to use this to verify login and logout",
-    "id": "login-and-logout-feature",
-    "keyword": "Feature",
-    "uri": "loginlogout.feature",
-    "tags": [
-      {
-        "line": 1,
-        "name": "@tag"
-      }
-    ]
-  },
-  {
-    "line": 2,
-    "elements": [
-      {
-        "line": 5,
-        "name": "Verify signed in Candidates apply for job",
-        "description": "",
-        "id": "candidate-sign-in-and-apply-for-job;verify-signed-in-candidates-apply-for-job",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5568776600,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Candidate clicks on job link",
-            "match": {
-              "location": "Stepdef.candidate_clicks_on_job_link()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 72076800,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51098}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 5cfac20e47fae22d685c2de74f856bba\n*** Element info: {Using\u003dxpath, value\u003d//a[@id\u003d\u0027hs-eu-confirmation-button\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.candidate_clicks_on_apply_button_of_Job(Stepdef.java:549)\r\n\tat ✽.When Candidate clicks on apply button of Job(signinapply.feature:7)\r\n",
-              "status": "failed"
-            },
-            "line": 7,
-            "name": "Candidate clicks on apply button of Job",
-            "match": {
-              "location": "Stepdef.candidate_clicks_on_apply_button_of_Job()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 8,
-            "name": "candidate choose sign in option to apply",
-            "match": {
-              "location": "Stepdef.candidate_choose_sign_in_option_to_apply()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "line": 4,
-            "name": "@Signinapplyjob"
-          }
-        ]
-      },
-      {
-        "line": 37,
-        "name": "Verify Candidate registration",
-        "description": "",
-        "id": "candidate-sign-in-and-apply-for-job;verify-candidate-registration;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 12327400,
-              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d106.0.5249.119)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.5\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51098}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 5cfac20e47fae22d685c2de74f856bba\n*** Element info: {Using\u003dxpath, value\u003d//a[text()\u003d\u0027Register\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdef.Stepdef.candidate_click_on_register_Link(Stepdef.java:561)\r\n\tat ✽.Given candidate click on register Link(signinapply.feature:12)\r\n",
-              "status": "failed"
-            },
-            "line": 12,
-            "name": "candidate click on register Link",
-            "match": {
-              "location": "Stepdef.candidate_click_on_register_Link()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 13,
-            "name": "candidate enter first name \"Prakash\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Prakash",
-                  "offset": 28
-                }
-              ],
-              "location": "Stepdef.candidate_enter_first_name(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 14,
-            "name": "candidate enter last name \"Paul\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Paul",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.candidate_enter_last_name(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 15,
-            "name": "candidate enters email \"prakashpaul12@xyz.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "prakashpaul12@xyz.com",
-                  "offset": 24
-                }
-              ],
-              "location": "Stepdef.candidate_enters_email(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 16,
-            "name": "candidate enters password \"PRakaSh$012xFa\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "PRakaSh$012xFa",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.candidate_enters_password(String)"
-            },
-            "matchedColumns": [
-              3
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 17,
-            "name": "candidate enters conformpassword \"PRakaSh$012xFa\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "PRakaSh$012xFa",
-                  "offset": 34
-                }
-              ],
-              "location": "Stepdef.candidate_enters_conformpassword(String)"
-            },
-            "matchedColumns": [
-              4
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 18,
-            "name": "candidate accepts terms and conditions",
-            "match": {
-              "location": "Stepdef.candidate_accepts_terms_and_conditions()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 19,
-            "name": "candidate enters submit button of registration",
-            "match": {
-              "location": "Stepdef.candidate_enters_submit_button_of_registration()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 20,
-            "name": "candidate clicks on click here to login",
-            "match": {
-              "location": "Stepdef.candidate_clicks_on_click_here_to_login_span_class_xpa_link()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 21,
-            "name": "candidate enters mail \"prakashpaul12@xyz.com\" to login",
-            "match": {
-              "arguments": [
-                {
-                  "val": "prakashpaul12@xyz.com",
-                  "offset": 23
-                }
-              ],
-              "location": "Stepdef.candidate_enters_mail_to_login(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 22,
-            "name": "candidate enters password \"PRakaSh$012xFa\" to login",
-            "match": {
-              "arguments": [
-                {
-                  "val": "PRakaSh$012xFa",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.candidate_enters_password_to_login(String)"
-            },
-            "matchedColumns": [
-              3
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 23,
-            "name": "candidate clicks on login button",
-            "match": {
-              "location": "Stepdef.candidate_clicks_on_login_button()"
+              "location": "Stepdef.recruiter_clicks_on_candidates_Suitable_Jobs()"
             },
             "keyword": "And "
           },
@@ -2367,14 +743,36 @@
             },
             "comments": [
               {
-                "line": 24,
-                "value": "#start filling application"
+                "line": 74,
+                "value": "#And Recruiter clicks on candidates Chat with candidate"
               }
             ],
-            "line": 25,
-            "name": "Signed in Candidate click on Apply button of Job",
+            "line": 75,
+            "name": "Recruiter clicks on candidates Post Hire Feedback",
             "match": {
-              "location": "Stepdef.signed_in_Candidate_click_on_Apply_button_of_Job()"
+              "location": "Stepdef.recruiter_clicks_on_candidates_Post_Hire_Feedback()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 76,
+            "name": "Recruiter clicks on candidates Onboarding",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_candidates_Onboarding()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 77,
+            "name": "recruiter clicks on Add template",
+            "match": {
+              "location": "Stepdef.recruiter_clicks_on_Add_template()"
             },
             "keyword": "Then "
           },
@@ -2382,110 +780,63 @@
             "result": {
               "status": "skipped"
             },
-            "line": 26,
-            "name": "Candidate enters first name \"Prakash\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Prakash",
-                  "offset": 29
-                }
-              ],
-              "location": "Stepdef.candidate_enters_first_name(String)"
-            },
-            "matchedColumns": [
-              0
+            "comments": [
+              {
+                "line": 78,
+                "value": "#Then recruiter clicks on create new template"
+              },
+              {
+                "line": 79,
+                "value": "#Then recruiter names the template and submit"
+              },
+              {
+                "line": 80,
+                "value": "#Then recruiter clicks on add stage"
+              },
+              {
+                "line": 81,
+                "value": "#Then recruiter names the stage Instructions to candidate Submit"
+              },
+              {
+                "line": 82,
+                "value": "#Then recruiter clicks on stage dropdown and click on add doc"
+              },
+              {
+                "line": 83,
+                "value": "#Then recruiter gives name to doc and add notes then submit"
+              },
+              {
+                "line": 84,
+                "value": "#Then recruiter clicks on onboarding link available at TLC"
+              },
+              {
+                "line": 85,
+                "value": "#Then recruiter clicks on add candidate"
+              },
+              {
+                "line": 86,
+                "value": "#Then select job select candidate select template"
+              },
+              {
+                "line": 87,
+                "value": "#Then click on invite candidate"
+              }
             ],
-            "keyword": "When "
+            "line": 88,
+            "name": "recruiter select required template and submit",
+            "match": {
+              "location": "Stepdef.recruiter_select_required_template_and_submit()"
+            },
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "skipped"
             },
-            "line": 27,
-            "name": "Candidate enters last name \"Paul\"",
+            "line": 89,
+            "name": "Recruiter clicks on candidates Timeline",
             "match": {
-              "arguments": [
-                {
-                  "val": "Paul",
-                  "offset": 28
-                }
-              ],
-              "location": "Stepdef.candidate_enters_last_name(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 28,
-            "name": "Candidate  chooses Country \"india\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "india",
-                  "offset": 28
-                }
-              ],
-              "location": "Stepdef.candidate_chooses_Country(String)"
-            },
-            "matchedColumns": [
-              5
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 29,
-            "name": "Candidate enters phone no \"8000000011\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "8000000011",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.candidate_enters_phone_no(String)"
-            },
-            "matchedColumns": [
-              6
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 30,
-            "name": "Candidate enters Email Address \"prakashpaul12@xyz.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "prakashpaul12@xyz.com",
-                  "offset": 32
-                }
-              ],
-              "location": "Stepdef.candidate_enters_Email_Address(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 31,
-            "name": "click on checkbox to recieve whatsapp notifications",
-            "match": {
-              "location": "Stepdef.click_on_checkbox_to_recieve_whatsapp_notifications()"
+              "location": "Stepdef.recruiter_clicks_on_candidates_Timeline()"
             },
             "keyword": "And "
           },
@@ -2493,31 +844,27 @@
             "result": {
               "status": "skipped"
             },
-            "line": 32,
-            "name": "Candidate uploads his resume",
+            "line": 90,
+            "name": "Recruiter clicks on candidates Contact Numbers",
             "match": {
-              "location": "Stepdef.candidate_uploads_his_resume()"
+              "location": "Stepdef.recruiter_clicks_on_candidates_Contact_Numbers()"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "line": 1,
-            "name": "@tag"
-          },
-          {
-            "line": 10,
-            "name": "@Registration"
+            "line": 5,
+            "name": "@tag1"
           }
         ]
       }
     ],
-    "name": "candidate sign in and apply for job",
-    "description": "",
-    "id": "candidate-sign-in-and-apply-for-job",
+    "name": "Application info page",
+    "description": "I want to use this to verify login and logout",
+    "id": "application-info-page",
     "keyword": "Feature",
-    "uri": "signinapply.feature",
+    "uri": "Featurefiles/04_application.feature",
     "tags": [
       {
         "line": 1,
