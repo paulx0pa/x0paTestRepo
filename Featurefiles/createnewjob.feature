@@ -91,5 +91,5 @@ Examples:
 #And click on view job button
 #Then copy the job link
 #
-#Scenario: close the browser
-#Given close Browser
+Scenario: close the browser
+Given close Browser

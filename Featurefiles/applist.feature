@@ -31,11 +31,11 @@ When recruiter chooses add applicant to default talentpool
 #Then recruiter add applicant to new bucket "vip a007"  
 Then Click on Submit Button of Talent pool
 #                  KIV
-#Given recruiter clicks on add to kiv button
-#Then add or remove applications from kiv using toggle and submit
+Given recruiter clicks on add to kiv button
+Then add or remove applications from kiv using toggle and submit
 #             CHANGE STAGE
-Given recruiter clicks on change stage button
-Then choose application stage from dropdown list
+#Given recruiter clicks on change stage button
+#Then choose application stage from dropdown list
 #             EMAIL TEMPLATE
 Given recruiter clicks on Add Email Button
 Then choose Shortlist Email template to send candidates
@@ -49,5 +49,5 @@ Then recruiter selects xopa report from dropdown and submit
 #                 DELETE
 #Given recruiter clicks on delete option and submit
 
-#Scenario: close the browser
-#Given close Browser
+Scenario: close the browser
+Given close Browser

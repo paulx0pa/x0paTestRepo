@@ -44,5 +44,5 @@ Examples:
 |Hyderabad     |software Tester  |Job0001      |internal&external|India           |Hyderabad    |java   |sql    |Bachelor's degree|Permanent|2      |10     |full-time|15       |12/02/2022  |candidate should be expert in java|3 years experience|anand paul       |
 
 
-#Scenario: close the browser
-#Given close Browser
+Scenario: close the browser
+Given close Browser

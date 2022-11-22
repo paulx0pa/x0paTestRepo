@@ -13,5 +13,5 @@ Feature: Login and Logout feature
   Scenario: Verify Recruiter Ai Logout Functionality
   Given Click on Logout Button
   
-#Scenario: close the browser
-#Given close Browser
+Scenario: close the browser
+Given close Browser

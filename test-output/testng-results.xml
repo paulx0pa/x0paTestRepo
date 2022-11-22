@@ -2,44 +2,46 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="85877" started-at="2022-11-17T09:50:13Z" finished-at="2022-11-17T09:51:39Z">
+  <suite name="Default suite" duration-ms="148273" started-at="2022-11-22T06:04:26Z" finished-at="2022-11-22T06:06:54Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testrunners.Testrunners@3bd40a57]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testrunners.Testrunners@2bbf180e]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="85877" started-at="2022-11-17T09:50:13Z" finished-at="2022-11-17T09:51:39Z">
+    <test name="Default test" duration-ms="148273" started-at="2022-11-22T06:04:26Z" finished-at="2022-11-22T06:06:54Z">
       <class name="testrunners.Testrunners">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:testrunners.Testrunners@3bd40a57]" name="setUpClass" is-config="true" duration-ms="375" started-at="2022-11-17T09:50:13Z" finished-at="2022-11-17T09:50:14Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:testrunners.Testrunners@2bbf180e]" name="setUpClass" is-config="true" duration-ms="276" started-at="2022-11-22T06:04:26Z" finished-at="2022-11-22T06:04:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testrunners.Testrunners@3bd40a57]" name="feature" duration-ms="84902" started-at="2022-11-17T09:50:14Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2022-11-17T09:51:39Z">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testrunners.Testrunners@2bbf180e]" name="feature" duration-ms="146993" started-at="2022-11-22T06:04:26Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2022-11-22T06:06:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Application info page]]>
+                <![CDATA[Job Info]]>
               </value>
             </param>
           </params>
           <exception class="cucumber.runtime.CucumberException">
             <message>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button id="have-consent-btn" tabindex="0" class="ml-md-2 xpa-min-width-100 justify-content-center mb-2 mb-md-0 bx--btn bx--btn--sm bx--btn--secondary" type="button">...</button> is not clickable at point (717, 563). Other element would receive the click: <div class="bx--loading-overlay">...</div>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d1b157515355d1a5472d66b151d078ac]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52679}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dfac527b477474b384299d7e2a0b7054]]>
             </message>
             <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button id="have-consent-btn" tabindex="0" class="ml-md-2 xpa-min-width-100 justify-content-center mb-2 mb-md-0 bx--btn bx--btn--sm bx--btn--secondary" type="button">...</button> is not clickable at point (717, 563). Other element would receive the click: <div class="bx--loading-overlay">...</div>
+              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d1b157515355d1a5472d66b151d078ac
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52679}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dfac527b477474b384299d7e2a0b7054
 at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -67,13 +69,14 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button id="have-consent-btn" tabindex="0" class="ml-md-2 xpa-min-width-100 justify-content-center mb-2 mb-md-0 bx--btn bx--btn--sm bx--btn--secondary" type="button">...</button> is not clickable at point (717, 563). Other element would receive the click: <div class="bx--loading-overlay">...</div>
+Caused by: org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d1b157515355d1a5472d66b151d078ac
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52679}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dfac527b477474b384299d7e2a0b7054
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -86,15 +89,15 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
 at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at stepdef.Stepdef.recruiter_choose_already_have_concent_option(Stepdef.java:1364)
-at ✽.Then Recruiter choose already have concent option(Featurefiles/04_application.feature:21)
+at stepdef.Stepdef.recruiter_clicks_on_timeline_of_job_posted(Stepdef.java:2879)
+at ✽.When recruiter clicks on timeline of job posted(Featurefiles/07_jobinfo.feature:65)
 ]]>
             </full-stacktrace>
           </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:testrunners.Testrunners@3bd40a57]" name="tearDownClass" is-config="true" duration-ms="462" started-at="2022-11-17T09:51:39Z" finished-at="2022-11-17T09:51:39Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:testrunners.Testrunners@2bbf180e]" name="tearDownClass" is-config="true" duration-ms="925" started-at="2022-11-22T06:06:53Z" finished-at="2022-11-22T06:06:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

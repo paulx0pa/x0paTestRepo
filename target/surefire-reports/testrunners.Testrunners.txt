@@ -1,0 +1,150 @@
+-------------------------------------------------------------------------------
+Test set: testrunners.Testrunners
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 12, Errors: 0, Skipped: 0, Time elapsed: 509.898 s <<< FAILURE! - in testrunners.Testrunners
+testrunners.Testrunners.feature[Login and Logout feature](1)  Time elapsed: 72.187 s  <<< FAILURE!
+cucumber.runtime.CucumberException: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@aria-label='Logout'] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@aria-label='Logout'] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@aria-label='Logout']"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51544}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dc1bf2cd84a5d875e14c5b8e883da604
+*** Element info: {Using=xpath, value=//button[@aria-label='Logout']}
+
+testrunners.Testrunners.feature[Create new Job with Basic Information](2)  Time elapsed: 48.641 s  <<< FAILURE!
+cucumber.runtime.CucumberException: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/section/div[1]/div/header/nav/ul/li[2]/a"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51676}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 610178eab5cfa3194c222111631a71ec
+*** Element info: {Using=xpath, value=/html/body/section/div[1]/div/header/nav/ul/li[2]/a}
+
+testrunners.Testrunners.feature[Candidate apply for job as Guest](3)  Time elapsed: 1.376 s  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.NullPointerException: null value in entry: url=null
+Caused by: java.lang.NullPointerException: null value in entry: url=null
+
+testrunners.Testrunners.feature[Application info page](4)  Time elapsed: 27.246 s  <<< FAILURE!
+cucumber.runtime.CucumberException: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//a[@class='bx--header__menu-item'])[3] (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//a[@class='bx--header__menu-item'])[3] (tried for 20 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@class='bx--header__menu-item'])[3]"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51794}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 001d90f594ca1468b003b1b38c39fba6
+*** Element info: {Using=xpath, value=(//a[@class='bx--header__menu-item'])[3]}
+
+testrunners.Testrunners.feature[Bulk Upload feature](5)  Time elapsed: 25.068 s  <<< FAILURE!
+cucumber.runtime.CucumberException: 
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Employer Login"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51908}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2e1ee8234db8f53b2e11f6e522b4dc25
+*** Element info: {Using=link text, value=Employer Login}
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"link text","selector":"Employer Login"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51908}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2e1ee8234db8f53b2e11f6e522b4dc25
+*** Element info: {Using=link text, value=Employer Login}
+
+testrunners.Testrunners.feature[candidate sign in and apply for job](6)  Time elapsed: 21.631 s  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.NullPointerException: null value in entry: url=null
+Caused by: java.lang.NullPointerException: null value in entry: url=null
+
+testrunners.Testrunners.feature[Job Info](7)  Time elapsed: 47.92 s  <<< FAILURE!
+cucumber.runtime.CucumberException: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/section/div[1]/div/header/nav/ul/li[2]/a"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c4e8a39461192cd175b70cb68ecc829
+*** Element info: {Using=xpath, value=/html/body/section/div[1]/div/header/nav/ul/li[2]/a}
+
+testrunners.Testrunners.feature[Edit Job Info](8)  Time elapsed: 68.684 s  <<< FAILURE!
+cucumber.runtime.CucumberException: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/section/div[1]/div/header/nav/ul/li[2]/a"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52105}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f225a80dee2683d5a0b2c1dbd8f43233
+*** Element info: {Using=xpath, value=/html/body/section/div[1]/div/header/nav/ul/li[2]/a}
+
+testrunners.Testrunners.feature[List of Jobs](9)  Time elapsed: 48.122 s  <<< FAILURE!
+cucumber.runtime.CucumberException: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/section/div[1]/div/header/nav/ul/li[2]/a"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52212}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dc5458986dfd1222e9d9a041cc144ecd
+*** Element info: {Using=xpath, value=/html/body/section/div[1]/div/header/nav/ul/li[2]/a}
+
+testrunners.Testrunners.feature[List of Applications](10)  Time elapsed: 48.545 s  <<< FAILURE!
+cucumber.runtime.CucumberException: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/section/div[1]/div/header/nav/ul/li[2]/a"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52320}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f7377f0a831bc57a677a9e324c9baf07
+*** Element info: {Using=xpath, value=/html/body/section/div[1]/div/header/nav/ul/li[2]/a}
+
+testrunners.Testrunners.feature[New Candidate Registration](11)  Time elapsed: 1.001 s  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.NullPointerException: null value in entry: url=null
+Caused by: java.lang.NullPointerException: null value in entry: url=null
+
+testrunners.Testrunners.feature[Create new Job with Basic Information ,collaborators](12)  Time elapsed: 51.009 s  <<< FAILURE!
+cucumber.runtime.CucumberException: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/section/div[1]/div/header/nav/ul/li[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/section/div[1]/div/header/nav/ul/li[2]/a"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52458}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 76c7ef14b7dd141436608d3e472d8f49
+*** Element info: {Using=xpath, value=/html/body/section/div[1]/div/header/nav/ul/li[2]/a}
+

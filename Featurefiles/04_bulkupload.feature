@@ -27,6 +27,6 @@ Feature: Bulk Upload feature
 #Then recruiter selects any job or list of jobs
 #Then recruiter clicks on add tag button and add tag name "tag_a0002"
   
-  #
-#Scenario: close the browser
-#Given close Browser
+  
+Scenario: close the browser
+Given close Browser

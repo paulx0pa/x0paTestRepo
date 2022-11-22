@@ -25,6 +25,7 @@ Then Recruiter chooses Interview type phone round
 Then Recruiter schedules interview by clicking on blue arrow
 Then Recruiter clicks on checkbox to directly send invite
 Then Recruiter chooses Interview date and time
+Then recruiter clicks on end time
 Then Recruiter clicks on schedule an interview button
 Then Recruiter clicks on yes if candidate attended interview
 Then Recruiter clicks on mark this stage as complete
@@ -37,6 +38,7 @@ Then recruiter accepts candidate
  Then recruiter chooses onsite round
  Then Recruiter clicks on checkbox to directly send invite
  Then Recruiter chooses Interview date and time
+ Then recruiter clicks on end time
  Then Recruiter clicks on schedule an interview button
  Then Recruiter clicks on yes if candidate attended interview
 Then Recruiter clicks on mark this stage as complete
@@ -48,6 +50,7 @@ Then again recruiter clicks on add interview stage button
 Then Recruiter chooses Interview type Online
 Then Recruiter clicks on checkbox to directly send invite
 Then Recruiter chooses Interview date and time
+Then recruiter clicks on end time
 When recruiter choose meeting type
 Then Recruiter clicks on schedule an interview button
 Then recruiter clicks on start meeting button
@@ -89,5 +92,5 @@ Then recruiter select required template and submit
 And Recruiter clicks on candidates Timeline
 And Recruiter clicks on candidates Contact Numbers
 
-#Scenario: close the browser
-#Given close Browser
+Scenario: close the browser
+Given close Browser

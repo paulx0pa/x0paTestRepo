@@ -29,25 +29,25 @@ And choose start date of InstituteA "<doj-ins-a>"
 And choose ending date of InstitueA "<yop-ins-a>"
 And Click on Save Button of EduA
 #  DELETE 2Q AND 3Q
-When candidate clicks on delete Qb and Qc
-#When Candidate clicks on edit option of EducationB
-#And enters InstituteB Name "<institute-b>"
-#And choose country of instituteB
-#And choose city of instituteB "<cityofins-b>"
-#And select Qualification from InstituteB "<qualification-b>"
-#And Enter CGPA got in InstituteB "<cgpa-b>"
-#And choose start date of InstituteB "<doj-ins-b>"
-#And choose ending date of InstitueB "<yop-ins-b>"
-#And Click on Save Button of EduB
-#When Candidate clicks on edit option of EducationC
-#And enters InstituteC Name "<institute-c>"
-#And choose country of instituteC
-#And choose city of instituteC "<cityofins-c>"
-#And select Qualification from InstituteC "<qualification-c>"
-#And Enter CGPA got in InstituteC "<cgpa-c>"
-#And choose start date of InstituteC "<doj-ins-c>"
-#And choose ending date of InstitueC "<yop-ins-c>"
-#And Click on Save Button of EduC
+#When candidate clicks on delete Qb and Qc
+When Candidate clicks on edit option of EducationB
+And enters InstituteB Name "<institute-b>"
+And choose country of instituteB
+And choose city of instituteB "<cityofins-b>"
+And select Qualification from InstituteB "<qualification-b>"
+And Enter CGPA got in InstituteB "<cgpa-b>"
+And choose start date of InstituteB "<doj-ins-b>"
+And choose ending date of InstitueB "<yop-ins-b>"
+And Click on Save Button of EduB
+When Candidate clicks on edit option of EducationC
+And enters InstituteC Name "<institute-c>"
+And choose country of instituteC
+And choose city of instituteC "<cityofins-c>"
+And select Qualification from InstituteC "<qualification-c>"
+And Enter CGPA got in InstituteC "<cgpa-c>"
+And choose start date of InstituteC "<doj-ins-c>"
+And choose ending date of InstitueC "<yop-ins-c>"
+And Click on Save Button of EduC
 When candidate adds work experience
 When candidate adds certifications
 Then candidate clicks on add button of project
@@ -63,5 +63,5 @@ Examples:
 |firstname|lastname|country|phoneno   |mail                     |institute-a|cityofins-a |qualification-a  |cgpa-a|doj-ins-a      |yop-ins-a    |institute-b|cityofins-b|qualification-b|cgpa-b|doj-ins-b      |yop-ins-b    |institute-c|cityofins-c|qualification-c              |cgpa-c|doj-ins-c     |yop-ins-c    |project-title|project-discription|
 |uday     |a10     |india  |6300630013|uday@a13.com             |GITE       |Rjy         |Bachelor's Degree|8.6   |12th june,2017 |30 April,2021|Lyola      |Vij        |Diploma        |7.8   |12th june,2015 |30 April,2021|ZPHS       |skp        |High School or Equivalent    |8.2   |12th june,2015|30 April,2021|ERP Project  |Stock Market       | 
 
-#Scenario: close the browser
-#Given close Browser
+Scenario: close the browser
+Given close Browser

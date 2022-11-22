@@ -64,7 +64,7 @@ And recruiter edits no of vacancies "<vacancies>"
 And recruiter edits close date of job "<mdyclosedate>"
 And recruiter edits Job Description "<job discription>"
 And recruiter edits Job Requirements "<job requirements>"
-And recruiter edits primary recruiter "<primary recruiter>"
+#And recruiter edits primary recruiter "<primary recruiter>"
 #And click on submit after editing basic info of job
 When clicks on skills and education section
 When recruiter edits industry field "<industry>"
@@ -77,11 +77,14 @@ And recruiter can edit minimal Annual Salary "<min sal>"
 And recruiter can edit maximum Annual Salary "<max sal>"
 And recruiter edits prescreening questions
 Then recruiter can edit collaborators
+#And edit prescreening settings
+#And edit prescreening shortlist criteria
+#And edit interview setup
 
 Examples:
 
 |office address|job title        |internal code|job status       |country location|city location|skill 1|skill 2|qualification    |job type |min exp|max exp|emp type |vacancies|mdyclosedate|job discription                   |job requirements  |primary recruiter|industry          |keyword|education     |worklocation|working hrs|min sal  |max sal  |
 |Hyderabad     |software Engineer|Job0001      |internal&external|Germany         |haag         |java   |sql    |Bachelor's degree|Permanent|3      |12     |full-time|15       |12/02/2022  |candidate should be expert in java|3 years experience|anand paul       |computer software |java   |BSc Computers |Hyderabad   |8 hrs      | 400000  |1000000  |
 
-#Scenario: close the browser
-#Given close Browser
+Scenario: close the browser
+Given close Browser

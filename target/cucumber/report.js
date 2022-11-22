@@ -1,9 +1,9 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Featurefiles/04_application.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Featurefiles/07_jobinfo.feature");
 formatter.feature({
   "line": 2,
-  "name": "Application info page",
-  "description": "I want to use this to verify login and logout",
-  "id": "application-info-page",
+  "name": "Job Info",
+  "description": "",
+  "id": "job-info",
   "keyword": "Feature",
   "tags": [
     {
@@ -13,20 +13,26 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "line": 6,
-  "name": "verify login and logout functionality",
+  "line": 5,
+  "name": "login to Verify Recruiter Ai Application info",
   "description": "",
-  "id": "application-info-page;verify-login-and-logout-functionality",
+  "id": "job-info;login-to-verify-recruiter-ai-application-info",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 5,
-      "name": "@tag1"
+      "line": 4,
+      "name": "@Login"
     }
   ]
 });
 formatter.step({
+  "comments": [
+    {
+      "line": 6,
+      "value": "#                LOGIN"
+    }
+  ],
   "line": 7,
   "name": "Launch Application using valid URL",
   "keyword": "Given "
@@ -46,413 +52,18 @@ formatter.step({
   "name": "verify captcha and click on Login button",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 11,
-  "name": "Recruiter clicks on source menu",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 12,
-  "name": "Recruiter clicks on all applicants section",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 13,
-  "name": "Recruiter clicks on any Application",
-  "keyword": "Then "
-});
-formatter.step({
-  "comments": [
-    {
-      "line": 14,
-      "value": "#Then Recruiter downloads cv of applicant"
-    },
-    {
-      "line": 15,
-      "value": "#Then Recruiter downloads report of candidate"
-    }
-  ],
-  "line": 16,
-  "name": "Recruiter clicks on candidates Resume",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 17,
-  "name": "Recruiter clicks on candidates Interview Status",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 18,
-  "name": "Recruiter enables autosend pre screening Questions",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 19,
-  "name": "Recruiter shortlists the candidate",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 20,
-  "name": "Recruiter sends shortlist Mail",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 21,
-  "name": "Recruiter choose already have concent option",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 22,
-  "name": "Recruiter clicks on add pre interview stage button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 23,
-  "name": "Recruiter clicks on add interview stage button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 24,
-  "name": "Recruiter chooses Interview type phone round",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 25,
-  "name": "Recruiter schedules interview by clicking on blue arrow",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 26,
-  "name": "Recruiter clicks on checkbox to directly send invite",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 27,
-  "name": "Recruiter chooses Interview date and time",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 28,
-  "name": "Recruiter clicks on schedule an interview button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 29,
-  "name": "Recruiter clicks on yes if candidate attended interview",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 30,
-  "name": "Recruiter clicks on mark this stage as complete",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 31,
-  "name": "recruiter gives feedback on interview",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 32,
-  "name": "recruiter rates candidate",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 33,
-  "name": "recruiter accepts candidate",
-  "keyword": "Then "
-});
-formatter.step({
-  "comments": [
-    {
-      "line": 34,
-      "value": "#       SECOND INTERVIEW ROUND"
-    }
-  ],
-  "line": 35,
-  "name": "Recruiter again clicks on add interview stage button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 36,
-  "name": "Recruiter chooses Interview type Onsite",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 37,
-  "name": "recruiter chooses onsite round",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 38,
-  "name": "Recruiter clicks on checkbox to directly send invite",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 39,
-  "name": "Recruiter chooses Interview date and time",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 40,
-  "name": "Recruiter clicks on schedule an interview button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 41,
-  "name": "Recruiter clicks on yes if candidate attended interview",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 42,
-  "name": "Recruiter clicks on mark this stage as complete",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 43,
-  "name": "recruiter gives feedback on interview",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 44,
-  "name": "recruiter rates candidate",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 45,
-  "name": "recruiter accepts candidate",
-  "keyword": "Then "
-});
-formatter.step({
-  "comments": [
-    {
-      "line": 46,
-      "value": "#     ONLINE INTERVIEW ROUND"
-    }
-  ],
-  "line": 47,
-  "name": "again recruiter clicks on add interview stage button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 48,
-  "name": "Recruiter chooses Interview type Online",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 49,
-  "name": "Recruiter clicks on checkbox to directly send invite",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 50,
-  "name": "Recruiter chooses Interview date and time",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 51,
-  "name": "recruiter choose meeting type",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 52,
-  "name": "Recruiter clicks on schedule an interview button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 53,
-  "name": "recruiter clicks on start meeting button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 54,
-  "name": "Recruiter clicks on yes if candidate attended interview",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 55,
-  "name": "Recruiter clicks on mark this stage as complete",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 56,
-  "name": "recruiter gives feedback on interview",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 57,
-  "name": "recruiter rates candidate",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 58,
-  "name": "recruiter accepts candidate",
-  "keyword": "Then "
-});
-formatter.step({
-  "comments": [
-    {
-      "line": 59,
-      "value": "#     Coding/Whiteboard Assessment"
-    },
-    {
-      "line": 60,
-      "value": "#Then recruiter chooses Coding or Whiteboard Assessment"
-    }
-  ],
-  "line": 61,
-  "name": "recruiter takes final decision on interview",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 62,
-  "name": "recruiter sends offer concent",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 63,
-  "name": "recruiter resends offer concent",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 64,
-  "name": "recruiter skips offer concent",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 65,
-  "name": "recruiter clicks on add offer to add offer details",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 66,
-  "name": "recruiter clicks on send offer added",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 67,
-  "name": "Recruiter clicks on candidates Approvals Table",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 68,
-  "name": "Recruiter clicks on candidates Collaborators",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 69,
-  "name": "Recruiter clicks on candidates Applicant Notes",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 70,
-  "name": "Recruiter clicks on candidates References",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 71,
-  "name": "Recruiter clicks on candidates Offer Information",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 72,
-  "name": "Recruiter clicks on candidates Other Jobs Applied",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 73,
-  "name": "Recruiter clicks on candidates Suitable Jobs",
-  "keyword": "And "
-});
-formatter.step({
-  "comments": [
-    {
-      "line": 74,
-      "value": "#And Recruiter clicks on candidates Chat with candidate"
-    }
-  ],
-  "line": 75,
-  "name": "Recruiter clicks on candidates Post Hire Feedback",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 76,
-  "name": "Recruiter clicks on candidates Onboarding",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 77,
-  "name": "recruiter clicks on Add template",
-  "keyword": "Then "
-});
-formatter.step({
-  "comments": [
-    {
-      "line": 78,
-      "value": "#Then recruiter clicks on create new template"
-    },
-    {
-      "line": 79,
-      "value": "#Then recruiter names the template and submit"
-    },
-    {
-      "line": 80,
-      "value": "#Then recruiter clicks on add stage"
-    },
-    {
-      "line": 81,
-      "value": "#Then recruiter names the stage Instructions to candidate Submit"
-    },
-    {
-      "line": 82,
-      "value": "#Then recruiter clicks on stage dropdown and click on add doc"
-    },
-    {
-      "line": 83,
-      "value": "#Then recruiter gives name to doc and add notes then submit"
-    },
-    {
-      "line": 84,
-      "value": "#Then recruiter clicks on onboarding link available at TLC"
-    },
-    {
-      "line": 85,
-      "value": "#Then recruiter clicks on add candidate"
-    },
-    {
-      "line": 86,
-      "value": "#Then select job select candidate select template"
-    },
-    {
-      "line": 87,
-      "value": "#Then click on invite candidate"
-    }
-  ],
-  "line": 88,
-  "name": "recruiter select required template and submit",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 89,
-  "name": "Recruiter clicks on candidates Timeline",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 90,
-  "name": "Recruiter clicks on candidates Contact Numbers",
-  "keyword": "And "
-});
 formatter.match({
   "location": "Stepdef.launch_Application_using_valid_URL()"
 });
 formatter.result({
-  "duration": 8373105500,
+  "duration": 6532746700,
   "status": "passed"
 });
 formatter.match({
   "location": "Stepdef.accept_cookies_and_choose_login_type()"
 });
 formatter.result({
-  "duration": 3533115500,
+  "duration": 347638100,
   "status": "passed"
 });
 formatter.match({
@@ -469,402 +80,1248 @@ formatter.match({
   "location": "Stepdef.enters_valid_credentials_and(String,String)"
 });
 formatter.result({
-  "duration": 547524200,
+  "duration": 477863400,
   "status": "passed"
 });
 formatter.match({
   "location": "Stepdef.verify_captcha_and_click_on_Login_button()"
 });
 formatter.result({
-  "duration": 78381600,
+  "duration": 79809300,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 13,
+  "name": "Verify create new job functionality with basic information",
+  "description": "",
+  "id": "job-info;verify-create-new-job-functionality-with-basic-information",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 12,
+      "name": "@CreateNewJob"
+    }
+  ]
+});
+formatter.step({
+  "line": 14,
+  "name": "Recruiter clicks on Jobs Menu",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 15,
+  "name": "select create new job section",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
+  "name": "click on Start button of form",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 17,
+  "name": "choose office address \"\u003coffice address\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "add Job Title as \"\u003cjob title\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "add internal code for job \"\u003cinternal code\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "select Job Status as \"\u003cjob status\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 21,
+  "name": "choose candidates from other countries",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 22,
+  "name": "enable rank and file job",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 23,
+  "name": "Select Country Location \"\u003ccountry location\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 24,
+  "name": "Select City location \"\u003ccity location\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 25,
+  "name": "add skills \"\u003cskill 1\u003e\" and \"\u003cskill 2\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 26,
+  "name": "add Qualification \"\u003cqualification\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 27,
+  "name": "add job type in emp details as \"\u003cjob type\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 28,
+  "name": "select minimum experience as \"\u003cmin exp\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 29,
+  "name": "select maximum experience as \"\u003cmax exp\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 30,
+  "name": "choose Employment type as \"\u003cemp type\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "choose no of vacancies \"\u003cvacancies\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 32,
+  "name": "choose close date of job \"\u003cmdyclosedate\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "add Job Description \"\u003cjob discription\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 34,
+  "name": "add Job Requirements \"\u003cjob requirements\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "choose primary recruiter \"\u003cprimary recruiter\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 36,
+  "name": "click on submit button of job",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 37,
+  "name": "click on view job button",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 38,
+      "value": "#   JOB INFO"
+    }
+  ],
+  "line": 39,
+  "name": "recruiter clicks on collaborators section of job posted",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 40,
+  "name": "recruiter clicks on job approvers section of job posted",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 41,
+  "name": "recruiter clicks on work flow automation of job",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 42,
+  "name": "enable this job be open forever until closed manually",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 43,
+  "name": "allow candidates to attach CV while applying for this job",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 44,
+  "name": "enable to ask any pre-screening questions to the candidate",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 45,
+  "name": "enable What other shortlisting criteria would you like to enable",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 46,
+  "name": "enable already have consent from candidates to proceed with the interviews",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 47,
+  "name": "auto send pre interview questions to the candidate asa gives the consent",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 48,
+  "name": "add pre interview stage",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 49,
+      "value": "#And For shortlisted candidates setup assessments and interviews"
+    },
+    {
+      "line": 50,
+      "value": "#And enable already have consent from candidates to proceed with the offer"
+    }
+  ],
+  "line": 51,
+  "name": "recruiter enables assesments and interview setup toggle",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 52,
+  "name": "Recruiter chooses Interview type phone round in job info",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 53,
+  "name": "Recruiter schedules interview by clicking on blue arrow of job info",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 54,
+  "name": "Recruiter clicks on checkbox to directly send invite",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 55,
+  "name": "recruiter clicks on add slot button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 56,
+  "name": "Recruiter chooses Interview date and time",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 57,
+  "name": "recruiter selects end date and time",
+  "keyword": "Then "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 58,
+      "value": "#Then Recruiter clicks on schedule an interview button"
+    }
+  ],
+  "line": 59,
+  "name": "recruiter enables already have consent from candidate",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 60,
+  "name": "recruiter clicks on conversations section of job posted",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 61,
+  "name": "recruiter clicks on ai settings of Job",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 62,
+  "name": "recruiter clicks on hiring goals of job",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 63,
+  "name": "recruiter clicks on consulting fee of job",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 64,
+  "name": "recruiter clicks on meta info of job posted",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 65,
+  "name": "recruiter clicks on timeline of job posted",
+  "keyword": "When "
+});
+formatter.examples({
+  "line": 67,
+  "name": "",
+  "description": "",
+  "id": "job-info;verify-create-new-job-functionality-with-basic-information;",
+  "rows": [
+    {
+      "cells": [
+        "office address",
+        "job title",
+        "internal code",
+        "job status",
+        "country location",
+        "city location",
+        "skill 1",
+        "skill 2",
+        "qualification",
+        "job type",
+        "min exp",
+        "max exp",
+        "emp type",
+        "vacancies",
+        "mdyclosedate",
+        "job discription",
+        "job requirements",
+        "primary recruiter"
+      ],
+      "line": 69,
+      "id": "job-info;verify-create-new-job-functionality-with-basic-information;;1"
+    },
+    {
+      "cells": [
+        "Hyderabad",
+        "software Tester",
+        "Job0001",
+        "internal\u0026external",
+        "India",
+        "Hyderabad",
+        "java",
+        "sql",
+        "Bachelor\u0027s degree",
+        "Permanent",
+        "2",
+        "10",
+        "full-time",
+        "15",
+        "12/02/2022",
+        "candidate should be expert in java",
+        "3 years experience",
+        "anand paul"
+      ],
+      "line": 70,
+      "id": "job-info;verify-create-new-job-functionality-with-basic-information;;2"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.scenario({
+  "line": 70,
+  "name": "Verify create new job functionality with basic information",
+  "description": "",
+  "id": "job-info;verify-create-new-job-functionality-with-basic-information;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@tag"
+    },
+    {
+      "line": 12,
+      "name": "@CreateNewJob"
+    }
+  ]
+});
+formatter.step({
+  "line": 14,
+  "name": "Recruiter clicks on Jobs Menu",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 15,
+  "name": "select create new job section",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
+  "name": "click on Start button of form",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 17,
+  "name": "choose office address \"Hyderabad\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "add Job Title as \"software Tester\"",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "add internal code for job \"Job0001\"",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "select Job Status as \"internal\u0026external\"",
+  "matchedColumns": [
+    3
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 21,
+  "name": "choose candidates from other countries",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 22,
+  "name": "enable rank and file job",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 23,
+  "name": "Select Country Location \"India\"",
+  "matchedColumns": [
+    4
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 24,
+  "name": "Select City location \"Hyderabad\"",
+  "matchedColumns": [
+    5
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 25,
+  "name": "add skills \"java\" and \"sql\"",
+  "matchedColumns": [
+    6,
+    7
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 26,
+  "name": "add Qualification \"Bachelor\u0027s degree\"",
+  "matchedColumns": [
+    8
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 27,
+  "name": "add job type in emp details as \"Permanent\"",
+  "matchedColumns": [
+    9
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 28,
+  "name": "select minimum experience as \"2\"",
+  "matchedColumns": [
+    10
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 29,
+  "name": "select maximum experience as \"10\"",
+  "matchedColumns": [
+    11
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 30,
+  "name": "choose Employment type as \"full-time\"",
+  "matchedColumns": [
+    12
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "choose no of vacancies \"15\"",
+  "matchedColumns": [
+    13
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 32,
+  "name": "choose close date of job \"12/02/2022\"",
+  "matchedColumns": [
+    14
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "add Job Description \"candidate should be expert in java\"",
+  "matchedColumns": [
+    15
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 34,
+  "name": "add Job Requirements \"3 years experience\"",
+  "matchedColumns": [
+    16
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "choose primary recruiter \"anand paul\"",
+  "matchedColumns": [
+    17
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 36,
+  "name": "click on submit button of job",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 37,
+  "name": "click on view job button",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 38,
+      "value": "#   JOB INFO"
+    }
+  ],
+  "line": 39,
+  "name": "recruiter clicks on collaborators section of job posted",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 40,
+  "name": "recruiter clicks on job approvers section of job posted",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 41,
+  "name": "recruiter clicks on work flow automation of job",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 42,
+  "name": "enable this job be open forever until closed manually",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 43,
+  "name": "allow candidates to attach CV while applying for this job",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 44,
+  "name": "enable to ask any pre-screening questions to the candidate",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 45,
+  "name": "enable What other shortlisting criteria would you like to enable",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 46,
+  "name": "enable already have consent from candidates to proceed with the interviews",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 47,
+  "name": "auto send pre interview questions to the candidate asa gives the consent",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 48,
+  "name": "add pre interview stage",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 49,
+      "value": "#And For shortlisted candidates setup assessments and interviews"
+    },
+    {
+      "line": 50,
+      "value": "#And enable already have consent from candidates to proceed with the offer"
+    }
+  ],
+  "line": 51,
+  "name": "recruiter enables assesments and interview setup toggle",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 52,
+  "name": "Recruiter chooses Interview type phone round in job info",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 53,
+  "name": "Recruiter schedules interview by clicking on blue arrow of job info",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 54,
+  "name": "Recruiter clicks on checkbox to directly send invite",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 55,
+  "name": "recruiter clicks on add slot button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 56,
+  "name": "Recruiter chooses Interview date and time",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 57,
+  "name": "recruiter selects end date and time",
+  "keyword": "Then "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 58,
+      "value": "#Then Recruiter clicks on schedule an interview button"
+    }
+  ],
+  "line": 59,
+  "name": "recruiter enables already have consent from candidate",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 60,
+  "name": "recruiter clicks on conversations section of job posted",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 61,
+  "name": "recruiter clicks on ai settings of Job",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 62,
+  "name": "recruiter clicks on hiring goals of job",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 63,
+  "name": "recruiter clicks on consulting fee of job",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 64,
+  "name": "recruiter clicks on meta info of job posted",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 65,
+  "name": "recruiter clicks on timeline of job posted",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_Jobs_Menu()"
+});
+formatter.result({
+  "duration": 1893577600,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_source_menu()"
+  "location": "Stepdef.select_create_new_job_section()"
 });
 formatter.result({
-  "duration": 10153147500,
+  "duration": 438285300,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_all_applicants_section()"
+  "location": "Stepdef.click_on_Start_button_of_form()"
 });
 formatter.result({
-  "duration": 3345803700,
+  "duration": 349150200,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_any_Application()"
+  "arguments": [
+    {
+      "val": "Hyderabad",
+      "offset": 23
+    }
+  ],
+  "location": "Stepdef.choose_office_address(String)"
 });
 formatter.result({
-  "duration": 17651786100,
+  "duration": 7575859000,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Resume()"
+  "arguments": [
+    {
+      "val": "software Tester",
+      "offset": 18
+    }
+  ],
+  "location": "Stepdef.add_Job_Title_as(String)"
 });
 formatter.result({
-  "duration": 11212819700,
+  "duration": 436673100,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Interview_Status()"
+  "arguments": [
+    {
+      "val": "Job0001",
+      "offset": 27
+    }
+  ],
+  "location": "Stepdef.add_internal_code_for_job(String)"
 });
 formatter.result({
-  "duration": 232017200,
+  "duration": 187082800,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdef.recruiter_enables_autosend_pre_screening_Questions()"
+  "arguments": [
+    {
+      "val": "internal\u0026external",
+      "offset": 22
+    }
+  ],
+  "location": "Stepdef.select_Job_Status_as(String)"
 });
 formatter.result({
-  "duration": 4511620400,
+  "duration": 282756900,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdef.recruiter_shortlists_the_candidate()"
+  "location": "Stepdef.choose_candidates_from_other_countries()"
 });
 formatter.result({
-  "duration": 4152168400,
+  "duration": 94971500,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdef.recruiter_sends_shortlist_Mail()"
+  "location": "Stepdef.enable_rank_and_file_job()"
 });
 formatter.result({
-  "duration": 10338550900,
+  "duration": 134911200,
   "status": "passed"
 });
 formatter.match({
-  "location": "Stepdef.recruiter_choose_already_have_concent_option()"
+  "arguments": [
+    {
+      "val": "India",
+      "offset": 25
+    }
+  ],
+  "location": "Stepdef.select_Country_Location(String)"
 });
 formatter.result({
-  "duration": 10304122900,
-  "error_message": "org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element \u003cbutton id\u003d\"have-consent-btn\" tabindex\u003d\"0\" class\u003d\"ml-md-2 xpa-min-width-100 justify-content-center mb-2 mb-md-0 bx--btn bx--btn--sm bx--btn--secondary\" type\u003d\"button\"\u003e...\u003c/button\u003e is not clickable at point (717, 563). Other element would receive the click: \u003cdiv class\u003d\"bx--loading-overlay\"\u003e...\u003c/div\u003e\n  (Session info: chrome\u003d107.0.5304.107)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.3\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: d1b157515355d1a5472d66b151d078ac\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat stepdef.Stepdef.recruiter_choose_already_have_concent_option(Stepdef.java:1364)\r\n\tat ✽.Then Recruiter choose already have concent option(Featurefiles/04_application.feature:21)\r\n",
+  "duration": 549986400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Hyderabad",
+      "offset": 22
+    }
+  ],
+  "location": "Stepdef.select_City_location(String)"
+});
+formatter.result({
+  "duration": 600882000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "java",
+      "offset": 12
+    },
+    {
+      "val": "sql",
+      "offset": 23
+    }
+  ],
+  "location": "Stepdef.add_skills_and(String,String)"
+});
+formatter.result({
+  "duration": 673547900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Bachelor\u0027s degree",
+      "offset": 19
+    }
+  ],
+  "location": "Stepdef.add_Qualification(String)"
+});
+formatter.result({
+  "duration": 471330300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Permanent",
+      "offset": 32
+    }
+  ],
+  "location": "Stepdef.add_job_type_in_emp_details_as(String)"
+});
+formatter.result({
+  "duration": 267470800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 30
+    }
+  ],
+  "location": "Stepdef.select_minimum_experience_as(String)"
+});
+formatter.result({
+  "duration": 252289500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "10",
+      "offset": 30
+    }
+  ],
+  "location": "Stepdef.select_maximum_experience_as(String)"
+});
+formatter.result({
+  "duration": 170867100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "full-time",
+      "offset": 27
+    }
+  ],
+  "location": "Stepdef.choose_Employment_type_as(String)"
+});
+formatter.result({
+  "duration": 322044900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "15",
+      "offset": 24
+    }
+  ],
+  "location": "Stepdef.choose_no_of_vacancies(String)"
+});
+formatter.result({
+  "duration": 260768400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12/02/2022",
+      "offset": 26
+    }
+  ],
+  "location": "Stepdef.choose_close_date_of_job(String)"
+});
+formatter.result({
+  "duration": 403789600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "candidate should be expert in java",
+      "offset": 21
+    }
+  ],
+  "location": "Stepdef.add_Job_Description(String)"
+});
+formatter.result({
+  "duration": 844112100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3 years experience",
+      "offset": 22
+    }
+  ],
+  "location": "Stepdef.add_Job_Requirements(String)"
+});
+formatter.result({
+  "duration": 486104800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "anand paul",
+      "offset": 26
+    }
+  ],
+  "location": "Stepdef.choose_primary_recruiter(String)"
+});
+formatter.result({
+  "duration": 221424300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.click_on_submit_button_of_job()"
+});
+formatter.result({
+  "duration": 227529100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.click_on_view_job_button()"
+});
+formatter.result({
+  "duration": 5481289300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_collaborators_section_of_job_posted()"
+});
+formatter.result({
+  "duration": 17367848600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_job_approvers_section_of_job_posted()"
+});
+formatter.result({
+  "duration": 3155585700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_work_flow_automation_of_job()"
+});
+formatter.result({
+  "duration": 2471578100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.enable_this_job_be_open_forever_until_closed_manually()"
+});
+formatter.result({
+  "duration": 3002470000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.allow_candidates_to_attach_CV_while_applying_for_this_job()"
+});
+formatter.result({
+  "duration": 3001927200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.enable_to_ask_any_pre_screening_questions_to_the_candidate()"
+});
+formatter.result({
+  "duration": 18071685600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.enable_What_other_shortlisting_criteria_would_you_like_to_enable()"
+});
+formatter.result({
+  "duration": 3916464800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.enable_already_have_consent_from_candidates_to_proceed_with_the_interviews()"
+});
+formatter.result({
+  "duration": 2156646300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.auto_send_pre_interview_questions_to_the_candidate_asa_gives_the_consent()"
+});
+formatter.result({
+  "duration": 2131323800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.add_pre_interview_stage()"
+});
+formatter.result({
+  "duration": 8891249300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_enables_assesments_and_interview_setup_toggle()"
+});
+formatter.result({
+  "duration": 2234531800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_chooses_Interview_type_phone_round_in_job_info()"
+});
+formatter.result({
+  "duration": 2661567200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_schedules_interview_by_clicking_on_blue_arrow_of_job_info()"
+});
+formatter.result({
+  "duration": 3236504800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_checkbox_to_directly_send_invite()"
+});
+formatter.result({
+  "duration": 204685000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_add_slot_button()"
+});
+formatter.result({
+  "duration": 2172559900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_chooses_Interview_date_and_time()"
+});
+formatter.result({
+  "duration": 2506704800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_selects_end_date_and_time()"
+});
+formatter.result({
+  "duration": 5357718200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_enables_already_have_consent_from_candidate()"
+});
+formatter.result({
+  "duration": 4394674200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_conversations_section_of_job_posted()"
+});
+formatter.result({
+  "duration": 7332048800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_ai_settings_of_Job()"
+});
+formatter.result({
+  "duration": 321236400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_hiring_goals_of_job()"
+});
+formatter.result({
+  "duration": 2028357200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_consulting_fee_of_job()"
+});
+formatter.result({
+  "duration": 191687800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_meta_info_of_job_posted()"
+});
+formatter.result({
+  "duration": 19076594700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Stepdef.recruiter_clicks_on_timeline_of_job_posted()"
+});
+formatter.result({
+  "duration": 237662500,
+  "error_message": "org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document\n  (Session info: chrome\u003d107.0.5304.107)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.3\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52679}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: dfac527b477474b384299d7e2a0b7054\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat stepdef.Stepdef.recruiter_clicks_on_timeline_of_job_posted(Stepdef.java:2879)\r\n\tat ✽.When recruiter clicks on timeline of job posted(Featurefiles/07_jobinfo.feature:65)\r\n",
   "status": "failed"
 });
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_add_pre_interview_stage_button()"
+formatter.scenario({
+  "comments": [
+    {
+      "line": 73,
+      "value": "#Given Recruiter clicks on Jobs Menu"
+    },
+    {
+      "line": 74,
+      "value": "#Then click on Job postings link"
+    },
+    {
+      "line": 75,
+      "value": "#Then recruiter clicks on any job"
+    },
+    {
+      "line": 76,
+      "value": "#When recruiter clicks on clone job"
+    },
+    {
+      "line": 77,
+      "value": "#When recruiter clicks on email this job \"job@id1.com\" and \"jobcc@id1.com\""
+    },
+    {
+      "line": 78,
+      "value": "#When recruiter clicks on transfer ownership of the job"
+    },
+    {
+      "line": 79,
+      "value": "#           edit job"
+    },
+    {
+      "line": 82,
+      "value": "#Scenario: Verify Recruiter Ai Application List"
+    },
+    {
+      "line": 83,
+      "value": "#When recruiter clicks on collaborators section of job posted"
+    },
+    {
+      "line": 84,
+      "value": "#When recruiter clicks on job approvers section of job posted"
+    },
+    {
+      "line": 85,
+      "value": "#When recruiter clicks on work flow automation of job"
+    },
+    {
+      "line": 86,
+      "value": "#Then recruiter enables assesments and interview setup toggle"
+    },
+    {
+      "line": 87,
+      "value": "#Then Recruiter chooses Interview type phone round in job info"
+    },
+    {
+      "line": 88,
+      "value": "#Then Recruiter schedules interview by clicking on blue arrow of job info"
+    },
+    {
+      "line": 89,
+      "value": "#Then Recruiter clicks on checkbox to directly send invite"
+    },
+    {
+      "line": 90,
+      "value": "#Then recruiter clicks on add slot button"
+    },
+    {
+      "line": 91,
+      "value": "#Then Recruiter chooses Interview date and time"
+    },
+    {
+      "line": 92,
+      "value": "#Then recruiter selects end date and time"
+    },
+    {
+      "line": 93,
+      "value": "#Then Recruiter clicks on schedule an interview button"
+    },
+    {
+      "line": 94,
+      "value": "#Then recruiter enables already have consent from candidate"
+    },
+    {
+      "line": 95,
+      "value": "#When recruiter clicks on conversations section of job posted"
+    },
+    {
+      "line": 96,
+      "value": "#When recruiter clicks on ai settings of Job"
+    },
+    {
+      "line": 97,
+      "value": "#When recruiter clicks on hiring goals of job"
+    },
+    {
+      "line": 98,
+      "value": "#When recruiter clicks on consulting fee of job"
+    },
+    {
+      "line": 99,
+      "value": "#When recruiter clicks on meta info of job posted"
+    },
+    {
+      "line": 100,
+      "value": "#When recruiter clicks on timeline of job posted"
+    }
+  ],
+  "line": 102,
+  "name": "close the browser",
+  "description": "",
+  "id": "job-info;close-the-browser",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_add_interview_stage_button()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_chooses_Interview_type()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_schedules_interview_by_clicking_on_blue_arrow()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_checkbox_to_directly_send_invite()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_chooses_Interview_date_and_time()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_schedule_an_interview_button()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_yes_if_candidate_attended_interview()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_mark_this_stage_as_complete()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_gives_feedback_on_interview()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_rates_candidate()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_accepts_candidate()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_again_clicks_on_add_interview_stage_button()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_chooses_Interview_type_Onsite()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_chooses_onsite_round()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_checkbox_to_directly_send_invite()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_chooses_Interview_date_and_time()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_schedule_an_interview_button()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_yes_if_candidate_attended_interview()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_mark_this_stage_as_complete()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_gives_feedback_on_interview()"
-});
-formatter.result({
-  "status": "skipped"
+formatter.step({
+  "line": 103,
+  "name": "close Browser",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "Stepdef.recruiter_rates_candidate()"
+  "location": "Stepdef.close_Browser()"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_accepts_candidate()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.again_recruiter_clicks_on_add_interview_stage_button()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_chooses_Interview_type_Online()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_checkbox_to_directly_send_invite()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_chooses_Interview_date_and_time()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_choose_meeting_type()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_schedule_an_interview_button()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_start_meeting_button()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_yes_if_candidate_attended_interview()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_mark_this_stage_as_complete()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_gives_feedback_on_interview()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_rates_candidate()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_accepts_candidate()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_takes_final_decision_on_interview()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_sends_offer_concent()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_resends_offer_concent()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_skips_offer_concent()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_add_offer_to_add_offer_details()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_send_offer_added()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Approvals_Table()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Collaborators()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Applicant_Notes()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_References()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Offer_Information()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Other_Jobs_Applied()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Suitable_Jobs()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Post_Hire_Feedback()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Onboarding()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_Add_template()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_select_required_template_and_submit()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Timeline()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Stepdef.recruiter_clicks_on_candidates_Contact_Numbers()"
-});
-formatter.result({
-  "status": "skipped"
+  "duration": 475908100,
+  "status": "passed"
 });
 });

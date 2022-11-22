@@ -20,7 +20,7 @@ Then verify captcha and click on Login button
 
 Examples:
 |firstname|lastname|mail                |password    |conformpassword |
-|Praveen  |kumar   |Ex7905066@a040a.com |akshay@0001 |akshay@0001     |
+|Praveen  |kumar   |Ex7905068@a054a.com |akshay@0001 |akshay@0001     |
 
-#Scenario: close the browser
-#Given close Browser
+Scenario: close the browser
+Given close Browser

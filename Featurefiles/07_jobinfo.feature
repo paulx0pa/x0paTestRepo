@@ -39,6 +39,15 @@ And click on view job button
 When recruiter clicks on collaborators section of job posted
 When recruiter clicks on job approvers section of job posted
 When recruiter clicks on work flow automation of job
+And enable this job be open forever until closed manually
+And allow candidates to attach CV while applying for this job
+And enable to ask any pre-screening questions to the candidate
+And enable What other shortlisting criteria would you like to enable
+And enable already have consent from candidates to proceed with the interviews
+And auto send pre interview questions to the candidate asa gives the consent
+And add pre interview stage
+#And For shortlisted candidates setup assessments and interviews
+#And enable already have consent from candidates to proceed with the offer
 Then recruiter enables assesments and interview setup toggle
 Then Recruiter chooses Interview type phone round in job info
 Then Recruiter schedules interview by clicking on blue arrow of job info
@@ -90,5 +99,5 @@ Examples:
 #When recruiter clicks on meta info of job posted
 #When recruiter clicks on timeline of job posted
 
-#Scenario: close the browser
-#Given close Browser
+Scenario: close the browser
+Given close Browser
