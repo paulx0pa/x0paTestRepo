@@ -17,10 +17,9 @@ And candidate enters submit button of registration
 Then candidate clicks on click here to login
 When enters valid credentials "<mail>" and "<password>"
 Then verify captcha and click on Login button
-
+Given close Browser
 Examples:
 |firstname|lastname|mail                |password    |conformpassword |
-|Praveen  |kumar   |Ex7905068@a054a.com |akshay@0001 |akshay@0001     |
+|Praveen  |kumar   |Ex790c425@a005a.com |akshay@0001 |akshay@0001     |
 
-Scenario: close the browser
-Given close Browser
+#Scenario: close the browser

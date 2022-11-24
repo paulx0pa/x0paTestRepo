@@ -69,13 +69,16 @@ And Click on Save button of project
 #And signed in Candidate click on Submit Button
 When Candidate click on next Button
 And candidate rate for skills
+#And Candidate click on next Button
+#And candidate answers prescreening questions
 And candidate click on submit button of Application
+Given close Browser
 
 Examples:
 |firstname|lastname|country|phoneno   |mail             |password   |institute-a|cityofins-a |qualification-a  |cgpa-a|doj-ins-a      |yop-ins-a    |institute-b|cityofins-b|qualification-b|cgpa-b|doj-ins-b      |yop-ins-b    |institute-c|cityofins-c|qualification-c              |cgpa-c|doj-ins-c     |yop-ins-c    |project-title|project-discription|
-|Thomas   |light   |india  |2434502458|matrix3x58@in.com|XPAStag0$  | GITE       |Rjy        |Bachelor's Degree|8.6   |12th june,2017 |30 April,2021|Lyola      |Vij        |Diploma        |7.8   |12th june,2015 |30 April,2021|ZPHS       |skp        |High School or Equivalent    |8.2   |12th june,2015|30 April,2021|ERP Project  |Stock Market       | 
+|Thomas   |light   |india  |9434502125|primit3x25@in.com|XPAStag0$  | GITE       |Rjy        |Bachelor's Degree|8.6   |12th june,2017 |30 April,2021|Lyola      |Vij        |Diploma        |7.8   |12th june,2015 |30 April,2021|ZPHS       |skp        |High School or Equivalent    |8.2   |12th june,2015|30 April,2021|ERP Project  |Stock Market       | 
 
-Scenario: close the browser
-Given close Browser
+#Scenario: close the browser
+#Given close Browser
 
 

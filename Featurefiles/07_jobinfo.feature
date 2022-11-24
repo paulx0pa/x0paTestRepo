@@ -63,6 +63,7 @@ When recruiter clicks on hiring goals of job
 When recruiter clicks on consulting fee of job
 When recruiter clicks on meta info of job posted
 When recruiter clicks on timeline of job posted
+Given close Browser
 
 Examples:
 
@@ -99,5 +100,5 @@ Examples:
 #When recruiter clicks on meta info of job posted
 #When recruiter clicks on timeline of job posted
 
-Scenario: close the browser
-Given close Browser
+#Scenario: close the browser
+#Given close Browser

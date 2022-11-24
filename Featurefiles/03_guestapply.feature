@@ -57,11 +57,14 @@ And Candidate selects project start and end dates
 And Click on Save button of project
 And Candidate click on next Button
 And candidate rate for skills
+#And Candidate click on next Button
+#And candidate answers prescreening questions
 And candidate click on submit button of Application
+Given close Browser
 
 Examples:
 |firstname|lastname|country|phoneno   |mail                     |institute-a|cityofins-a |qualification-a  |cgpa-a|doj-ins-a      |yop-ins-a    |institute-b|cityofins-b|qualification-b|cgpa-b|doj-ins-b      |yop-ins-b    |institute-c|cityofins-c|qualification-c              |cgpa-c|doj-ins-c     |yop-ins-c    |project-title|project-discription|
 |uday     |a10     |india  |6300630013|uday@a13.com             |GITE       |Rjy         |Bachelor's Degree|8.6   |12th june,2017 |30 April,2021|Lyola      |Vij        |Diploma        |7.8   |12th june,2015 |30 April,2021|ZPHS       |skp        |High School or Equivalent    |8.2   |12th june,2015|30 April,2021|ERP Project  |Stock Market       | 
 
-Scenario: close the browser
-Given close Browser
+#Scenario: close the browser
+#Given close Browser

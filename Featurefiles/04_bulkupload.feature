@@ -12,8 +12,9 @@ Feature: Bulk Upload feature
   #BULK UPLOAD
   Given Recruiter clicks on Jobs Menu 
   Then select create new job section
-  Then Recruiter clicks on download bulk upload template
+  #Then Recruiter clicks on download bulk upload template
   When recruiter clicks on upload button of Bulk Jobs
+  Given close Browser
   # JOB LIST PAGE
   #When recruiter selects Job or jobs using Checkbox
   #Then recruiter clicks on Batch actions button
@@ -27,6 +28,6 @@ Feature: Bulk Upload feature
 #Then recruiter selects any job or list of jobs
 #Then recruiter clicks on add tag button and add tag name "tag_a0002"
   
-  
-Scenario: close the browser
-Given close Browser
+  #
+#Scenario: close the browser
+#Given close Browser

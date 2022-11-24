@@ -43,53 +43,30 @@ And enter minimal Annual Salary "<min sal>"
 And enter maximum Annual Salary "<max sal>"
 Given recruiter clicks on pre screening questionaire 
 When recruiter clicks on select questions button
-#When recruiter clicks on Add Question button
-#And recruiter adds essay text type question
-#And recruiter adds numeric type question
-#And recruiter adds yes or no question
+When recruiter clicks on Add Question button
+And recruiter adds essay text type question
+And recruiter adds numeric type question
+And recruiter adds yes or no question
 And Select questions from displayed List
 Then click on Add Selected option
 Given recruiter Clicks on Attachments section
 When recruiter uploads Attachment file
 Then click on submit after uploading file
+And click on view job button
+Then copy the job link
+Then click on back button
+Then recruiter clicks on add collaborators button
+When recruiter set up pre screening questions
+Then recruiter set up passing points
+Then recruiter set up Interview
+Given close Browser
+
 Examples:
 
 |office address|job title        |internal code|job status       |country location|city location|skill 1|skill 2|qualification    |job type |min exp|max exp|emp type |vacancies|mdyclosedate|job discription                   |job requirements  |primary recruiter|industry          |keyword|education     |worklocation|working hrs|min sal  |max sal  |
 |Hyderabad     |software Engineer|Job0001      |internal&external|India           |Hyderabad    |java   |sql    |Bachelor's degree|Permanent|2      |10     |full-time|15       |12/02/2022  |candidate should be expert in java|3 years experience|anand paul       |computer software |java   |BSc Computers |Hyderabad   |8 hrs      | 400000  |1000000  |
 
 
-#@Skills&Education
-#Scenario Outline:verify recruiter able to add Skills and Education
 
-
-
-
-#@AdditionalInformation
-#Scenario:verify recruiter able to add AdditionalInformation
-
-
-#@PrescreeningQuestions
-#Scenario: verify recruiter able to choose pre screening questions
-#Given recruiter clicks on pre screening questionaire 
-#When recruiter clicks on select questions button
-#When recruiter clicks on Add Question button
-#And recruiter adds essay text type question
-#And recruiter adds numeric type question
-#And recruiter adds yes or no question
-#And recruiter adds multiple choice question
-#And recruiter adds weighted choice question
-#And recruiter adds file type question
-#And Select questions from displayed List
-#Then click on Add Selected option
-
-
-#@Attachments
-#Scenario: Verify Attachments functionality
-#Given recruiter Clicks on Attachments section
-#When recruiter uploads Attachment file
-#Then click on submit after uploading file
-#And click on view job button
-#Then copy the job link
-#
-Scenario: close the browser
-Given close Browser
+#Scenario: close the browser
+#Given close Browser

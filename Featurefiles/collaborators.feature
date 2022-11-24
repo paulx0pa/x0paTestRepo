@@ -38,11 +38,13 @@ Then recruiter clicks on add collaborators button
 When recruiter set up pre screening questions
 Then recruiter set up passing points
 Then recruiter set up Interview
+Given close Browser
+
 Examples:
 
 |office address|job title        |internal code|job status       |country location|city location|skill 1|skill 2|qualification    |job type |min exp|max exp|emp type |vacancies|mdyclosedate|job discription                   |job requirements  |primary recruiter|
 |Hyderabad     |software Tester  |Job0001      |internal&external|India           |Hyderabad    |java   |sql    |Bachelor's degree|Permanent|2      |10     |full-time|15       |12/02/2022  |candidate should be expert in java|3 years experience|anand paul       |
 
 
-Scenario: close the browser
-Given close Browser
+#Scenario: close the browser
+#Given close Browser

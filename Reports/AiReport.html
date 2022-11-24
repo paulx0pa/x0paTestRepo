@@ -34,7 +34,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -48,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Nov 22, 2022 11:34:26 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Nov 24, 2022 12:27:29 PM</span>
 				</a>
 			</li>
 			<li>
@@ -74,7 +73,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -88,8 +86,8 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@tag</a></li>
-					<li><a href='#'>@Login</a></li>
-					<li><a href='#'>@CreateNewJob</a></li>
+					<li><a href='#'>@tag1</a></li>
+					<li><a href='#'>@Logout</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -137,10 +135,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -152,10 +150,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -167,10 +165,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='98.113%'><span class='strong'>52</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='1.887%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -184,21 +182,21 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Job Info</span>
-						<span class='test-time'>Nov 22, 2022 11:34:26 AM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>Login and Logout feature</span>
+						<span class='test-time'>Nov 24, 2022 12:27:29 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
-		<span class='category label white-text'>@Login</span>
+		<span class='category label white-text'>@tag1</span>
 	</div>
-	<span class='duration right label'>0h 0m 7s+504ms</span>
+	<span class='duration right label'>0h 0m 13s+556ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
-		<span class="desc-text">login to Verify Recruiter Ai Application info</span>
+		<span class="desc-text">verify login and logout functionality</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node given pass' status='pass'>
@@ -235,250 +233,25 @@
 		</li>
 	</ul>
 </div>
-<div class='scenariooutline node' test-id='7' status='fail'>
-	<span class='duration right label'>0h 2m 18s+868ms</span>
-	<div class='desc'>
-		<b>ScenarioOutline</b>
-		<span class="desc-text">Verify create new job functionality with basic information</span>
+<div class='scenario node' test-id='7' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Logout</span>
 	</div>
-	<ul class='steps'>
-		<li test-id='8' class='node scenario fail' status='fail'>
-			<div class='category-list'>
-				<span class='category label white-text'>@tag</span>
-				<span class='category label white-text'>@CreateNewJob</span>
-			</div>
-			
-			<b>Scenario</b>
-			
-			<span class="bdd-step-name">Verify create new job functionality with basic information</span>
-			
-				<ul class='steps'>
-					<li test-id='9' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given Recruiter clicks on Jobs Menu</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='10' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then select create new job section</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='11' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When click on Start button of form</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='12' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And choose office address "Hyderabad"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='13' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And add Job Title as "software Tester"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='14' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And add internal code for job "Job0001"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='15' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And select Job Status as "internal&external"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='16' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And choose candidates from other countries</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='17' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And enable rank and file job</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='18' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Select Country Location "India"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='19' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Select City location "Hyderabad"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='20' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And add skills "java" and "sql"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='21' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And add Qualification "Bachelor's degree"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='22' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And add job type in emp details as "Permanent"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='23' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And select minimum experience as "2"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='24' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And select maximum experience as "10"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='25' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And choose Employment type as "full-time"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='26' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And choose no of vacancies "15"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='27' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And choose close date of job "12/02/2022"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='28' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And add Job Description "candidate should be expert in java"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='29' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And add Job Requirements "3 years experience"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='30' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And choose primary recruiter "anand paul"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='31' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And click on submit button of job</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='32' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And click on view job button</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='33' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When recruiter clicks on collaborators section of job posted</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='34' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When recruiter clicks on job approvers section of job posted</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='35' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When recruiter clicks on work flow automation of job</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='36' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And enable this job be open forever until closed manually</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='37' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And allow candidates to attach CV while applying for this job</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='38' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And enable to ask any pre-screening questions to the candidate</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='39' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And enable What other shortlisting criteria would you like to enable</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='40' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And enable already have consent from candidates to proceed with the interviews</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='41' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And auto send pre interview questions to the candidate asa gives the consent</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='42' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And add pre interview stage</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='43' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then recruiter enables assesments and interview setup toggle</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='44' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then Recruiter chooses Interview type phone round in job info</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='45' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then Recruiter schedules interview by clicking on blue arrow of job info</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='46' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then Recruiter clicks on checkbox to directly send invite</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='47' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then recruiter clicks on add slot button</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='48' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then Recruiter chooses Interview date and time</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='49' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then recruiter selects end date and time</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='50' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then recruiter enables already have consent from candidate</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='51' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When recruiter clicks on conversations section of job posted</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='52' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When recruiter clicks on ai settings of Job</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='53' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When recruiter clicks on hiring goals of job</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='54' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When recruiter clicks on consulting fee of job</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='55' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When recruiter clicks on meta info of job posted</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='56' class='node when fail' status='fail'><b>When</b>
-						<span class="bdd-step-name">When recruiter clicks on timeline of job posted</span>
-							<div class='pre'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=107.0.5304.107)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52679}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dfac527b477474b384299d7e2a0b7054
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at stepdef.Stepdef.recruiter_clicks_on_timeline_of_job_posted(Stepdef.java:2879)
-	at ✽.When recruiter clicks on timeline of job posted(Featurefiles/07_jobinfo.feature:65)
-</pre></div>
-					</li>
-				</ul>
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='57' status='pass'>
-	<span class='duration right label'>0h 0m 0s+488ms</span>
+	<span class='duration right label'>0h 0m 9s+163ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
-		<span class="desc-text">close the browser</span>
+		<span class="desc-text">Verify Recruiter Ai Logout Functionality</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='58' class='node given pass' status='pass'>
+		<li test-id='8' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Click on Logout Button</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='9' class='node given pass' status='pass'>
 			
 			<b>Given</b>
 			
@@ -544,13 +317,13 @@ Session ID: dfac527b477474b384299d7e2a0b7054
 					<div class='category-heading'>
 						<span class='category-name'>@tag</span>
 						<span class='category-status right'>
-							<span class='label fail'>2</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 					
@@ -565,14 +338,9 @@ Session ID: dfac527b477474b384299d7e2a0b7054
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 22, 2022 11:34:26 AM</td>
-										<td class='linked' test-id='1'>Job Info</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Nov 22, 2022 11:34:34 AM</td>
-										<td class='linked' test-id='8'>Job Info.Verify create new job functionality with basic information.Verify create new job functionality with basic information</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Nov 24, 2022 12:27:29 PM</td>
+										<td class='linked' test-id='1'>Login and Logout feature</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -581,7 +349,7 @@ Session ID: dfac527b477474b384299d7e2a0b7054
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Login</span>
+						<span class='category-name'>@tag1</span>
 						<span class='category-status right'>
 							<span class='label pass'>1</span>
 						</span>
@@ -604,8 +372,8 @@ Session ID: dfac527b477474b384299d7e2a0b7054
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 22, 2022 11:34:26 AM</td>
-										<td class='linked' test-id='2'>Job Info.login to Verify Recruiter Ai Application info</td>
+										<td>Nov 24, 2022 12:27:29 PM</td>
+										<td class='linked' test-id='2'>Login and Logout feature.verify login and logout functionality</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -615,15 +383,15 @@ Session ID: dfac527b477474b384299d7e2a0b7054
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@CreateNewJob</span>
+						<span class='category-name'>@Logout</span>
 						<span class='category-status right'>
-							<span class='label fail'>1</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -638,9 +406,9 @@ Session ID: dfac527b477474b384299d7e2a0b7054
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 22, 2022 11:34:34 AM</td>
-										<td class='linked' test-id='8'>Job Info.Verify create new job functionality with basic information.Verify create new job functionality with basic information</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Nov 24, 2022 12:27:42 PM</td>
+										<td class='linked' test-id='7'>Login and Logout feature.Verify Recruiter Ai Logout Functionality</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -659,89 +427,6 @@ Session ID: dfac527b477474b384299d7e2a0b7054
 	</div>
 </div>
 <!-- category view -->
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>org.openqa.selenium.StaleElementReferenceException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Nov 22, 2022 11:36:52 AM</td>
-                                                        <td class='linked' test-id='56'>Job Info.Verify create new job functionality with basic information.Verify create new job functionality with basic information.When recruiter clicks on timeline of job posted</td>
-                                                        <td><pre><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=107.0.5304.107)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PAUL', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52679}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dfac527b477474b384299d7e2a0b7054
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at stepdef.Stepdef.recruiter_clicks_on_timeline_of_job_posted(Stepdef.java:2879)
-	at ✽.When recruiter clicks on timeline of job posted(Featurefiles/07_jobinfo.feature:65)
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -757,31 +442,31 @@ Session ID: dfac527b477474b384299d7e2a0b7054
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>53</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nov 22, 2022 11:34:26 AM</div>
+					<div class='panel-lead'>Nov 24, 2022 12:27:29 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nov 22, 2022 11:36:53 AM</div>
+			 		<div class='panel-lead'>Nov 24, 2022 12:27:52 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>146,954ms</div>
+					<div class='panel-lead'>22,880ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -797,20 +482,20 @@ Session ID: dfac527b477474b384299d7e2a0b7054
 						</tr>
 						<tr>
 							<td>@tag</td>
-							<td>0</td>
-							<td>2</td>
-							<td>0</td>
-						</tr>
-						<tr>
-							<td>@Login</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
 						</tr>
 						<tr>
-							<td>@CreateNewJob</td>
-							<td>0</td>
+							<td>@tag1</td>
 							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@Logout</td>
+							<td>1</td>
+							<td>0</td>
 							<td>0</td>
 						</tr>
 					</table>
@@ -826,31 +511,31 @@ Session ID: dfac527b477474b384299d7e2a0b7054
 
 		<script>
 			var statusGroup = {
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
 				passChild: 2,
-				failChild: 1,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 1,
+				exceptionsChild: 0,
 				
-				passGrandChild: 52,
-				failGrandChild: 1,
+				passGrandChild: 6,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 1,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		

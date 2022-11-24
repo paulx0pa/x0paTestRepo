@@ -3,24 +3,18 @@
     "line": 2,
     "elements": [
       {
-        "line": 5,
-        "name": "login to Verify Recruiter Ai Application info",
+        "line": 6,
+        "name": "verify login and logout functionality",
         "description": "",
-        "id": "job-info;login-to-verify-recruiter-ai-application-info",
+        "id": "login-and-logout-feature;verify-login-and-logout-functionality",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 6532746700,
+              "duration": 10596813700,
               "status": "passed"
             },
-            "comments": [
-              {
-                "line": 6,
-                "value": "#                LOGIN"
-              }
-            ],
             "line": 7,
             "name": "Launch Application using valid URL",
             "match": {
@@ -30,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 347638100,
+              "duration": 1421321500,
               "status": "passed"
             },
             "line": 8,
@@ -42,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 477863400,
+              "duration": 985560300,
               "status": "passed"
             },
             "line": 9,
@@ -64,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 79809300,
+              "duration": 167338400,
               "status": "passed"
             },
             "line": 10,
@@ -77,922 +71,57 @@
         ],
         "tags": [
           {
-            "line": 4,
-            "name": "@Login"
+            "line": 5,
+            "name": "@tag1"
           }
         ]
       },
       {
-        "line": 70,
-        "name": "Verify create new job functionality with basic information",
+        "line": 13,
+        "name": "Verify Recruiter Ai Logout Functionality",
         "description": "",
-        "id": "job-info;verify-create-new-job-functionality-with-basic-information;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1893577600,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "Recruiter clicks on Jobs Menu",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_Jobs_Menu()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 438285300,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "select create new job section",
-            "match": {
-              "location": "Stepdef.select_create_new_job_section()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 349150200,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "click on Start button of form",
-            "match": {
-              "location": "Stepdef.click_on_Start_button_of_form()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 7575859000,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "choose office address \"Hyderabad\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Hyderabad",
-                  "offset": 23
-                }
-              ],
-              "location": "Stepdef.choose_office_address(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 436673100,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "add Job Title as \"software Tester\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "software Tester",
-                  "offset": 18
-                }
-              ],
-              "location": "Stepdef.add_Job_Title_as(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 187082800,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "add internal code for job \"Job0001\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Job0001",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.add_internal_code_for_job(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 282756900,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "select Job Status as \"internal\u0026external\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "internal\u0026external",
-                  "offset": 22
-                }
-              ],
-              "location": "Stepdef.select_Job_Status_as(String)"
-            },
-            "matchedColumns": [
-              3
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 94971500,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "choose candidates from other countries",
-            "match": {
-              "location": "Stepdef.choose_candidates_from_other_countries()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 134911200,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "enable rank and file job",
-            "match": {
-              "location": "Stepdef.enable_rank_and_file_job()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 549986400,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "Select Country Location \"India\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "India",
-                  "offset": 25
-                }
-              ],
-              "location": "Stepdef.select_Country_Location(String)"
-            },
-            "matchedColumns": [
-              4
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 600882000,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "Select City location \"Hyderabad\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Hyderabad",
-                  "offset": 22
-                }
-              ],
-              "location": "Stepdef.select_City_location(String)"
-            },
-            "matchedColumns": [
-              5
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 673547900,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "add skills \"java\" and \"sql\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "java",
-                  "offset": 12
-                },
-                {
-                  "val": "sql",
-                  "offset": 23
-                }
-              ],
-              "location": "Stepdef.add_skills_and(String,String)"
-            },
-            "matchedColumns": [
-              6,
-              7
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 471330300,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "add Qualification \"Bachelor\u0027s degree\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Bachelor\u0027s degree",
-                  "offset": 19
-                }
-              ],
-              "location": "Stepdef.add_Qualification(String)"
-            },
-            "matchedColumns": [
-              8
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 267470800,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "add job type in emp details as \"Permanent\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Permanent",
-                  "offset": 32
-                }
-              ],
-              "location": "Stepdef.add_job_type_in_emp_details_as(String)"
-            },
-            "matchedColumns": [
-              9
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 252289500,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "select minimum experience as \"2\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "2",
-                  "offset": 30
-                }
-              ],
-              "location": "Stepdef.select_minimum_experience_as(String)"
-            },
-            "matchedColumns": [
-              10
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 170867100,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "select maximum experience as \"10\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "10",
-                  "offset": 30
-                }
-              ],
-              "location": "Stepdef.select_maximum_experience_as(String)"
-            },
-            "matchedColumns": [
-              11
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 322044900,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "choose Employment type as \"full-time\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "full-time",
-                  "offset": 27
-                }
-              ],
-              "location": "Stepdef.choose_Employment_type_as(String)"
-            },
-            "matchedColumns": [
-              12
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 260768400,
-              "status": "passed"
-            },
-            "line": 31,
-            "name": "choose no of vacancies \"15\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "15",
-                  "offset": 24
-                }
-              ],
-              "location": "Stepdef.choose_no_of_vacancies(String)"
-            },
-            "matchedColumns": [
-              13
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 403789600,
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "choose close date of job \"12/02/2022\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "12/02/2022",
-                  "offset": 26
-                }
-              ],
-              "location": "Stepdef.choose_close_date_of_job(String)"
-            },
-            "matchedColumns": [
-              14
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 844112100,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "add Job Description \"candidate should be expert in java\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "candidate should be expert in java",
-                  "offset": 21
-                }
-              ],
-              "location": "Stepdef.add_Job_Description(String)"
-            },
-            "matchedColumns": [
-              15
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 486104800,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "add Job Requirements \"3 years experience\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "3 years experience",
-                  "offset": 22
-                }
-              ],
-              "location": "Stepdef.add_Job_Requirements(String)"
-            },
-            "matchedColumns": [
-              16
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 221424300,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "choose primary recruiter \"anand paul\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "anand paul",
-                  "offset": 26
-                }
-              ],
-              "location": "Stepdef.choose_primary_recruiter(String)"
-            },
-            "matchedColumns": [
-              17
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 227529100,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "click on submit button of job",
-            "match": {
-              "location": "Stepdef.click_on_submit_button_of_job()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 5481289300,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "click on view job button",
-            "match": {
-              "location": "Stepdef.click_on_view_job_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 17367848600,
-              "status": "passed"
-            },
-            "comments": [
-              {
-                "line": 38,
-                "value": "#   JOB INFO"
-              }
-            ],
-            "line": 39,
-            "name": "recruiter clicks on collaborators section of job posted",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_collaborators_section_of_job_posted()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3155585700,
-              "status": "passed"
-            },
-            "line": 40,
-            "name": "recruiter clicks on job approvers section of job posted",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_job_approvers_section_of_job_posted()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2471578100,
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "recruiter clicks on work flow automation of job",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_work_flow_automation_of_job()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3002470000,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "enable this job be open forever until closed manually",
-            "match": {
-              "location": "Stepdef.enable_this_job_be_open_forever_until_closed_manually()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3001927200,
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "allow candidates to attach CV while applying for this job",
-            "match": {
-              "location": "Stepdef.allow_candidates_to_attach_CV_while_applying_for_this_job()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 18071685600,
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "enable to ask any pre-screening questions to the candidate",
-            "match": {
-              "location": "Stepdef.enable_to_ask_any_pre_screening_questions_to_the_candidate()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3916464800,
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "enable What other shortlisting criteria would you like to enable",
-            "match": {
-              "location": "Stepdef.enable_What_other_shortlisting_criteria_would_you_like_to_enable()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2156646300,
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "enable already have consent from candidates to proceed with the interviews",
-            "match": {
-              "location": "Stepdef.enable_already_have_consent_from_candidates_to_proceed_with_the_interviews()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2131323800,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "auto send pre interview questions to the candidate asa gives the consent",
-            "match": {
-              "location": "Stepdef.auto_send_pre_interview_questions_to_the_candidate_asa_gives_the_consent()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 8891249300,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "add pre interview stage",
-            "match": {
-              "location": "Stepdef.add_pre_interview_stage()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2234531800,
-              "status": "passed"
-            },
-            "comments": [
-              {
-                "line": 49,
-                "value": "#And For shortlisted candidates setup assessments and interviews"
-              },
-              {
-                "line": 50,
-                "value": "#And enable already have consent from candidates to proceed with the offer"
-              }
-            ],
-            "line": 51,
-            "name": "recruiter enables assesments and interview setup toggle",
-            "match": {
-              "location": "Stepdef.recruiter_enables_assesments_and_interview_setup_toggle()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2661567200,
-              "status": "passed"
-            },
-            "line": 52,
-            "name": "Recruiter chooses Interview type phone round in job info",
-            "match": {
-              "location": "Stepdef.recruiter_chooses_Interview_type_phone_round_in_job_info()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3236504800,
-              "status": "passed"
-            },
-            "line": 53,
-            "name": "Recruiter schedules interview by clicking on blue arrow of job info",
-            "match": {
-              "location": "Stepdef.recruiter_schedules_interview_by_clicking_on_blue_arrow_of_job_info()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 204685000,
-              "status": "passed"
-            },
-            "line": 54,
-            "name": "Recruiter clicks on checkbox to directly send invite",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_checkbox_to_directly_send_invite()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2172559900,
-              "status": "passed"
-            },
-            "line": 55,
-            "name": "recruiter clicks on add slot button",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_add_slot_button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2506704800,
-              "status": "passed"
-            },
-            "line": 56,
-            "name": "Recruiter chooses Interview date and time",
-            "match": {
-              "location": "Stepdef.recruiter_chooses_Interview_date_and_time()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5357718200,
-              "status": "passed"
-            },
-            "line": 57,
-            "name": "recruiter selects end date and time",
-            "match": {
-              "location": "Stepdef.recruiter_selects_end_date_and_time()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 4394674200,
-              "status": "passed"
-            },
-            "comments": [
-              {
-                "line": 58,
-                "value": "#Then Recruiter clicks on schedule an interview button"
-              }
-            ],
-            "line": 59,
-            "name": "recruiter enables already have consent from candidate",
-            "match": {
-              "location": "Stepdef.recruiter_enables_already_have_consent_from_candidate()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 7332048800,
-              "status": "passed"
-            },
-            "line": 60,
-            "name": "recruiter clicks on conversations section of job posted",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_conversations_section_of_job_posted()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 321236400,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "recruiter clicks on ai settings of Job",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_ai_settings_of_Job()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2028357200,
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "recruiter clicks on hiring goals of job",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_hiring_goals_of_job()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 191687800,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "recruiter clicks on consulting fee of job",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_consulting_fee_of_job()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 19076594700,
-              "status": "passed"
-            },
-            "line": 64,
-            "name": "recruiter clicks on meta info of job posted",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_meta_info_of_job_posted()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 237662500,
-              "error_message": "org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document\n  (Session info: chrome\u003d107.0.5304.107)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PAUL\u0027, ip: \u0027192.168.1.3\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\\Users\\paul\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52679}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: dfac527b477474b384299d7e2a0b7054\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat stepdef.Stepdef.recruiter_clicks_on_timeline_of_job_posted(Stepdef.java:2879)\r\n\tat ✽.When recruiter clicks on timeline of job posted(Featurefiles/07_jobinfo.feature:65)\r\n",
-              "status": "failed"
-            },
-            "line": 65,
-            "name": "recruiter clicks on timeline of job posted",
-            "match": {
-              "location": "Stepdef.recruiter_clicks_on_timeline_of_job_posted()"
-            },
-            "keyword": "When "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@tag"
-          },
-          {
-            "line": 12,
-            "name": "@CreateNewJob"
-          }
-        ]
-      },
-      {
-        "comments": [
-          {
-            "line": 73,
-            "value": "#Given Recruiter clicks on Jobs Menu"
-          },
-          {
-            "line": 74,
-            "value": "#Then click on Job postings link"
-          },
-          {
-            "line": 75,
-            "value": "#Then recruiter clicks on any job"
-          },
-          {
-            "line": 76,
-            "value": "#When recruiter clicks on clone job"
-          },
-          {
-            "line": 77,
-            "value": "#When recruiter clicks on email this job \"job@id1.com\" and \"jobcc@id1.com\""
-          },
-          {
-            "line": 78,
-            "value": "#When recruiter clicks on transfer ownership of the job"
-          },
-          {
-            "line": 79,
-            "value": "#           edit job"
-          },
-          {
-            "line": 82,
-            "value": "#Scenario: Verify Recruiter Ai Application List"
-          },
-          {
-            "line": 83,
-            "value": "#When recruiter clicks on collaborators section of job posted"
-          },
-          {
-            "line": 84,
-            "value": "#When recruiter clicks on job approvers section of job posted"
-          },
-          {
-            "line": 85,
-            "value": "#When recruiter clicks on work flow automation of job"
-          },
-          {
-            "line": 86,
-            "value": "#Then recruiter enables assesments and interview setup toggle"
-          },
-          {
-            "line": 87,
-            "value": "#Then Recruiter chooses Interview type phone round in job info"
-          },
-          {
-            "line": 88,
-            "value": "#Then Recruiter schedules interview by clicking on blue arrow of job info"
-          },
-          {
-            "line": 89,
-            "value": "#Then Recruiter clicks on checkbox to directly send invite"
-          },
-          {
-            "line": 90,
-            "value": "#Then recruiter clicks on add slot button"
-          },
-          {
-            "line": 91,
-            "value": "#Then Recruiter chooses Interview date and time"
-          },
-          {
-            "line": 92,
-            "value": "#Then recruiter selects end date and time"
-          },
-          {
-            "line": 93,
-            "value": "#Then Recruiter clicks on schedule an interview button"
-          },
-          {
-            "line": 94,
-            "value": "#Then recruiter enables already have consent from candidate"
-          },
-          {
-            "line": 95,
-            "value": "#When recruiter clicks on conversations section of job posted"
-          },
-          {
-            "line": 96,
-            "value": "#When recruiter clicks on ai settings of Job"
-          },
-          {
-            "line": 97,
-            "value": "#When recruiter clicks on hiring goals of job"
-          },
-          {
-            "line": 98,
-            "value": "#When recruiter clicks on consulting fee of job"
-          },
-          {
-            "line": 99,
-            "value": "#When recruiter clicks on meta info of job posted"
-          },
-          {
-            "line": 100,
-            "value": "#When recruiter clicks on timeline of job posted"
-          }
-        ],
-        "line": 102,
-        "name": "close the browser",
-        "description": "",
-        "id": "job-info;close-the-browser",
+        "id": "login-and-logout-feature;verify-recruiter-ai-logout-functionality",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 475908100,
+              "duration": 7523191900,
               "status": "passed"
             },
-            "line": 103,
+            "line": 14,
+            "name": "Click on Logout Button",
+            "match": {
+              "location": "Stepdef.click_on_Logout_Button()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1634205200,
+              "status": "passed"
+            },
+            "line": 15,
             "name": "close Browser",
             "match": {
               "location": "Stepdef.close_Browser()"
             },
             "keyword": "Given "
           }
+        ],
+        "tags": [
+          {
+            "line": 12,
+            "name": "@Logout"
+          }
         ]
       }
     ],
-    "name": "Job Info",
-    "description": "",
-    "id": "job-info",
+    "name": "Login and Logout feature",
+    "description": "I want to use this to verify login and logout",
+    "id": "login-and-logout-feature",
     "keyword": "Feature",
-    "uri": "Featurefiles/07_jobinfo.feature",
+    "uri": "Featurefiles/01_loginlogout.feature",
     "tags": [
       {
         "line": 1,

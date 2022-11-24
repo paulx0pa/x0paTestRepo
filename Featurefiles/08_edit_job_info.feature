@@ -33,7 +33,7 @@ And add Job Requirements "<job requirements>"
 And choose primary recruiter "<primary recruiter>"
 And click on submit button of job
 And click on view job button
-Then copy the job link
+#Then copy the job link
 #When recruiter clicks on clone job
 When recruiter clicks on email this job "job@id1.com" and "jobcc@id1.com"
 #When recruiter clicks on transfer ownership of the job
@@ -80,11 +80,12 @@ Then recruiter can edit collaborators
 #And edit prescreening settings
 #And edit prescreening shortlist criteria
 #And edit interview setup
+Given close Browser
 
 Examples:
 
 |office address|job title        |internal code|job status       |country location|city location|skill 1|skill 2|qualification    |job type |min exp|max exp|emp type |vacancies|mdyclosedate|job discription                   |job requirements  |primary recruiter|industry          |keyword|education     |worklocation|working hrs|min sal  |max sal  |
 |Hyderabad     |software Engineer|Job0001      |internal&external|Germany         |haag         |java   |sql    |Bachelor's degree|Permanent|3      |12     |full-time|15       |12/02/2022  |candidate should be expert in java|3 years experience|anand paul       |computer software |java   |BSc Computers |Hyderabad   |8 hrs      | 400000  |1000000  |
 
-Scenario: close the browser
-Given close Browser
+#Scenario: close the browser
+#Given close Browser

@@ -46,8 +46,9 @@ Then recruiter clicks on submit to download cvs
 #           DOWNLOAD XOPA REPORT
 Given recruiter clicks on download option
 Then recruiter selects xopa report from dropdown and submit
+Given close Browser
 #                 DELETE
 #Given recruiter clicks on delete option and submit
 
-Scenario: close the browser
-Given close Browser
+#Scenario: close the browser
+#Given close Browser

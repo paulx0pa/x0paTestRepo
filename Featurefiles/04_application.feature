@@ -8,7 +8,7 @@ Feature: Application info page
   Then accept cookies and choose login type
   When enters valid credentials "paul@trainingqa.com" and "XPAStag0"
   Then verify captcha and click on Login button
-  Then Recruiter clicks on source menu
+ Then Recruiter clicks on source menu
 Then Recruiter clicks on all applicants section
 Then Recruiter clicks on any Application
 #Then Recruiter downloads cv of applicant
@@ -33,32 +33,32 @@ Then recruiter gives feedback on interview
 Then recruiter rates candidate
 Then recruiter accepts candidate
 #       SECOND INTERVIEW ROUND
- Then Recruiter again clicks on add interview stage button
- Then Recruiter chooses Interview type Onsite
- Then recruiter chooses onsite round
- Then Recruiter clicks on checkbox to directly send invite
- Then Recruiter chooses Interview date and time
- Then recruiter clicks on end time
- Then Recruiter clicks on schedule an interview button
- Then Recruiter clicks on yes if candidate attended interview
-Then Recruiter clicks on mark this stage as complete
-Then recruiter gives feedback on interview
-Then recruiter rates candidate
-Then recruiter accepts candidate
+ #Then Recruiter again clicks on add interview stage button
+ #Then Recruiter chooses Interview type Onsite
+ #Then recruiter chooses onsite round
+ #Then Recruiter clicks on checkbox to directly send invite
+ #Then Recruiter chooses Interview date and time
+ #Then recruiter clicks on end time
+ #Then Recruiter clicks on schedule an interview button
+ #Then Recruiter clicks on yes if candidate attended interview
+#Then Recruiter clicks on mark this stage as complete
+#Then recruiter gives feedback on interview
+#Then recruiter rates candidate
+#Then recruiter accepts candidate
 #     ONLINE INTERVIEW ROUND
-Then again recruiter clicks on add interview stage button
-Then Recruiter chooses Interview type Online
-Then Recruiter clicks on checkbox to directly send invite
-Then Recruiter chooses Interview date and time
-Then recruiter clicks on end time
-When recruiter choose meeting type
-Then Recruiter clicks on schedule an interview button
-Then recruiter clicks on start meeting button
-Then Recruiter clicks on yes if candidate attended interview
-Then Recruiter clicks on mark this stage as complete
-Then recruiter gives feedback on interview
-Then recruiter rates candidate
-Then recruiter accepts candidate
+#Then again recruiter clicks on add interview stage button
+#Then Recruiter chooses Interview type Online
+#Then Recruiter clicks on checkbox to directly send invite
+#Then Recruiter chooses Interview date and time
+#Then recruiter clicks on end time
+#When recruiter choose meeting type
+#Then Recruiter clicks on schedule an interview button
+#Then recruiter clicks on start meeting button
+#Then Recruiter clicks on yes if candidate attended interview
+#Then Recruiter clicks on mark this stage as complete
+#Then recruiter gives feedback on interview
+#Then recruiter rates candidate
+#Then recruiter accepts candidate
 #     Coding/Whiteboard Assessment 
 #Then recruiter chooses Coding or Whiteboard Assessment 
 Then recruiter takes final decision on interview
@@ -91,6 +91,6 @@ Then recruiter clicks on Add template
 Then recruiter select required template and submit
 And Recruiter clicks on candidates Timeline
 And Recruiter clicks on candidates Contact Numbers
-
-Scenario: close the browser
 Given close Browser
+#Scenario: close the browser
+#Given close Browser
