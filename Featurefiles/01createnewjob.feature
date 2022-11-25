@@ -17,7 +17,7 @@ And choose office address "<office address>"
 And add Job Title as "<job title>"
 And add internal code for job "<internal code>"
 And select Job Status as "<job status>"
-And choose candidates from other countries
+#And choose candidates from other countries
 And enable rank and file job
 And Select Country Location "<country location>"
 And Select City location "<city location>"
@@ -43,10 +43,10 @@ And enter minimal Annual Salary "<min sal>"
 And enter maximum Annual Salary "<max sal>"
 Given recruiter clicks on pre screening questionaire 
 When recruiter clicks on select questions button
-When recruiter clicks on Add Question button
-And recruiter adds essay text type question
-And recruiter adds numeric type question
-And recruiter adds yes or no question
+#When recruiter clicks on Add Question button
+#And recruiter adds essay text type question
+#And recruiter adds numeric type question
+#And recruiter adds yes or no question
 And Select questions from displayed List
 Then click on Add Selected option
 Given recruiter Clicks on Attachments section

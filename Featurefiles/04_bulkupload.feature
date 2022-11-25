@@ -14,7 +14,7 @@ Feature: Bulk Upload feature
   Then select create new job section
   #Then Recruiter clicks on download bulk upload template
   When recruiter clicks on upload button of Bulk Jobs
-  Given close Browser
+  #Given close Browser
   # JOB LIST PAGE
   #When recruiter selects Job or jobs using Checkbox
   #Then recruiter clicks on Batch actions button

@@ -18,7 +18,7 @@ And choose office address "<office address>"
 And add Job Title as "<job title>"
 And add internal code for job "<internal code>"
 And select Job Status as "<job status>"
-And choose candidates from other countries
+#And choose candidates from other countries
 And enable rank and file job
 And Select Country Location "<country location>"
 And Select City location "<city location>"

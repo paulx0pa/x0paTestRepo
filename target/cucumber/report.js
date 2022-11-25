@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Featurefiles/01_loginlogout.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("01_loginlogout.feature");
 formatter.feature({
   "line": 2,
   "name": "Login and Logout feature",
@@ -50,14 +50,14 @@ formatter.match({
   "location": "Stepdef.launch_Application_using_valid_URL()"
 });
 formatter.result({
-  "duration": 10596813700,
+  "duration": 6573378300,
   "status": "passed"
 });
 formatter.match({
   "location": "Stepdef.accept_cookies_and_choose_login_type()"
 });
 formatter.result({
-  "duration": 1421321500,
+  "duration": 1100255700,
   "status": "passed"
 });
 formatter.match({
@@ -74,14 +74,14 @@ formatter.match({
   "location": "Stepdef.enters_valid_credentials_and(String,String)"
 });
 formatter.result({
-  "duration": 985560300,
+  "duration": 305427000,
   "status": "passed"
 });
 formatter.match({
   "location": "Stepdef.verify_captcha_and_click_on_Login_button()"
 });
 formatter.result({
-  "duration": 167338400,
+  "duration": 163115400,
   "status": "passed"
 });
 formatter.scenario({
@@ -110,16 +110,4 @@ formatter.step({
 });
 formatter.match({
   "location": "Stepdef.click_on_Logout_Button()"
-});
-formatter.result({
-  "duration": 7523191900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Stepdef.close_Browser()"
-});
-formatter.result({
-  "duration": 1634205200,
-  "status": "passed"
-});
 });
