@@ -2769,9 +2769,13 @@ public class Stepdef {
 
          @Then("^recruiter clicks on Batch actions button$")
          public void recruiter_clics_on_Batch_actions_button() throws Throwable ,InterruptedException{
-        		WebDriverWait wait = new WebDriverWait(driver,20);
-    			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Batch Actions']"))); 
-    			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
+		  WebElement element=driver.findElement(By.xpath("//button[text()='Batch Actions']"));
+		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", element);
+//         		WebDriverWait wait = new WebDriverWait(driver,20);
+//     			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Batch Actions']"))); 
+//     			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
 //        	 driver.findElement(By.xpath("//button[text()='Batch Actions']")).click();
         	 
         	
