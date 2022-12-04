@@ -14,7 +14,7 @@ Scenario: Verify Recruiter Ai Application List
   #Then Recruiter clicks on download bulk upload template
   When recruiter clicks on upload button of Bulk Jobs
   # JOB LIST PAGE
-  Then copy id of job
+ # Then copy id of job
   When recruiter selects Job or jobs using Checkbox
   Then recruiter clicks on Batch actions button
 Then recruiter chooses job visibility from batch actions dd
@@ -24,7 +24,7 @@ When recruiter selects Job or jobs using Checkbox
 Then recruiter clicks on Batch actions button
 Then recruiter chooses job status close from batch actions dd
 When recruiter clicks on closed jobs link
-Then filter job by id
+#Then filter job by id
 When recruiter selects Job or jobs using Checkbox
 Then recruiter clicks on Batch actions button
 Then recruiter chooses job visibility from batch actions dd
