@@ -35,6 +35,14 @@ And add Job Requirements "<job requirements>"
 And choose primary recruiter "<primary recruiter>"
 And click on submit button of job
 And click on view job button
+Then copy the job link
+#TRIAL CLONE ,EMAIL, TRANSFER OWNERSHIP
+#When recruiter clicks on clone job
+#When recruiter clicks on email this job "job@id1021.com" and "jobcc@id1021.com"
+#When recruiter clicks on transfer ownership of the job
+
+
+
 #   JOB INFO
 When recruiter clicks on collaborators section of job posted
 When recruiter clicks on job approvers section of job posted
@@ -63,7 +71,7 @@ When recruiter clicks on hiring goals of job
 When recruiter clicks on consulting fee of job
 When recruiter clicks on meta info of job posted
 When recruiter clicks on timeline of job posted
-Given close Browser
+
 
 Examples:
 
@@ -71,34 +79,10 @@ Examples:
 |Hyderabad     |software Tester  |Job0001      |internal&external|India           |Hyderabad    |java   |sql    |Bachelor's degree|Permanent|2      |10     |full-time|15       |12/02/2022  |candidate should be expert in java|3 years experience|anand paul       |
 
 
-#Given Recruiter clicks on Jobs Menu
-#Then click on Job postings link
-#Then recruiter clicks on any job
-#When recruiter clicks on clone job
-#When recruiter clicks on email this job "job@id1.com" and "jobcc@id1.com"
-#When recruiter clicks on transfer ownership of the job
-#           edit job
-
-
-#Scenario: Verify Recruiter Ai Application List
-#When recruiter clicks on collaborators section of job posted
-#When recruiter clicks on job approvers section of job posted
-#When recruiter clicks on work flow automation of job
-#Then recruiter enables assesments and interview setup toggle
-#Then Recruiter chooses Interview type phone round in job info
-#Then Recruiter schedules interview by clicking on blue arrow of job info
-#Then Recruiter clicks on checkbox to directly send invite
-#Then recruiter clicks on add slot button
-#Then Recruiter chooses Interview date and time
-#Then recruiter selects end date and time
-#Then Recruiter clicks on schedule an interview button
-#Then recruiter enables already have consent from candidate
-#When recruiter clicks on conversations section of job posted
-#When recruiter clicks on ai settings of Job
-#When recruiter clicks on hiring goals of job
-#When recruiter clicks on consulting fee of job
-#When recruiter clicks on meta info of job posted
-#When recruiter clicks on timeline of job posted
-
-#Scenario: close the browser
-#Given close Browser
+Scenario: verify suggested candidates are autoshortlisting by enabling auto shortlist in workflow
+Given Recruiter clicks on Jobs Menu
+Then click on Job postings link
+Then click on applications button of posted Job
+When recruiter clicks on suggested applications link of a job 
+When recruiter chooses suggested applications for the job
+Then after adding applicant to pipeline verify autoshortlisted or not

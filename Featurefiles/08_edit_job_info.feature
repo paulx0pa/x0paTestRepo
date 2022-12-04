@@ -35,7 +35,7 @@ And click on submit button of job
 And click on view job button
 #Then copy the job link
 #When recruiter clicks on clone job
-When recruiter clicks on email this job "job@id1.com" and "jobcc@id1.com"
+#When recruiter clicks on email this job "job@id1.com" and "jobcc@id1.com"
 #When recruiter clicks on transfer ownership of the job
 Examples:
 

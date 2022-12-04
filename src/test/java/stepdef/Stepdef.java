@@ -21,12 +21,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.google.gson.annotations.Until;
 
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -35,8 +39,10 @@ public class Stepdef {
 	
 		public static WebDriver driver;
 		public static String linktoapply;
+		public static String linktotp;
 		public static String job_id;
 		public static String joblst_id;
+		public static String v_app_id;
 		@Given("^Launch Application using valid URL$")
 		public void launch_Application_using_valid_URL() throws Throwable {
 //		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
@@ -258,8 +264,9 @@ public class Stepdef {
 
 		@Then("^copy the job link$")
 		public void copy_the_job_link() throws Throwable ,InterruptedException{
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			Thread.sleep(3000);
 			WebElement jid=driver.findElement(By.xpath("//small[@class='ml-0 ']"));
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			String strMain=jid.getText();
 			String[] arrSplit = strMain.split(": ");
 			job_id=arrSplit[1];
@@ -334,6 +341,7 @@ public class Stepdef {
 	 		interviewround.selectByVisibleText("Phone Interview");
 	 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	 		driver.findElement(By.xpath("//input[@id='stageName']")).sendKeys("phone Round");
+	 		Thread.sleep(2000);
 	 		driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();
 	 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	 		JavascriptExecutor js1=(JavascriptExecutor)driver;
@@ -463,15 +471,12 @@ public class Stepdef {
 		}
 		@When("^recruiter adds numeric type question$")
 		public void recruiter_adds_numeric_type_question() throws Throwable {
-			WebElement element=driver.findElement(By.xpath("//button[@id='add-presrng-ques-btn']"));
+//			Thread.sleep(2000);
+			WebElement element=driver.findElement(By.xpath("//textarea[@name='question']"));
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click();", element);
+			element.sendKeys("what your marks in sub a012  ?");
 //			Thread.sleep(2000);
-			driver.findElement(By.xpath("//textarea[@name='question']")).sendKeys("what your marks in sub a012  ?");
-//			Thread.sleep(2000);
-			WebElement a=driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[2]"));
-			js.executeScript("arguments[0].click();", a);
+			driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[2]")).click();
 //			Thread.sleep(2000);
 			WebElement category=driver.findElement(By.xpath("(//input[@type='text'])[2]"));
 			category.sendKeys("hr");
@@ -480,26 +485,20 @@ public class Stepdef {
 //			Thread.sleep(2000);
 			category.sendKeys(Keys.ENTER);
 //			Thread.sleep(2000);
-			WebElement b=driver.findElement(By.xpath("(//button[contains(text(),'Submit')])[1]")); 
-			js.executeScript("arguments[0].click();", b);
+			driver.findElement(By.xpath("(//button[contains(text(),'Submit')])[1]")).click(); 
 			
 		}
 
 		@When("^recruiter adds yes or no question$")
 		public void recruiter_adds_yes_or_no_question() throws Throwable {
-			Thread.sleep(3000);
-			WebElement element=driver.findElement(By.xpath("//button[@id='add-presrng-ques-btn']"));
+//			Thread.sleep(2000);
+			WebElement element =driver.findElement(By.xpath("//textarea[@name='question']"));
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click();", element);
+			element.sendKeys("are you willing to relocate to a012 ?");
 //			Thread.sleep(2000);
-			driver.findElement(By.xpath("//textarea[@name='question']")).sendKeys("are you willing to relocate to a012 ?");
+			driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[3]")).click();
 //			Thread.sleep(2000);
-			WebElement a=driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[3]"));
-			js.executeScript("arguments[0].click();", a);
-//			Thread.sleep(2000);
-			WebElement b=driver.findElement(By.xpath("//span[@class='bx--toggle__switch']"));
-			js.executeScript("arguments[0].click();", b);
+		    driver.findElement(By.xpath("//span[@class='bx--toggle__switch']")).click();
 //			Thread.sleep(2000);
 			WebElement category=driver.findElement(By.xpath("(//input[@type='text'])[2]"));
 			category.sendKeys("hr");
@@ -509,8 +508,7 @@ public class Stepdef {
 //			Thread.sleep(2000);
 			category.sendKeys(Keys.ENTER);
 //			Thread.sleep(2000);
-			WebElement c=driver.findElement(By.xpath("(//button[contains(text(),'Submit')])[1]")); 
-			js.executeScript("arguments[0].click();",c);
+			driver.findElement(By.xpath("(//button[contains(text(),'Submit')])[1]")).click(); 
 		}
 
 		@When("^recruiter adds multiple choice question$")
@@ -1225,14 +1223,22 @@ public class Stepdef {
            }
 		@Then("^Recruiter clicks on any Application$")
 		public void recruiter_clicks_on_any_Application() throws Throwable {
-			Thread.sleep(3000);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			Select filterby=new Select(driver.findElement(By.xpath("(//select[@id='select-1'])[1]")));			
-			filterby.selectByValue("appIdDsc");  
-	 			driver.findElement(By.xpath("(//span[text()='Thomas light'])[1]")).click();
+			Thread.sleep(4000);
+//			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("(//select[@id='select-1'])[1]")));
+			Select filterby=new Select(driver.findElement(By.xpath("(//select[@id='select-1'])[1]")));
+			Thread.sleep(2000);
+			filterby.selectByValue("appIdDsc");
+			Thread.sleep(5000);
+			new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[@id='appl-name-link'])[1]")));
+			driver.findElement(By.xpath("(//span[@id='appl-name-link'])[1]")).click();
+//			Actions act=new Actions(driver);
+//			act.moveToElement(application).perform();
+//			application.click();   
+//	 		driver.findElement(By.xpath("(//span[text()='Thomas light'])[1]")).click();
 //			driver.findElement(By.xpath("(//span[text()='uday a10'])[1]")).click();  //(//span[text()='uday a10'])[1]---------------------------------------APPLICATION INFO
-	 			
-		}                                
+//			driver.findElement(By.xpath("(//span[text()='george w'])[1]")).click();
+		}   //*[@id="appl-name-link"]                             
 
 		@Then("^Recruiter downloads cv of applicant$")
 		public void recruiter_downloads_cv_of_applicant() throws Throwable {
@@ -1263,7 +1269,7 @@ public class Stepdef {
 		}
 		@When("^Recruiter clicks on candidates Resume$")
 		public void recruiter_clicks_on_candidates_Resume() throws Throwable {
-//			Thread.sleep(4000);
+			Thread.sleep(4000);
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			JavascriptExecutor js=(JavascriptExecutor)driver;
 			js.executeScript("window.scrollBy(0,700)");
@@ -1278,12 +1284,13 @@ public class Stepdef {
 
 		@When("^Recruiter clicks on candidates Interview Status$")
 		public void recruiter_clicks_on_candidates_Interview_Status() throws Throwable {
-			 WebDriverWait wait1 = new WebDriverWait(driver,10);
-	  			WebElement element = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='is']"))); 
+			 WebDriverWait wait = new WebDriverWait(driver,10);
+	  			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='is']"))); 
 	  			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
 			Thread.sleep(2000);
 			JavascriptExecutor js=(JavascriptExecutor)driver;
 			js.executeScript("window.scrollBy(0,300)");
+			Thread.sleep(2000);
 		}
 		@Then("^Recruiter enables autosend pre screening Questions$")
 		public void recruiter_enables_autosend_pre_screening_Questions() throws Throwable {
@@ -1296,10 +1303,7 @@ public class Stepdef {
 
 		@Then("^Recruiter shortlists the candidate$")
 		public void recruiter_shortlists_the_candidate() throws Throwable {
-			WebElement element=driver.findElement(By.xpath("//button[@id='appl-shortlist-btn']"));
-		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click();", element); 
+			driver.findElement(By.xpath("(//button[text()='Shortlist'])[2]")).click();
 		}
 
 		@Then("^Recruiter sends shortlist Mail$")
@@ -1309,32 +1313,58 @@ public class Stepdef {
 	  		Thread.sleep(4000);
 	  		driver.findElement(By.xpath("//input[@id='shareToEmail']")).click(); 
 	  		driver.findElement(By.xpath("//button[text()='Submit']")).click(); 
+	  		JavascriptExecutor js=(JavascriptExecutor)driver;
+			js.executeScript("window.scrollBy(0,200)");
+			Thread.sleep(2000);
+	  		
 		}
 
 		@Then("^Recruiter choose already have concent option$")
 		public void recruiter_choose_already_have_concent_option() throws Throwable {
-			WebDriverWait wait = new WebDriverWait(driver,20);
+			WebDriverWait wait = new WebDriverWait(driver,10);
 			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='have-consent-btn']"))); 
 			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
 		    		}
 
 		@Then("^Recruiter clicks on add pre interview stage button$")
 		public void recruiter_clicks_on_add_pre_interview_stage_button() throws Throwable { 
-			WebDriverWait wait = new WebDriverWait(driver, 20);
+//			WebElement element=driver.findElement(By.xpath("//button[text()='Add Pre Interview Stage']"));
+////		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//			JavascriptExecutor js = (JavascriptExecutor) driver;
+//			js.executeScript("arguments[0].click();", element);
+			
+			WebDriverWait wait = new WebDriverWait(driver, 10);
 			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Add Pre Interview Stage']"))); 
 			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
+		}
+		@Then("^recruiter clicks on pre interview question set$")
+		public void recruiter_clicks_on_pre_interview_question_set() throws Throwable {
+			WebElement element=driver.findElement(By.xpath("//button[@aria-controls='accordion-item-1']"));
+		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", element);
+			WebElement selq=driver.findElement(By.xpath("//button[@id='jc-sel-ques-btn']"));
+			js.executeScript("arguments[0].click();", selq);
+			WebElement qtype=driver.findElement(By.xpath("//input[@id='example_facet_Question TypeYes / No']"));
+			js.executeScript("arguments[0].click();", qtype);
+			WebElement adq=driver.findElement(By.xpath("(//button[text()='Add'])[1]")); 
+			js.executeScript("arguments[0].click();", adq);
+			driver.findElement(By.xpath("//input[@id='numanswer']")).sendKeys("5");
+			WebElement sav=driver.findElement(By.xpath("//button[text()='Save']"));
+			js.executeScript("arguments[0].click();", sav);
+			WebElement atostlst=driver.findElement(By.xpath("//label[@for='showPassingPoint0']")); 
+			js.executeScript("arguments[0].click();", atostlst);
 		}
 
 		@Then("^Recruiter clicks on add interview stage button$")
 		public void recruiter_clicks_on_add_interview_stage_button() throws Throwable {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			JavascriptExecutor js=(JavascriptExecutor)driver;
 			js.executeScript("window.scrollBy(0,400)");
-			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait(driver,20);
-			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()='Add Interview Stage'])[1]"))); 
-			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-//            WebElement adintstag=driver.findElement(By.xpath("(//button[text()='Add Interview Stage'])[1]")); 
+			Thread.sleep(2000);
+			 WebElement element=driver.findElement(By.xpath("(//button[text()='Add Interview Stage'])[1]"));
+	  		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	  			js.executeScript("arguments[0].click();", element);
 		}
 
 		@Then("^Recruiter chooses Interview type phone round$")
@@ -1349,31 +1379,59 @@ public class Stepdef {
 		interviewround.selectByVisibleText("Phone Interview");
 //		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//input[@id='stageName']")).sendKeys("phone Round");
-		driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();  
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click(); 
+		Thread.sleep(2000); 
 		}
 		@Then("^Recruiter again clicks on add interview stage button$")
 		public void recruiter_again_clicks_on_add_interview_stage_button() throws Throwable ,InterruptedByTimeoutException{
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			JavascriptExecutor js=(JavascriptExecutor)driver;
-			js.executeScript("window.scrollBy(0,-1500)");
-			driver.findElement(By.xpath("//div[@id='interviewStage']")).click();
-			Thread.sleep(2000);
-			driver.findElement(By.xpath("(//button[text()='Add Interview Stage'])[1]")).click();
+		 Thread.sleep(4000);
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+	     js.executeScript("window.scrollBy(0,-1500)");
+	     Thread.sleep(4000);
+	     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		 Actions act =new Actions(driver);
+         WebElement is=driver.findElement(By.xpath("//div[@id='interviewStage']"));
+         act.moveToElement(is);
+         is.click();
+		 Thread.sleep(2000);
+		 WebElement adis=driver.findElement(By.xpath("(//button[text()='Add Interview Stage'])[1]"));
+		 js.executeScript("arguments[0].click();", adis);
 		}
 		@Then("^Recruiter chooses Interview type Onsite$")
 		public void recruiter_chooses_Interview_type_Onsite() throws Throwable {
+			WebDriverWait wait = new WebDriverWait(driver,20);
+			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='radio-3']"))); 
+			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			driver.findElement(By.xpath("//label[@for='radio-3']")).click();
+			Select stage=new Select(driver.findElement(By.xpath("//select[@id='workflowStage']")));
+        	stage.selectByVisibleText("Onsite Interview");
+        	driver.findElement(By.xpath("//input[@id='stageName']")).sendKeys("onsite Round");
+        WebElement sbmt=driver.findElement(By.xpath("(//button[text()='Submit'])[1]"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", sbmt);
+		driver.findElement(By.xpath("(//div[@id='interviewStage'])[2]")).click();
+			
+			
+//			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//			driver.findElement(By.xpath("//label[@for='radio-3']")).click();
 		}
 
          @Then("^again recruiter clicks on add interview stage button$")
          public void again_recruiter_clicks_on_add_interview_stage_button() throws Throwable {
-        	 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
- 			JavascriptExecutor js=(JavascriptExecutor)driver;
- 			js.executeScript("window.scrollBy(0,-1500)");
-			driver.findElement(By.xpath("(//div[@id='interviewStage'])[2]")).click();
-			Thread.sleep(2000);
-			driver.findElement(By.xpath("(//button[text()='Add Interview Stage'])[1]")).click();
+         Thread.sleep(4000);
+         JavascriptExecutor js = (JavascriptExecutor) driver;
+         js.executeScript("window.scrollBy(0,-1500)");
+         Thread.sleep(4000);
+         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+         Actions act =new Actions(driver);
+         WebElement is=driver.findElement(By.xpath("(//div[@id='interviewStage'])[2]"));
+//         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+         act.moveToElement(is);
+         is.click();
+         Thread.sleep(2000);
+  		 WebElement adis=driver.findElement(By.xpath("(//button[text()='Add Interview Stage'])[1]"));
+  		 js.executeScript("arguments[0].click();", adis); 
         }
          @Then("^recruiter chooses Coding or Whiteboard Assessment$")
          public void recruiter_chooses_Coding_or_Whiteboard_Assessment() throws Throwable {
@@ -1404,14 +1462,17 @@ public class Stepdef {
          }
           @Then("^Recruiter chooses Interview type Online$")
           public void recruiter_chooses_Interview_type_Online() throws Throwable {
-        	  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-  			driver.findElement(By.xpath("//label[@for='radio-3']")).click();
-        	Select stage=new Select(driver.findElement(By.id("workflowStage")));
-        	stage.selectByVisibleText("Online Interview");
-        	driver.findElement(By.xpath("//input[@id='stageName']")).sendKeys("online Round");
-			driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();
-//			Thread.sleep(2000);
-			driver.findElement(By.xpath("(//div[@id='interviewStage'])[3]")).click();
+        	  WebDriverWait wait = new WebDriverWait(driver,20);
+    			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='radio-3']"))); 
+    			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
+    			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    			Select stage=new Select(driver.findElement(By.xpath("//select[@id='workflowStage']")));
+               stage.selectByVisibleText("Online Interview");
+          	driver.findElement(By.xpath("//input[@id='stageName']")).sendKeys("online Round");
+  			WebElement sbmt=driver.findElement(By.xpath("(//button[text()='Submit'])[1]"));
+  			JavascriptExecutor js = (JavascriptExecutor) driver;
+  	        js.executeScript("arguments[0].click();", sbmt);
+  	       driver.findElement(By.xpath("(//div[@id='interviewStage'])[3]")).click();
         }
           @When("^recruiter choose meeting type$")
           public void recruiter_choose_meeting_type() throws Throwable {
@@ -1423,32 +1484,32 @@ public class Stepdef {
 //TRIAL ONSITE
         @Then("^recruiter chooses onsite round$")
          public void recruiter_chooses_onsite_round() throws Throwable {
-        	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        	Select stage=new Select(driver.findElement(By.id("workflowStage")));
-        	stage.selectByVisibleText("Onsite Interview");
-        	driver.findElement(By.xpath("//input[@id='stageName']")).sendKeys("onsite Round");
-			driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();
-			driver.findElement(By.xpath("(//div[@id='interviewStage'])[2]")).click();
+//        	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//        	Select stage=new Select(driver.findElement(By.id("workflowStage")));
+//        	stage.selectByVisibleText("Onsite Interview");
+//        	driver.findElement(By.xpath("//input[@id='stageName']")).sendKeys("onsite Round");
+//			driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();
+//			WebElement istage=driver.findElement(By.xpath("(//div[@id='interviewStage'])[2]"));
+//			Actions actions = new Actions(driver);
+//			actions.moveToElement(istage).click().build().perform();
+////			driver.findElement(By.xpath("(//div[@id='interviewStage'])[2]")).click();
          }
 
 		@Then("^Recruiter schedules interview by clicking on blue arrow$")
 		public void recruiter_schedules_interview_by_clicking_on_blue_arrow() throws Throwable {
-			Thread.sleep(2000);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+			Thread.sleep(3000);
 			WebElement istage=driver.findElement(By.xpath("//div[@id='interviewStage']"));
 			Actions actions = new Actions(driver);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 			actions.moveToElement(istage).click().build().perform();
-			
 		}
 
 		@Then("^Recruiter clicks on checkbox to directly send invite$")
 		public void recruiter_clicks_on_checkbox_to_directly_send_invite() throws Throwable {
-			Thread.sleep(3000);
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			WebElement element=driver.findElement(By.xpath("//label[@for='directInviteSent']"));
-			Actions act=new Actions(driver);
-            act.moveToElement(element);
-            element.click();
+			Thread.sleep(2000);
+			JavascriptExecutor js=(JavascriptExecutor)driver; //x
+			js.executeScript("window.scrollBy(0,400)");     //x
+			driver.findElement(By.xpath("//label[@for='directInviteSent']")).click();
 		}
 
 		@Then("^Recruiter chooses Interview date and time$")
@@ -1528,7 +1589,16 @@ public class Stepdef {
 			js.executeScript("window.scrollBy(0,40)");
         	driver.findElement(By.xpath("//div[text()='Yes']")).click();
         }
-
+        @When("^Recruiter clicks on yes for candidate attended interview$")
+        public void recruiter_clicks_on_yes_for_candidate_attended_interview() throws Throwable { 
+        	JavascriptExecutor js=(JavascriptExecutor)driver;
+        	js.executeScript("window.scrollBy(0,1200)");
+        	new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@type='text'])[5]")));
+        	driver.findElement(By.xpath("(//input[@type='text'])[5]")).sendKeys("yes");
+			Thread.sleep(2000);
+			js.executeScript("window.scrollBy(0,40)");
+        	driver.findElement(By.xpath("//div[text()='Yes']")).click(); 
+        }
         @Then("^Recruiter clicks on mark this stage as complete$")
         public void recruiter_clicks_on_mark_this_stage_as_complete() throws Throwable {
         	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -1562,34 +1632,62 @@ public class Stepdef {
         }
         @Then("^recruiter takes final decision on interview$")
         public void recruiter_takes_final_decision_on_interview() throws Throwable {
-        	Thread.sleep(3000);
-        	WebDriverWait wait = new WebDriverWait(driver, 20);
-  			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='finalDecToggle']"))); 
-  			driver.findElement(By.xpath("//label[@for='finalDecToggle']")).click();
-  			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Final Decision']"))); 
-        	driver.findElement(By.xpath("//div[text()='Final Decision']")).click();
-        	//feedback text field
-        	JavascriptExecutor js=(JavascriptExecutor)driver;
+		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		    WebElement element=driver.findElement(By.xpath("//label[@for='finalDecToggle']"));
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", element);
+			Thread.sleep(2000);
+			js.executeScript("window.scrollBy(0,-200)");    //x
+			Thread.sleep(2000);
+        	WebElement fd=driver.findElement(By.xpath("//div[text()='Final Decision']"));
+//        	Actions act=new Actions(driver);    //x
+//        	act.moveToElement(fd).perform();       //x
+//        	driver.findElement(By.xpath("")).click();   //x   
+    		js.executeScript("arguments[0].click();", fd);
+        	Thread.sleep(2000);
 			js.executeScript("window.scrollBy(0,700)");
-			Thread.sleep(3000);
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			Thread.sleep(2000);   //x
         	driver.findElement(By.xpath("(//textarea[@class='bx--text-area some-class'])[1]")).sendKeys("Good");
-        	Thread.sleep(3000);
-        	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        	driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();
-        	//ratin
-        	Thread.sleep(3000);
-        	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        	driver.findElement(By.xpath("(//i[@class='fa fa-star'])[12]")).click();
-        	//accept
-        	Thread.sleep(3000);
-        	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        	driver.findElement(By.xpath("//button[text()='Accept']")).click();
-        	Thread.sleep(3000);
-        	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        	WebElement sbmt=driver.findElement(By.xpath("(//button[text()='Submit'])[1]"));
+        	js.executeScript("arguments[0].click();", sbmt);
+        	WebElement rate=driver.findElement(By.xpath("(//i[@class='fa fa-star'])[12]"));
+        	js.executeScript("arguments[0].click();", rate);
+        	WebElement deci=driver.findElement(By.xpath("//button[text()='Accept']"));
+        	js.executeScript("arguments[0].click();", deci);
         	JavascriptExecutor jt=(JavascriptExecutor)driver;
 			jt.executeScript("window.scrollBy(0,400)");
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        	
+        	
+        	
+        	
+//        	Thread.sleep(3000);
+//        	WebDriverWait wait = new WebDriverWait(driver, 20);
+//  			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='finalDecToggle']"))); 
+//  			driver.findElement(By.xpath("//label[@for='finalDecToggle']")).click();
+//  			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Final Decision']"))); 
+//        	driver.findElement(By.xpath("//div[text()='Final Decision']")).click();
+//        	//feedback text field
+//        	JavascriptExecutor js=(JavascriptExecutor)driver;
+//			js.executeScript("window.scrollBy(0,700)");
+//			Thread.sleep(3000);
+//			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//        	driver.findElement(By.xpath("(//textarea[@class='bx--text-area some-class'])[1]")).sendKeys("Good");
+//        	Thread.sleep(3000);
+//        	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//        	driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();
+//        	//ratin
+//        	Thread.sleep(3000);
+//        	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//        	driver.findElement(By.xpath("(//i[@class='fa fa-star'])[12]")).click();
+//        	//accept
+//        	Thread.sleep(3000);
+//        	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//        	driver.findElement(By.xpath("//button[text()='Accept']")).click();
+//        	Thread.sleep(3000);
+//        	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//        	JavascriptExecutor jt=(JavascriptExecutor)driver;
+//			jt.executeScript("window.scrollBy(0,400)");
+//			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         	
         }
         	//sendofferconcent
@@ -1658,6 +1756,62 @@ public class Stepdef {
            Thread.sleep(2000);
             driver.findElement(By.xpath("(//button[text()='Save'])[1]")).click();
         	}
+        	@When("^recruiter skips offer round$")
+        	public void recruiter_skips_offer_round() throws Throwable {
+        		WebDriverWait wait = new WebDriverWait(driver,20);
+      			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Skip Offer Round']"))); 
+      			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
+      			Thread.sleep(4000);
+      			WebElement a=driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[1]"));
+    		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    			JavascriptExecutor js = (JavascriptExecutor) driver;
+    			js.executeScript("arguments[0].click();", a);
+//      			driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[1]")).click();
+      		    Thread.sleep(2000);
+      		    WebElement b=driver.findElement(By.xpath("(//button[text()='Submit'])[1]"));
+      		    js.executeScript("arguments[0].click();", b);
+//    			joining date
+            	js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+            	Thread.sleep(2000);
+            	 WebElement c=driver.findElement(By.xpath("//input[@id='existingDate']"));
+            	 js.executeScript("arguments[0].click();", c);
+            	 Thread.sleep(2000);
+            	 WebElement d=driver.findElement(By.xpath("//span[@class='flatpickr-next-month']"));
+            	 js.executeScript("arguments[0].click();", d);
+            	 Thread.sleep(2000);
+            	 WebElement e=driver.findElement(By.xpath("//span[text()='25']"));
+            	 js.executeScript("arguments[0].click();", e);
+            	 Thread.sleep(2000);
+            	 WebElement f=driver.findElement(By.xpath("(//button[text()='Submit'])[1]"));
+            	 js.executeScript("arguments[0].click();", f);
+            	 Thread.sleep(2000);
+            	 // below are to change hire decision 
+    		
+        	}
+        	@When("^recruiter changes hire decision$")
+        	public void recruiter_changes_hire_decision() throws Throwable {
+        		JavascriptExecutor js = (JavascriptExecutor) driver;
+        		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+    			//change decision to not hired
+    			 Thread.sleep(2000);
+    			 WebElement g=driver.findElement(By.xpath("//a[@class='bx--link ml-5']"));
+    			 js.executeScript("arguments[0].click();", g);
+    			 WebElement m=driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[1]"));
+    			  js.executeScript("arguments[0].click();", m);
+    			driver.findElement(By.xpath("//textarea[@name='finalOfferRejectReason']")).sendKeys("performance is not as expected");
+    			  Thread.sleep(2000);
+    			  WebElement h=driver.findElement(By.xpath("(//button[text()='Submit'])[2]"));
+    			  js.executeScript("arguments[0].click();", h);
+      			// click on offer flow again  to re open offer      
+    			  WebElement i=driver.findElement(By.xpath("//div[@class=' bx--row  d-flex']"));
+    			  js.executeScript("arguments[0].click();", i);
+    			  WebElement j=driver.findElement(By.xpath("//button[@id='reopen-offer-btn-2']")); 
+    			  js.executeScript("arguments[0].click();", j);
+    			  WebElement k=driver.findElement(By.xpath("//button[text()='Submit']"));   
+    			  js.executeScript("arguments[0].click();", k);
+    			  WebElement l=driver.findElement(By.xpath("//div[@class=' bx--row  d-flex']"));
+    			  js.executeScript("arguments[0].click();", l); 
+        	}
             @Then("^recruiter clicks on send offer added$")
             public void recruiter_clicks_on_send_offer_added() throws Throwable {
             	Thread.sleep(2000);
@@ -1667,10 +1821,11 @@ public class Stepdef {
             }  
            @When("^Recruiter clicks on candidates Approvals Table$")
 		   public void recruiter_clicks_on_candidates_Approvals_Table() throws Throwable {
-        	Thread.sleep(3000);
+        	Thread.sleep(4000);
         	JavascriptExecutor js=(JavascriptExecutor)driver;
 			js.executeScript("window.scrollBy(0,450)");
-			Thread.sleep(5000);
+			Thread.sleep(4000);
+			 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			WebElement applicantnotes =driver.findElement(By.xpath("//a[@id='approvals']"));
 			Actions act=new Actions(driver);
 	        act.moveToElement(applicantnotes);
@@ -1679,11 +1834,11 @@ public class Stepdef {
 			js.executeScript("window.scrollBy(0,700)");
 			Thread.sleep(2000);
 			driver.findElement(By.xpath("(//button[text()='Add Approver'])[1]")).click();
-//			Thread.sleep(2000);
+			Thread.sleep(2000);
 			driver.findElement(By.name("approverEmail")).sendKeys("srrecruiter@gmail.com");
-//			Thread.sleep(2000);
+			Thread.sleep(2000);
 			driver.findElement(By.name("shareMessage")).sendKeys("please take care of this interview");
-//			Thread.sleep(2000);
+			Thread.sleep(2000);
 			driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();
 			Thread.sleep(3000);
 		}
@@ -1691,9 +1846,9 @@ public class Stepdef {
 		@When("^Recruiter clicks on candidates Collaborators$")
 		public void recruiter_clicks_on_candidates_Collaborators() throws Throwable {
 			Thread.sleep(4000);
-			 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			WebElement applicantnotes =driver.findElement(By.xpath("//a[@id='applCollabs']"));
 			Actions act=new Actions(driver);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	        act.moveToElement(applicantnotes);
 	        applicantnotes.click(); 
 			Thread.sleep(2000);
@@ -1742,16 +1897,24 @@ public class Stepdef {
 			JavascriptExecutor js=(JavascriptExecutor)driver;
 			js.executeScript("window.scrollBy(0,700)");
 			Thread.sleep(3000);
-			driver.findElement(By.xpath("//button[text()='Request References']")).click();
-			Thread.sleep(2000);
-			driver.findElement(By.xpath("//button[text()='Submit']")).click();
-			Thread.sleep(4000);
+			driver.findElement(By.xpath("//button[text()='Invite Candidate']")).click();
+//			String sendguest="Invite Candidate";
+//		
+//			if (driver.findElement(By.xpath("(//button[@type='button'])[21]")).getText().equalsIgnoreCase(sendguest))
+//			{
+//				Thread.sleep(2000);
+//				driver.findElement(By.xpath("//button[text()='Invite Candidate']")).click();
+//			}
+//			else
+//			{
+//			driver.findElement(By.xpath("//button[text()='Request References']")).click();   //(//button[@type='button'])[21]   
+//			driver.findElement(By.xpath("//button[text()='Submit']")).click();
+//			}
 		}
-
 		@When("^Recruiter clicks on candidates Offer Information$")
 		public void recruiter_clicks_on_candidates_Offer_Information() throws Throwable {
   			Thread.sleep(3000);
-  			 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+  			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
   			WebElement applicantnotes =driver.findElement(By.xpath("//a[@id='offer']"));
 			Actions act=new Actions(driver);
 	        act.moveToElement(applicantnotes);
@@ -1788,6 +1951,16 @@ public class Stepdef {
 			JavascriptExecutor js=(JavascriptExecutor)driver;
 			js.executeScript("window.scrollBy(0,300)");
 			Thread.sleep(2000);
+		}
+		@Then("^add application to any suitable job$")
+		public void add_application_to_any_suitable_job() throws Throwable {
+			Thread.sleep(2000);
+			 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			 driver.findElement(By.xpath("(//button[text()='Add to this job'])[1]")).click();
+			 Thread.sleep(2000);
+				JavascriptExecutor js=(JavascriptExecutor)driver;
+				js.executeScript("window.scrollBy(0,300)");
+				Thread.sleep(2000);
 		}
 
 		@When("^Recruiter clicks on candidates Chat with candidate$")
@@ -2014,7 +2187,7 @@ public class Stepdef {
 //			Actions act=new Actions(driver);
 //	        act.moveToElement(contacts);
 //	        contacts.click();
-			Thread.sleep(2000);
+//			Thread.sleep(2000);
 			JavascriptExecutor js=(JavascriptExecutor)driver;
      		js.executeScript("window.scrollBy(0,500)");
      		Thread.sleep(2000);
@@ -2027,6 +2200,75 @@ public class Stepdef {
 			Thread.sleep(3000);
 			driver.findElement(By.xpath("//button[text()='Add']")).click();
 		}
+		@Then("^recruiter shares profile$")
+		public void recruiter_shares_profile() throws Throwable {
+			JavascriptExecutor js=(JavascriptExecutor)driver;
+        	js.executeScript("window.scrollBy(0,-document.body.scrollHeight)");
+        	new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Share Profile']")));
+        	 driver.findElement(By.xpath("//button[text()='Share Profile']")).click();
+        	 Thread.sleep(3000);
+        	 driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys("Hi, here is a good profile!");
+        	 Thread.sleep(2000);
+        	 driver.findElement(By.xpath("//button[text()='Send']")).click();
+		}
+		@Then("^copy Application id$")
+		public void copy_Application_id() throws Throwable {
+			Thread.sleep(3000);
+			WebElement jid=driver.findElement(By.xpath("//small[@class='text-dark']"));
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			String strMain=jid.getText();
+			String[] arrSplit = strMain.split(": ");
+			v_app_id=arrSplit[1];    
+		}
+ 
+		@Then("^recruiter add cv to another job$")
+		public void recruiter_add_cv_to_another_job() throws Throwable {
+			WebElement element=driver.findElement(By.xpath("//button[text()='Add CV to another job']"));
+		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", element);
+			WebElement adcv=driver.findElement(By.xpath("//button[text()='Add CV to another job']"));
+			js.executeScript("arguments[0].click();", adcv);
+			driver.findElement(By.xpath("//input[@id='search-jobs']")).sendKeys("Software Tester");
+			WebElement jobid=driver.findElement(By.xpath("(//button[text()='Add'])[1]"));
+			js.executeScript("arguments[0].click();", jobid);
+			WebElement close=driver.findElement(By.xpath("//button[@title='Close']"));
+			js.executeScript("arguments[0].click();", close);
+		}
+		@Then("^compare application id with id of cv added$")
+		public void compare_application_id_with_id_of_cv_added() throws Throwable {
+			JavascriptExecutor jq=(JavascriptExecutor)driver;
+		 	jq.executeScript("window.scrollBy(0,600)");
+		 	 Thread.sleep(5000);
+		 	WebElement jid=driver.findElement(By.xpath("(//small[@class='text-dark'])[1]"));
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			String strMain=jid.getText();
+			String[] arrSplit = strMain.split(": ");
+			String app_id=arrSplit[1]; 
+			Assert.assertEquals(v_app_id, app_id);
+		 	 
+		}
+
+		@Then("^recruiter recalculates XOPA Ai scores$")
+		public void recruiter_recalculates_XOPA_Ai_scores() throws Throwable {
+			WebElement element=driver.findElement(By.xpath("//button[text()='Recalculate X0PA Scores']"));
+		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", element);
+//			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Recalculate X0PA Scores']")));
+//			driver.findElement(By.xpath("//button[text()='Recalculate X0PA Scores']")).click();
+			
+		}
+
+		@Then("^recruiter rejects candidate$")
+		public void recruiter_rejects_candidate() throws Throwable {
+			WebElement element=driver.findElement(By.xpath("//button[text()='Reject']"));
+		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", element);
+//			  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//			driver.findElement(By.xpath("//button[text()='Reject']")).click();
+		}    
 
           //----------------------BULK-----UPLOAD-------------------------
 		@Then("^Recruiter clicks on download bulk upload template$")
@@ -2050,9 +2292,15 @@ public class Stepdef {
 			 WebDriverWait wait1=new WebDriverWait(driver,120);
 			    WebElement element1 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='View Jobs']"))); 
 				((JavascriptExecutor)driver).executeScript("arguments[0].click();", element1);
-//			driver.findElement(By.xpath("//label[@aria-label='Select all rows']")).click();   
+			
 //			driver.findElement(By.xpath("(//label[@aria-label='Select row'])[1]")).click(); 
 			
+		}
+		@When("^Verify uploaded job beings displayed in job list or not$")
+		public void verify_uploaded_job_beings_displayed_in_job_list_or_not() throws Throwable {
+			String actualjobtitle=driver.findElement(By.xpath("(//a[@class='text-capitalize'])[1]")).getText();
+			String expjobtitle="Software Tester";
+			Assert.assertEquals(expjobtitle,actualjobtitle );  
 		}
 	    @Then("^copy id of job$")
         public void copy_id_of_job() throws Throwable {
@@ -2066,9 +2314,13 @@ public class Stepdef {
         }
         @When("^recruiter selects Job or jobs using Checkbox$")
         public void recruiter_selects_Job_or_jobs_using_Checkbox() throws Throwable {
-        	 WebDriverWait wait=new WebDriverWait(driver,60);
-			    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//label[@aria-label='Select row'])[1]"))); 
-				((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
+        	WebElement element=driver.findElement(By.xpath("(//label[@aria-label='Select row'])[1]"));
+		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", element);
+//        	 WebDriverWait wait=new WebDriverWait(driver,60);
+//			    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//label[@aria-label='Select row'])[1]"))); 
+//				((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
 //        	driver.findElement(By.xpath("(//label[@aria-label='Select row'])[1]")).click();
          }
 		
@@ -2101,14 +2353,34 @@ public class Stepdef {
        	Thread.sleep(2000);
      driver.findElement(By.xpath("(//div[text()='Applications'])[1]")).click(); 
      Thread.sleep(4000);
-     JavascriptExecutor jq=(JavascriptExecutor)driver;
- 	jq.executeScript("window.scrollBy(0,400)");
- 	 Thread.sleep(4000);
- 	driver.findElement(By.xpath("(//label[@class='bx--checkbox-label'])[1]")).click();
+//     JavascriptExecutor jq=(JavascriptExecutor)driver;
+// 	jq.executeScript("window.scrollBy(0,400)");
+// 	 Thread.sleep(4000);
+// 	driver.findElement(By.xpath("(//label[@class='bx--checkbox-label'])[1]")).click();
 //		 WebDriverWait wait=new WebDriverWait(driver,60);
 //		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//label[@class='bx--checkbox-label'])[1]"))); 
 //			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
 			
+		}
+		@Then("^select any application or list of applications$")
+		public void select_any_application_or_list_of_applications() throws Throwable {
+			   Thread.sleep(2000);
+			   JavascriptExecutor jq=(JavascriptExecutor)driver;
+			 	jq.executeScript("window.scrollBy(0,600)");
+			 	 Thread.sleep(2000);
+			 	WebElement element=driver.findElement(By.xpath("//label[@aria-label='Select all rows']"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element);
+//			 	WebElement element=new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@aria-label='Select all rows']")));
+//		           Actions act=new Actions(driver);
+//		           act.moveToElement(element).perform();
+//			 	driver.findElement(By.xpath("//label[@aria-label='Select all rows']")).click();     //label[@aria-label='Select all rows']  (//label[@aria-label='Select row'])[1]
+		}
+		@Then("^click on applications button of posted Job$")
+		public void click_on_applications_button_of_posted_Job() throws Throwable {
+			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[text()='Applications'])[1]"))); //x
+			driver.findElement(By.xpath("(//div[text()='Applications'])[1]")).click();  
 		}
 		//---------------------UPLOAD RESUME--------------------
 		@Given("^recruiter clicks on upload resume$")
@@ -2120,11 +2392,10 @@ public class Stepdef {
 		 driver.findElement(By.xpath("//button[text()='UPLOAD RESUME']")).click();
 //		 Thread.sleep(2000);
 		 WebElement uploadresume=driver.findElement(By.xpath("//input[@type='file']"));
-		String absolutepath=new File("Uploadfiles\\Ambareesh Bhaiya PDF.pdf").getAbsolutePath();
+		String absolutepath=new File("Uploadfiles//Ambareesh Bhaiya PDF.pdf").getAbsolutePath();
 		uploadresume.sendKeys(absolutepath);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Submit']")));
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
-		 
 		}
         //----------------------QUICK APPLICANT ADD------------------------
 		@Then("^recruiter can add candidate using quick applicant add$")
@@ -2189,19 +2460,34 @@ public class Stepdef {
 
 		@Then("^recruiter clicks on select from talent pool$")
 		public void recruiter_clicks_on_select_from_talent_pool() throws Throwable {
-			Thread.sleep(2000);
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		    Thread.sleep(3000);
-			driver.findElement(By.xpath("//button[@id='sel-from-tp-btn']")).click();
-			Thread.sleep(2000);
-			driver.findElement(By.xpath("(//input[@role='searchbox'])[3]")).sendKeys("deeven@f.com"); //-----------------------------email
+//			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)");
+			WebElement element=driver.findElement(By.xpath("//button[@id='sel-from-tp-btn']"));
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", element);
 			Thread.sleep(3000);
-			driver.findElement(By.xpath("//button[@id='search-btn']")).click();
-			Thread.sleep(2000);
-			driver.findElement(By.xpath("//label[@aria-label='Select row']")).click();
-			Thread.sleep(2000);
-			driver.findElement(By.xpath("//button[@id='pipeline']")).click();
-			driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
+			driver.findElement(By.xpath("//input[@id='search pool']")).sendKeys("matrix3x33@in.com");
+			WebElement sb=driver.findElement(By.xpath("//button[@id='search-btn']"));
+			Thread.sleep(3000);
+			js.executeScript("arguments[0].click();", sb);
+			((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+			WebElement sr=driver.findElement(By.xpath("//label[@for='data-table-3__select-row-143250']"));//label[@for='data-table-5__select-row-143250']
+			js.executeScript("arguments[0].click();", sr);
+			WebElement pl=driver.findElement(By.xpath("//button[@id='pipeline']"));
+			js.executeScript("arguments[0].click();", pl);
+//			Thread.sleep(2000);
+//			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//		    Thread.sleep(3000);
+//			driver.findElement(By.xpath("//button[@id='sel-from-tp-btn']")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(By.xpath("(//input[@role='searchbox'])[3]")).sendKeys("deeven@f.com"); //-----------------------------email
+//			Thread.sleep(3000);
+//			driver.findElement(By.xpath("//button[@id='search-btn']")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(By.xpath("//label[@aria-label='Select row']")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(By.xpath("//button[@id='pipeline']")).click();
+//			driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
 //			driver.findElement(By.xpath("(//button[text()='Add to Job'])[2]")).click();
 //			Thread.sleep(2000);
 //			driver.findElement(By.xpath("(//input[@role='searchbox'])[4]")).sendKeys("609100");// -----------------------------------JOB ID 
@@ -2215,17 +2501,36 @@ public class Stepdef {
 //			   
 			
 		}
-		
+	
+		@When("^search for registered candidate in talent pool$")
+		public void search_for_registered_candidate_in_talent_pool() throws Throwable {
+			driver.findElement(By.xpath("//input[@id='search pool']")).sendKeys("linux@os01.com");
+			WebElement sb=driver.findElement(By.xpath("//button[@id='search-btn']"));
+			Thread.sleep(3000);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", sb);
+			((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		}
+		@Then("^verify registred candidate available in talent pool or not$")
+		public void verify_registred_candidate_available_in_talent_pool_or_not() throws Throwable {
+			Thread.sleep(2000);
+			String tpname=driver.findElement(By.xpath("(//div[@title='Name'])[1]")).getText(); 
+			String regcand="Linux Lenovo";
+			Assert.assertEquals(tpname,regcand);
+		}
 
 
 		//-------------------------------TAG--------------------------------
 
          @When("^recruiter adds tag to list of applications and submit$")
          public void recruiter_adds_tag_to_list_of_applications_and_submit() throws Throwable,InterruptedException {
-      
+        	 WebElement element=driver.findElement(By.xpath("//button[text()='Tag']"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element);
 //    	driver.findElement(By.xpath("(//label[@class='bx--checkbox-label'])[1]")).click();
 //   		Thread.sleep(2000);
-        driver.findElement(By.xpath("//button[text()='Tag']")).click();
+//        driver.findElement(By.xpath("//button[text()='Tag']")).click();
 //        Thread.sleep(2000);
         WebElement tag=driver.findElement(By.xpath("(//input[@type='text'])[1]"));
 	   tag.sendKeys("hire 1");
@@ -2260,17 +2565,17 @@ public class Stepdef {
 
          @Given("^recruiter clicks on add to talent pool button$")
          public void recruiter_clicks_on_add_to_talent_pool_button() throws Throwable {
-        	 WebDriverWait wait=new WebDriverWait(driver,30);
- 		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Talent Pool']"))); 
- 			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-//         driver.findElement(By.xpath("//button[text()='Talent Pool']")).click();
+        		WebElement element=driver.findElement(By.xpath("//button[text()='Talent Pool']"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element);
          }
          @When("^recruiter chooses add applicant to default talentpool$")
          public void recruiter_chooses_add_applicant_to_default_talentpool() throws Throwable {
-        	 WebDriverWait wait=new WebDriverWait(driver,30);
-  		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='default-radio-btn']"))); 
-  			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-//        	 driver.findElement(By.xpath("//label[@for='default-radio-btn']")).click();  
+        		WebElement element=driver.findElement(By.xpath("//label[@for='default-radio-btn']"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element); 
         	 
          }
 
@@ -2291,33 +2596,30 @@ public class Stepdef {
          }
          @Then("^Click on Submit Button of Talent pool$")
          public void click_on_Submit_Button_of_Talent_pool() throws Throwable {
-//        	 Thread.sleep(2000);
-//  			 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-//  			Thread.sleep(3000);
         	 driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();    
          }
          //-------------------KIV----------------
          @Given("^recruiter clicks on add to kiv button$")
          public void recruiter_clicks_on_add_to_kiv_button() throws Throwable {
-        	 WebDriverWait wait=new WebDriverWait(driver,30);
-   		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='is_liked']"))); 
-   			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-//        	 driver.findElement(By.xpath("//button[@id='is_liked']")).click();   
+        	 WebElement element=driver.findElement(By.xpath("//button[@id='is_liked']"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element);  
          }
 
          @Then("^add or remove applications from kiv using toggle and submit$")
          public void add_or_remove_applications_from_kiv_using_toggle_and_submit() throws Throwable {
-        	 WebDriverWait wait=new WebDriverWait(driver,30);
-    		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()='Submit'])[1]"))); 
-    			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-//        	 driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();  
+        	 WebElement element=driver.findElement(By.xpath("(//button[text()='Submit'])[1]"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element);
          }
          @Given("^recruiter clicks on change stage button$")
          public void recruiter_clicks_on_change_stage_button() throws Throwable {
-        	 WebDriverWait wait=new WebDriverWait(driver,30);
- 		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Change Stage']"))); 
- 			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-//        	 driver.findElement(By.xpath("//button[text()='Change Stage']")).click(); 
+        	 WebElement element=driver.findElement(By.xpath("//button[text()='Change Stage']"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element);
          }
 
          @Then("^choose application stage from dropdown list$")
@@ -2349,10 +2651,10 @@ public class Stepdef {
          }
          @Given("^recruiter clicks on Add Email Button$")
          public void recruiter_clicks_on_Add_Email_Button() throws Throwable {
-        	 WebDriverWait wait=new WebDriverWait(driver,30);
-  		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='email']"))); 
-  			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-//        	 driver.findElement(By.xpath("//button[@id='email']")).click();
+        	 WebElement element=driver.findElement(By.xpath("//button[@id='email']"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element);
          }
 
          @Then("^choose Shortlist Email template to send candidates$")
@@ -2365,26 +2667,26 @@ public class Stepdef {
 
          @Then("^click on Submit button of EmailTemplates$")
          public void click_on_Submit_button_of_EmailTemplates() throws Throwable {
-        	 WebDriverWait wait = new WebDriverWait(driver, 60);
-   			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()='Submit'])[1]")));
-   			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-//        	 driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click(); 
+        	 WebElement element=driver.findElement(By.xpath("(//button[text()='Submit'])[1]"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element);
          }
 
          @Given("^recruiter clicks on download option$")
           public void recruiter_clicks_on_download_option() throws Throwable {
-        	 WebDriverWait wait=new WebDriverWait(driver,30);
-   		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='download_applications']"))); 
-   			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-//        	 driver.findElement(By.xpath("//button[@id='download_applications']")).click(); 
+        	 WebElement element=driver.findElement(By.xpath("//button[@id='download_applications']"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element);
          }
 
          @Then("^recruiter clicks on submit to download cvs$")
          public void recruiter_clicks_on_submit_to_download_cvs() throws Throwable ,InterruptedException{
-        	 WebDriverWait wait=new WebDriverWait(driver,30);
-    		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()='Submit'])[1]"))); 
-    			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-//        	 driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click(); 	 
+        	 WebElement element=driver.findElement(By.xpath("(//button[text()='Submit'])[1]"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element);	 
          }
 
          @Then("^recruiter selects xopa report from dropdown and submit$")
@@ -2392,18 +2694,15 @@ public class Stepdef {
         	 Select emailtemp=new Select(driver.findElement(By.xpath("//select[@id='downloadReportType']"))); 
         	 Thread.sleep(2000);
         	 emailtemp.selectByValue("download-x0pa-report");
-        	 WebDriverWait wait=new WebDriverWait(driver,30);
- 		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()='Submit'])[1]"))); 
- 			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
+         	 WebElement element=driver.findElement(By.xpath("(//button[text()='Submit'])[1]"));
+			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", element);
         	 
          }
          @Given("^recruiter clicks on delete option and submit$")
          public void recruiter_clicks_on_delete_option_and_submit() throws Throwable {
-//        	 Thread.sleep(2000);
-// 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-// 			Thread.sleep(2000);
           driver.findElement(By.xpath("//button[text()='Delete']")).click();
-//          Thread.sleep(2000);
           driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();
           
          }
@@ -2441,13 +2740,11 @@ public class Stepdef {
         	 driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
         	 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         	 driver.findElement(By.xpath("//label[@aria-label='Select all rows']")).click();
-//             driver.findElement(By.xpath("//label[@for='data-table-1__select-row-609438']")).click();
-//        	 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-//        	 Thread.sleep(3000);
-//        	 driver.findElement(By.xpath("//label[@for='data-table-1__select-row-608877']")).click();
          }
          @When("^recruiter clicks on closed jobs link$")
          public void recruiter_clicks_on_closed_jobs_link() throws Throwable {
+        	 JavascriptExecutor js=(JavascriptExecutor)driver;
+         	 js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         	 WebDriverWait wait = new WebDriverWait(driver,20);
  			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='all-users-open-closed-jobs-tab-2']"))); 
  			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
@@ -2493,16 +2790,17 @@ public class Stepdef {
          }
          @Then("^recruiter chooses job status close from batch actions dd$")
          public void recruiter_chooses_job_status_close_from_batch_actions_dd() throws Throwable {
-        	 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//        	 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 //        	 Thread.sleep(3000);
+        	 new WebDriverWait(driver,5).until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='batch-actions']")));
         	 Select emailtemp=new Select(driver.findElement(By.xpath("//select[@id='batch-actions']"))); 
-//        	 Thread.sleep(2000);
+        	 Thread.sleep(2000);
         	 emailtemp.selectByVisibleText("Job Status");
 //        	 Thread.sleep(2000);
         	 driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[4]")).click();
-//        	 Thread.sleep(2000);  
-        	 driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click(); 
-        	 Thread.sleep(4000); 
+//        	 Thread.sleep(5000);  
+        	 new WebDriverWait(driver,5).until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()='Submit'])[1]")));
+        	 driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();  
          }
          @Then("^recruiter chooses job status open from batch actions dd$")
          public void recruiter_chooses_job_status_from_batch_actions_dd() throws Throwable ,InterruptedException{
@@ -2516,6 +2814,20 @@ public class Stepdef {
 //        	 Thread.sleep(2000);   
         	 driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click(); 
         	 Thread.sleep(4000);
+         }
+         @Then("^verify opened job is displayed on open job list or not$")
+         public void verify_opened_job_is_displayed_on_open_job_list_or_not() throws Throwable {
+        	 WebDriverWait wait = new WebDriverWait(driver,20);
+  			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='all-users-open-closed-jobs-tab-1']")));
+  			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
+			Thread.sleep(2000);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			WebElement jlid=driver.findElement(By.xpath("(//small[@class='ml-0 '])[1]"));
+			String strMain=jlid.getText();
+			String[] arrSplit = strMain.split(": ");
+			String ojoblst_id=arrSplit[1];
+			Assert.assertEquals(joblst_id,ojoblst_id );  
+        	
          }
 
          @Then("^recruiter chooses transfer ownership from batch actions dd$")
@@ -3329,6 +3641,287 @@ public class Stepdef {
          public void edit_interview_setup() throws Throwable {
            
          }
+         @When("^recruiter clicks on suggested applications link of a job$")
+         public void recruiter_clicks_on_suggested_applications_link_of_a_job() throws Throwable {
+         	new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Suggested Candidates']")));    //a[text()='candidates from your talent pool are suitable for this role'])[1]
+         	WebElement element=driver.findElement(By.xpath("//span[text()='Suggested Candidates']"));
+            JavascriptExecutor js = (JavascriptExecutor)driver;
+            js.executeScript("arguments[0].click();", element);
+//         	 Actions act=new Actions(driver);
+//         	act.moveToElement(element).perform();
+//  			element.click();    
+         }
+         @When("^recruiter chooses suggested applications for the job$")
+         public void recruiter_chooses_suggested_applications_for_the_job() throws Throwable {
+ 			 JavascriptExecutor js=(JavascriptExecutor)driver;
+ 			 js.executeScript("window.scrollBy(0,500)");
+ 			 Thread.sleep(2000);
+ 			String suggestedmail= new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[@class='text-dark font-weight-normal ml-2 mt-0'])[1]"))).getText();
+           new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()='Add to Pipeline'])[2]")));
+           driver.findElement(By.xpath("(//button[text()='Add to Pipeline'])[2]")).click();
+           Thread.sleep(2000);
+           js.executeScript("window.scrollBy(0,-500)");
+           Thread.sleep(2000);
+        	new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='pipeline-tab']")));    //a[text()='candidates from your talent pool are suitable for this role'])[1]
+         	WebElement element=driver.findElement(By.xpath("//a[@id='pipeline-tab']"));
+            js.executeScript("arguments[0].click();", element);
+           js.executeScript("window.scrollBy(0,400)");
+           Thread.sleep(2000);
+           String pipelinemail= new WebDriverWait(driver,20).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[@id='appl-email-link'])[1]"))).getText();
+           Assert.assertEquals(suggestedmail,pipelinemail);
+         }
+         @Then("^after adding applicant to pipeline verify autoshortlisted or not$")
+         public void after_adding_applicant_to_pipeline_verify_autoshortlisted_or_not() throws Throwable {
+        	 String cnfmstlst= new WebDriverWait(driver,20).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[@class='text-success font-weight-bold1 ml-1'])[1]"))).getText();
+        	 String exptext="Shortlisted";
+        	 Assert.assertEquals(cnfmstlst,exptext);
+        	 
+         }
+         
+         //               TALENT POOL REGISTRATION
+         @Then("^click on external talent pool$")
+         public void click_on_external_talent_pool() throws Throwable {
+        	WebElement element=driver.findElement(By.xpath("//a[text()='External Talent Pool']"));
+        	 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
+        	 JavascriptExecutor js=(JavascriptExecutor)driver;
+             js.executeScript("arguments[0].click();", element);
+        	
+         }
+
+          @Then("^copy link to send to prospective candidates$")
+          public void copy_link_to_send_to_prospective_candidates() throws Throwable {
+        	new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='talentpool-txt']")));
+  			linktotp=driver.findElement(By.xpath("//input[@id='talentpool-txt']")).getAttribute("value");
+         }
+
+         @Then("^new candidate registers to tp using shared link$")
+         public void new_candidate_registers_to_tp_using_shared_link() throws Throwable {
+//        	    driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
+//
+//        	    ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+//        	    driver.switchTo().window(tabs.get(1)); //switches to new tab
+//        	    driver.get("https://www.facebook.com");
+//
+//        	    driver.switchTo().window(tabs.get(0)); // switch back to main screen        
+//        	    driver.get("https://www.news.google.com");
+//        	 
+//        	 
+// 			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//		    driver = new ChromeDriver();
+//		    driver.manage().deleteAllCookies();
+//		    driver.manage().window().maximize();
+//		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
+        	  System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+  			ChromeOptions options=new ChromeOptions();
+  			options.addArguments("headless");
+  			options.addArguments("disable-gpu");
+  			driver=new ChromeDriver(options);
+  			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
+		    driver.navigate().to(linktotp);  
+         }
+
+         @When("^candidate starts filling the form of tp$")
+         public void candidate_starts_filling_the_form_of_tp() throws Throwable {
+        	 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        	 driver.findElement(By.xpath("//a[@id='hs-eu-confirmation-button']")).click();
+        	 driver.findElement(By.xpath("//input[@id='candidateFirstName']")).sendKeys("Linux");
+        	 driver.findElement(By.xpath("//input[@id='candidateLastName']")).sendKeys("Lenovo");
+        	Select country=new Select(driver.findElement(By.xpath("//select[@id='countryId']")));
+    		country.selectByValue("105"); 
+        	 driver.findElement(By.xpath("//input[@id='mobile']")).sendKeys("9849948901");
+        	 driver.findElement(By.xpath("//input[@id='candidateEmail']")).sendKeys("linux@os01.com");
+        	 WebElement uploadresume=driver.findElement(By.xpath("//input[@type='file']"));
+     		String absolutepath=new File("Uploadfiles//Ambareesh Bhaiya PDF.pdf").getAbsolutePath();
+     		uploadresume.sendKeys(absolutepath);
+     		new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Submit CV']")));
+     		driver.findElement(By.xpath("//button[text()='Submit CV']")).click();
+         }
+         @Then("^click on filters option of jobs$")
+         public void click_on_filters_option_of_jobs() throws Throwable {
+        	 Thread.sleep(4000);	
+           	 driver.findElement(By.xpath("//i[@class='fa fa-filter']")).click();
+    
+         }
+         @Before("@id,@company,@minsal,@maxsal,@od,@cd,@vac,@private,@minxp,@maxxp,@tags,@as,@ht,@jt,@jc")
+         public void beforeScenario() throws InterruptedException{	
+        	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+       	 driver.findElement(By.xpath("//i[@class='fa fa-filter']")).click();
+       	 driver.findElement(By.xpath("//button[@id='clear-all-btn']")).click();
+         }
+
+         @When("^filter job by using job title$")
+         public void filter_job_by_using_job_title() throws Throwable {
+			 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//span[text()='Job Title']")).click();
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//input[@id='radio-is exact match of']")).click();
+           	 driver.findElement(By.xpath("//input[@id='string-txt']")).sendKeys("software Tester-01");  //------------------------------------------JOB ID
+           	driver.findElement(By.xpath("//input[@id='radio-is exact match of']")).click();  
+         }
+         @After("@title,@id,@company,@minsal,@maxsal,@od,@cd,@vac,@private,@minxp,@maxxp,@tags,@as,@ht,@jt,@jc")
+         public void afterScenario() throws InterruptedException{
+        	 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+              	 driver.findElement(By.xpath("//button[@id='apply-btn']")).click();
+       			Thread.sleep(2000);
+       		 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+              	 driver.findElement(By.xpath("(//*[local-name()='svg' and @id='close-portal-btn'])[1]")).click();
+         }
+
+         @When("^filter job by using job id$")
+         public void filter_job_by_using_job_id() throws Throwable {
+			 Thread.sleep(2000);
+			 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Job ID']")).click();
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("(//input[@type='text'])[1]")).sendKeys("610882");  //------------------------------------------JOB ID
+         }
+
+         @When("^filter job by company$")
+         public void filter_job_by_company() throws Throwable {
+//			 Thread.sleep(2000);
+//           	 driver.findElement(By.xpath("//span[text()='Company']")).click();
+//           	 Thread.sleep(2000);
+//           	 driver.findElement(By.xpath("(//input[@type='text'])[1]")).sendKeys("Qa Training");  //------------------------------------------JOB ID
+         }
+
+         @When("^filter job by min salary$")
+         public void filter_job_by_min_salary() throws Throwable {
+			 Thread.sleep(2000);
+			 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Minimum Salary']")).click();
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//input[@id='radio-is greater than']")).click(); 
+           	driver.findElement(By.xpath("//input[@id='number-txt-is greater than']")).sendKeys("10000"); 
+         }
+
+         @When("^filter job by max salary$")
+         public void filter_job_by_max_salary() throws Throwable {
+			 Thread.sleep(2000);
+			 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Maximum Salary']")).click();   
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//input[@id='radio-is greater than or equal to']")).click(); 
+           	 driver.findElement(By.xpath("//input[@id='number-txt-is greater than or equal to']")).sendKeys("500000"); 
+         }
+
+         @When("^filter job by open date$")
+         public void filter_job_by_open_date() throws Throwable {
+			 Thread.sleep(2000);
+			 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Open Date']")).click();     
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//input[@id='radio-is after']")).click();   
+           	driver.findElement(By.xpath("//input[@name='closeDate']")).click();   
+           	driver.findElement(By.xpath("//span[@class='flatpickr-prev-month']")).click();
+           	driver.findElement(By.xpath("//span[text()='16']")).click();
+         }
+
+         @When("^filter job by close date$")
+         public void filter_job_by_close_date() throws Throwable {
+        	 Thread.sleep(2000);
+        	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Close Date']")).click();
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//input[@id='radio-is after']")).click();   
+            driver.findElement(By.xpath("//input[@name='closeDate']")).click();   
+           driver.findElement(By.xpath("//span[@class='flatpickr-prev-month flatpickr-disabled']")).click();
+             driver.findElement(By.xpath("//span[text()='16']")).click();
+         }
+
+         @When("^filter job by vacancy$")
+         public void filter_job_by_vacancy() throws Throwable {
+        	 Thread.sleep(3000);
+        	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Vacancy']")).click();
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//input[@id='radio-is greater than or equal to']")).click(); 
+           	 driver.findElement(By.xpath("//input[@id='number-txt-is greater than or equal to']")).sendKeys("12"); 
+         }
+
+         @When("^filter job by private$")
+         public void filter_job_by_private() throws Throwable {
+        	 Thread.sleep(4000);
+        	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[@id='curr-filter-isPrivate']")).click();
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//label[@for='sort-filter-toggle']")).click(); 	 
+         }
+
+         @When("^filter job by min experience$")
+         public void filter_job_by_min_experience() throws Throwable {
+        	 Thread.sleep(4000);
+        	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Minimum Experience']")).click();
+           	 Thread.sleep(2000);
+        	 driver.findElement(By.xpath("//input[@id='radio-is greater than or equal to']")).click();
+        	 driver.findElement(By.xpath("//input[@id='number-txt-is greater than or equal to']")).sendKeys("3");  
+         }
+       
+         @When("^filter job by max experience$")
+         public void filter_job_by_max_experience() throws Throwable {
+        	 Thread.sleep(4000);
+        	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Maximum Experience']")).click();
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//input[@id='radio-is greater than']")).click();
+        	 driver.findElement(By.xpath("//input[@id='number-txt-is greater than']")).sendKeys("5");
+         }
+
+         @When("^filter job by using tags$")
+         public void filter_job_by_using_tags() throws Throwable {
+        	 Thread.sleep(4000);
+        	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Tags']")).click();
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//input[@id='example_facet_tag_a0001']")).click();  
+           	 }
+
+         @When("^filter job by using approval status$")
+         public void filter_job_by_using_approval_status() throws Throwable {
+        	 Thread.sleep(4000);
+        	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Approval Status']")).click();
+           	 Thread.sleep(2000);    
+           	driver.findElement(By.xpath("//input[@id='example_facet_Approved']")).click();
+           	
+         }
+
+         @When("^filter job by hour type$")
+         public void filter_job_by_hour_type() throws Throwable {
+        	 Thread.sleep(4000);
+        	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Hour Type']")).click();
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//input[@id='example_facet_Full-Time']")).click(); 
+         }
+
+         @When("^filter job by job type$")
+         public void filter_job_by_job_type() throws Throwable {
+        	 Thread.sleep(4000);
+        	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Job Type']")).click();
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//input[@id='example_facet_Permanent']")).click();   
+         }
+
+         @When("^filter job by job cateogory$")
+         public void filter_job_by_job_cateogory() throws Throwable {
+        	 Thread.sleep(4000);
+        	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           	 driver.findElement(By.xpath("//span[text()='Job Category']")).click();
+           	 Thread.sleep(2000);
+           	 driver.findElement(By.xpath("//input[@id='example_facet_Internal & External']")).click(); 
+         }
+         @Given("^verify collaborator login$")
+         public void verify_collaborator_login() throws Throwable {
+//             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+// 	        ChromeOptions options = new ChromeOptions();
+// 	        options.addArguments("--incognito");
+// 	        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+// 	        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+// 	        driver.get("https://staging.x0pa.ai/app/roboroy/job/612330/collab");
+         }
+         
          }
 
 

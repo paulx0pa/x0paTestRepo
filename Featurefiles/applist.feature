@@ -10,15 +10,25 @@ Scenario: Verify Recruiter Ai Application List
   Then verify captcha and click on Login button
   Given Recruiter clicks on Jobs Menu
 Then click on Job postings link
-Then click on applications button of any posted Job
+#Then click on applications button of any posted Job
+Then click on applications button of posted Job
+#Then select any application or list of applications
 #             UPLOAD RESUME
+Given recruiter clicks on upload resume
+Then recruiter can add candidate using quick applicant add
+When enter quick applicant first name and last name "vip" and "prakash"
+When enter quick applicant email and phone no "9849000305" and "deeven@a305.com"
+Then recruiter clicks on bulk import applicants
+Then recruiter clicks on select from talent pool
+#
 #Given recruiter clicks on upload resume
 #Then recruiter can add candidate using quick applicant add
-#When enter quick applicant first name and last name "deeven" and "D"
+#When enter quick applicant first name and last name "deeven" and "Prakash"
 #When enter quick applicant email and phone no "9849000048 and "deeven@a048.com"
 #Then recruiter clicks on bulk import applicants
 #Then recruiter clicks on select from talent pool
 #                  TAG
+Then select any application or list of applications
 When recruiter adds tag to list of applications and submit
 #               SHORTLIST 
 And Shortlist the selected Application

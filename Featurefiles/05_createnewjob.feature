@@ -43,10 +43,12 @@ And enter minimal Annual Salary "<min sal>"
 And enter maximum Annual Salary "<max sal>"
 Given recruiter clicks on pre screening questionaire 
 When recruiter clicks on select questions button
-#When recruiter clicks on Add Question button
-#And recruiter adds essay text type question
-#And recruiter adds numeric type question
-#And recruiter adds yes or no question
+When recruiter clicks on Add Question button
+And recruiter adds essay text type question
+When recruiter clicks on Add Question button
+And recruiter adds numeric type question
+When recruiter clicks on Add Question button
+And recruiter adds yes or no question
 And Select questions from displayed List
 Then click on Add Selected option
 Given recruiter Clicks on Attachments section

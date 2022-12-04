@@ -1,5 +1,5 @@
 @tag
-Feature: Application info page
+Feature: app info for job level interview setup
   I want to use this to verify login and logout
 
   @tag1
@@ -16,19 +16,18 @@ Then Recruiter clicks on any Application
 When Recruiter clicks on candidates Resume
 When Recruiter clicks on candidates Interview Status
 Then Recruiter enables autosend pre screening Questions
-#Then recruiter clicks on pre interview question set
-Then Recruiter shortlists the candidate
-Then Recruiter sends shortlist Mail
-Then Recruiter choose already have concent option
-Then Recruiter clicks on add pre interview stage button
-Then Recruiter clicks on add interview stage button
-Then Recruiter chooses Interview type phone round
+#Then Recruiter shortlists the candidate
+#Then Recruiter sends shortlist Mail
+#Then Recruiter choose already have concent option
+#Then Recruiter clicks on add pre interview stage button
+#Then Recruiter clicks on add interview stage button
+#Then Recruiter chooses Interview type phone round
 Then Recruiter schedules interview by clicking on blue arrow
-Then Recruiter clicks on checkbox to directly send invite
-Then Recruiter chooses Interview date and time
-Then recruiter clicks on end time
-Then Recruiter clicks on schedule an interview button
-Then Recruiter clicks on yes if candidate attended interview
+#Then Recruiter clicks on checkbox to directly send invite
+#Then Recruiter chooses Interview date and time
+#Then recruiter clicks on end time
+#Then Recruiter clicks on schedule an interview button
+When Recruiter clicks on yes for candidate attended interview
 Then Recruiter clicks on mark this stage as complete
 Then recruiter gives feedback on interview
 Then recruiter rates candidate
@@ -66,11 +65,8 @@ Then recruiter takes final decision on interview
 Then recruiter sends offer concent
 Then recruiter resends offer concent
 Then recruiter skips offer concent
-#    SKIP OFFER ROUND
-When recruiter skips offer round
-#When recruiter changes hire decision
-#Then recruiter clicks on add offer to add offer details
-#Then recruiter clicks on send offer added
+Then recruiter clicks on add offer to add offer details
+Then recruiter clicks on send offer added
 And Recruiter clicks on candidates Approvals Table
 And Recruiter clicks on candidates Collaborators
 And Recruiter clicks on candidates Applicant Notes
@@ -78,6 +74,7 @@ And Recruiter clicks on candidates References
 And Recruiter clicks on candidates Offer Information
 And Recruiter clicks on candidates Other Jobs Applied
 And Recruiter clicks on candidates Suitable Jobs
+And add application to any suitable job
 #And Recruiter clicks on candidates Chat with candidate
 And Recruiter clicks on candidates Post Hire Feedback
 And Recruiter clicks on candidates Onboarding
@@ -95,17 +92,4 @@ Then recruiter clicks on Add template
 Then recruiter select required template and submit
 And Recruiter clicks on candidates Timeline
 And Recruiter clicks on candidates Contact Numbers
-Then recruiter shares profile
-Then copy Application id
-And recruiter add cv to another job
-And recruiter recalculates XOPA Ai scores
-#And recruiter rejects candidate 
-#Given close Browser
-#Scenario: close the browser
-
-#Scenario: Verify cv added to job or not
-#Given Recruiter clicks on Jobs Menu
-#Then click on Job postings link
-#Then click on applications button of posted Job
-#Then compare application id with id of cv added
-
+Given close Browser

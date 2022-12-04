@@ -2,7 +2,6 @@
 Feature:Create new Job with Basic Information ,collaborators
 
 @Login
-@Before
 Scenario: Verify Recruiter Ai Login Functionality
 Given Launch Application using valid URL
 Then accept cookies and choose login type
@@ -48,3 +47,8 @@ Examples:
 
 #Scenario: close the browser
 #Given close Browser
+
+Scenario: verify collaborators login 
+Given verify collaborator login 
+
+

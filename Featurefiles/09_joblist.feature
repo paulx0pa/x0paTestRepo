@@ -19,19 +19,20 @@ Scenario: Verify Recruiter Ai Application List
   Then recruiter clicks on Batch actions button
 Then recruiter chooses job visibility from batch actions dd
 When recruiter selects Job or jobs using Checkbox
+Then recruiter clicks on add tag button and add tag name "tag_a0003"
+When recruiter selects Job or jobs using Checkbox
 Then recruiter clicks on Batch actions button
 Then recruiter chooses job status close from batch actions dd
-#When recruiter selects Job or jobs using Checkbox
-#Then recruiter clicks on add tag button and add tag name "tag_a0003"
 When recruiter clicks on closed jobs link
-#Then filter job by id
+Then filter job by id
 When recruiter selects Job or jobs using Checkbox
 Then recruiter clicks on Batch actions button
 Then recruiter chooses job visibility from batch actions dd
 When recruiter selects Job or jobs using Checkbox
 Then recruiter clicks on Batch actions button
 Then recruiter chooses job status open from batch actions dd
-Given close Browser
+Then verify opened job is displayed on open job list or not
+#Given close Browser
 #When recruiter selects Job or jobs using Checkbox
 #Then recruiter clicks on add tag button and add tag name "tag_a0003"
 #When recruiter selects Job or jobs using Checkbox
